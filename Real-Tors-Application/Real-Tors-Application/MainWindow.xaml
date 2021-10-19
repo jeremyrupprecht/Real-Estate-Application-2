@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="1000" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "500"/>
+            <ColumnDefinition Width = "Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="REAL-Tors" FontSize="20" FontWeight="Bold"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Filters" FontSize="20" FontWeight="Bold"/>
     </Grid>
 </Window>
