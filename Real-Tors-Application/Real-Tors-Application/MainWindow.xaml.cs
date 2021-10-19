@@ -16,14 +16,20 @@ using System.Windows.Shapes;
 namespace Real_Tors_Application
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Do not add any elements here!!!!! Create a new page and add your work there
+    /// I added a dock panel frame thingy that acts as a place holder for pages in the xaml file
     /// </summary>
-    /// test
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
+
             InitializeComponent();
+            _NavigationFrame.Navigate(new HomePage()); // First page thats displayed on program start
         }
+
+
     }
 }

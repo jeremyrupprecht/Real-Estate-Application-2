@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jasmi\Source\Repos\AnindyaMandal\CPSC481-Real-Tors\Real-Tors-Application\Real-Tors-Application\obj\Debug\
+D:\VisualStudioProjects\wtfgit\CPSC481-Real-Tors\Real-Tors-Application\Real-Tors-Application\obj\Debug\
 Real_Tors_Application
 none
 false
 DEBUG;TRACE
-C:\Users\jasmi\Source\Repos\AnindyaMandal\CPSC481-Real-Tors\Real-Tors-Application\Real-Tors-Application\App.xaml
-11151548125
+D:\VisualStudioProjects\wtfgit\CPSC481-Real-Tors\Real-Tors-Application\Real-Tors-Application\App.xaml
+5-562523591
 
-61434861427
+10-1603579474
 13-1505183044
-MainWindow.xaml;
+FilterView.xaml;HomePage.xaml;ListView.xaml;MainWindow.xaml;TestPage.xaml;
 
-True
+False
 

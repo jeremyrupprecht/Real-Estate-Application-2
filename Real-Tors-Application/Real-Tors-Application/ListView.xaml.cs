@@ -24,5 +24,11 @@ namespace Real_Tors_Application
         {
             InitializeComponent();
         }
+
+        private void btn_HomePage_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+        }
     }
 }
+
