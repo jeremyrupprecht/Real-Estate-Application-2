@@ -12,5 +12,6 @@
         <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
         <Label FontSize="90" HorizontalAlignment="Center" Margin="45 45">List View</Label>
         <Button x:Name="btn_HomePage" Content="Go to Home Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="btn_HomePage_Click"/>
+        <Button x:Name="btn_MapView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="btn_HomePage_Click"/>
     </Grid>
 </Page>
