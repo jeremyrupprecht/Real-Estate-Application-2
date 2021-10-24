@@ -386,3 +386,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Real-Tors-Application/Real-Tors-Application/resources/neighbourhoods.txt
+/Real-Tors-Application/Real-Tors-Application/resources/street.txt
+/Real-Tors-Application/Real-Tors-Application/Listing.cs
