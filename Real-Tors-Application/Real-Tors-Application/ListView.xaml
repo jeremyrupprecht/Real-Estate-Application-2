@@ -23,11 +23,12 @@
                     </Grid.RowDefinitions>
 
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
+                    <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
+                    
                     <Image Name="HouseImage0" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
 
-                    <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
-                    <Label Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left">Edgemont</Label>
-                    <Label Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right">$120,000</Label>
+                    <Label Name="Neighbourhood0" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left" Content="{Binding Path=neighbourhood[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                    <Label Name="PriceNum0" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right" Content="{Binding Path=price[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
                     <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
                         <Grid.ColumnDefinitions>
@@ -37,10 +38,10 @@
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label Name="BedNumber" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange">2</Label>
-                        <Label Name="BedIcon" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
-                        <Label Name="BathNumber" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue">3</Label>
-                        <Label Name="BathIcon" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                        <Label Name="BedNumber0" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange" Content="{Binding Path=bed[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                        <Label Name="BedIcon0" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber0" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue" Content="{Binding Path=bath[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                        <Label Name="BathIcon0" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
                     </Grid>
 
                 </Grid>
@@ -55,6 +56,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage1" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood1" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum1" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber1" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon1" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber1" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon1" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
 
                 </Grid>
                 <Grid Name="Listing3" Margin="50">
@@ -68,6 +87,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage2" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood2" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum2" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber2" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon2" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber2" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon2" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
                 <Grid Name="Listing4" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -80,6 +117,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage3" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood3" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum3" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber3" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon3" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber3" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon3" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
 
                 <Grid Name="Listing5" Margin="50">
@@ -93,6 +148,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage4" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood4" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum4" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber4" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon4" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber4" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon4" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
 
                 <Grid Name="Listing6" Margin="50">
@@ -106,6 +179,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage5" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood5" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum5" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber5" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon5" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber5" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon5" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
 
                 <Grid Name="Listing7" Margin="50">
@@ -118,6 +209,25 @@
                     </Grid.RowDefinitions>
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
+
+                    <Image Name="HouseImage6" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood6" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum6" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber6" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon6" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber6" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon6" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
 
                 <Grid Name="Listing8" Margin="50">
@@ -131,6 +241,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage7" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood7" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum7" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber7" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon7" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber7" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon7" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
 
                 <Grid Name="Listing9" Margin="50">
@@ -144,6 +272,24 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
+                    <Image Name="HouseImage8" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+
+                    <Label Name="Neighbourhood8" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum8" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Name="BedNumber8" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="Orange"></Label>
+                        <Label Name="BedIcon8" Grid.Column="1" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="Orange"></Label>
+                        <Label Name="BathNumber8" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="CadetBlue"></Label>
+                        <Label Name="BathIcon8" Grid.Column="3" FontSize="30" FontWeight="Black" HorizontalAlignment="Left" Foreground="CadetBlue"></Label>
+                    </Grid>
                 </Grid>
             </WrapPanel>
         </ScrollViewer>
