@@ -12,5 +12,6 @@
         <Button x:Name="btn_ListView" Content="Go to ListView" HorizontalAlignment="Left" Margin="320,110,0,0" VerticalAlignment="Top" Width="160" Click="btn_ListView_Click"/>
         <Button x:Name="btn_FilterView" Content="Go to FilterView" HorizontalAlignment="Left" Margin="320,180,0,0" VerticalAlignment="Top" Width="160" Click="btn_FilterView_Click"/>
         <Button x:Name="btn_TestView" Content="Go to TestView" HorizontalAlignment="Left" Margin="320,240,0,0" VerticalAlignment="Top" Width="160" Click="btn_TestView_Click"/>
+        <Button x:Name="btn_JeremyView" Content="Go To JeremyView" HorizontalAlignment="Left" Margin="320,305,0,0" VerticalAlignment="Top" Width="160" Click="btn_JeremyView_Click"/>
     </Grid>
 </Page>

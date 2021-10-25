@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="JeremyWindow3.xaml.cs">
+      <DependentUpon>JeremyWindow3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Listing.cs" />
     <Compile Include="FilterView.xaml.cs">
       <DependentUpon>FilterView.xaml</DependentUpon>
@@ -73,6 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JeremyWindow3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

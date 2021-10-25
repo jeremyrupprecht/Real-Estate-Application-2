@@ -44,5 +44,10 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("FilterView.xaml", UriKind.Relative)); 
         }
+
+        private void btn_JeremyView_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("JeremyWindow3.xaml", UriKind.Relative));
+        }
     }
 }
