@@ -9,8 +9,10 @@
       Title="HomePage">
 
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
-        <Button x:Name="btn_ListView" Content="Go to ListView" HorizontalAlignment="Left" Margin="0,110,0,0" VerticalAlignment="Top" Width="160" Click="btn_ListView_Click"/>
-        <Button x:Name="btn_FilterView" Content="Go to FilterView" HorizontalAlignment="Left" Margin="0,140,0,0" VerticalAlignment="Top" Width="160" Click="btn_FilterView_Click"/>
-        <Button x:Name="btn_TestView" Content="Go to TestView" HorizontalAlignment="Left" Margin="0,170,0,0" VerticalAlignment="Top" Width="160" Click="btn_TestView_Click"/>
+        <Button x:Name="btn_ListView" Content="Go to ListView" HorizontalAlignment="Left" Margin="320,110,0,0" VerticalAlignment="Top" Width="160" Click="btn_ListView_Click"/>
+        <Button x:Name="btn_MapView" Content="Go to MapView" HorizontalAlignment="Left" Margin="320,160,0,0" VerticalAlignment="Top" Width="160" Click="btn_MapView_Click"/>
+        <Button x:Name="btn_FilterView" Content="Go to FilterView" HorizontalAlignment="Left" Margin="320,210,0,0" VerticalAlignment="Top" Width="160" Click="btn_FilterView_Click"/>
+        <Button x:Name="btn_TestView" Content="Go to TestView" HorizontalAlignment="Left" Margin="320,260,0,0" VerticalAlignment="Top" Width="160" Click="btn_TestView_Click"/>
+        <Button x:Name="btn_JeremyView" Content="Go To JeremyView" HorizontalAlignment="Left" Margin="320,310,0,0" VerticalAlignment="Top" Width="160" Click="btn_JeremyView_Click"/>
     </Grid>
 </Page>

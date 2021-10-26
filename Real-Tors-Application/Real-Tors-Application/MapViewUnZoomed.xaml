@@ -1,0 +1,28 @@
+﻿<Page x:Class="Real_Tors_Application.MapViewUnZoomed"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Real_Tors_Application"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1420"
+      Title="MapViewUnZoomed">
+
+        <Grid>
+            <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
+
+            <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="409,132,409,106.5" Click="Btn_Map_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="/Calgary.jpg"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button x:Name="btn_HomePage" Content="Go to Home Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="Btn_HomePage_Click"/>
+            <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
+            <Label x:Name="lbl_Instructions" Content="Please click on an area on the map to view specific neighbourhoods" HorizontalAlignment="Center" Margin="0,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="20"/>
+
+        </Grid>
+
+</Page>
