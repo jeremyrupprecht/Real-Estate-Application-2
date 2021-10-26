@@ -65,6 +65,9 @@
     <Compile Include="ListView.xaml.cs">
       <DependentUpon>ListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapViewUnZoomed.xaml.cs">
       <DependentUpon>MapViewUnZoomed.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Calgary_Zoomed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
