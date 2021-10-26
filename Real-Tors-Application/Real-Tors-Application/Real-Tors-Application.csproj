@@ -152,33 +152,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Logo.png" />
+    <Resource Include="Images\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Calgary_Zoomed.jpg" />
+    <Resource Include="Images\Calgary_Zoomed.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Calgary.jpg" />
+    <Resource Include="Images\Calgary.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="houseImg1.jpg" />
+    <Resource Include="Images\houseImg1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BathroomIcon.png" />
-    <Resource Include="BedroomIcon.png" />
+    <Resource Include="Images\BathroomIcon.png" />
+    <Resource Include="Images\BedroomIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MapPin.png" />
+    <Resource Include="Images\MapPin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="HeartIconEmpty.png" />
-    <Resource Include="HeartIconFilled.png" />
+    <Resource Include="Images\HeartIconEmpty.png" />
+    <Resource Include="Images\HeartIconFilled.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ListIcon.png" />
+    <Resource Include="Images\ListIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MapIcon.png" />
+    <Resource Include="Images\MapIcon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
