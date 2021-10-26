@@ -152,27 +152,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Calgary.jpg" />
+    <Resource Include="Images\Calgary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Calgary_Zoomed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\houseImg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BathroomIcon.png" />
+    <Resource Include="Images\BedroomIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MapPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HeartIconEmpty.png" />
+    <Resource Include="Images\HeartIconFilled.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Calgary_Zoomed.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Calgary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="houseImg1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BathroomIcon.png" />
-    <Resource Include="BedroomIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="MapPin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="HeartIconEmpty.png" />
-    <Resource Include="HeartIconFilled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
