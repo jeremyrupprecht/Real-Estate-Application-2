@@ -11,13 +11,19 @@
     <Grid>
         <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="10,0,604,238" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="0,0,604,238" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/Calgary_Zoomed.jpg" Stretch="UniformToFill" Margin="0,0,-806,-234"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
+
+        <Image Source="/MapPin.png" Margin="316,500,520,366" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="463,169,405,697" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="85,303,811,564" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="264,303,595,564" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="244,121,615,746" RenderTransformOrigin="1.17,1.11"/>
 
         <Button x:Name="btn_HomePage" Content="Go to Home Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="Btn_HomePage_Click"/>
         <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
