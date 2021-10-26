@@ -37,11 +37,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber0" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900" Content="{Binding Path=bed[0], UpdateSourceTrigger=PropertyChanged}"></Label>
-                        <Image Name="BedIcon0" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber0" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff" Content="{Binding Path=bath[0], UpdateSourceTrigger=PropertyChanged}"></Label>
-                        <Image Name="BathIcon0" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber0" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon0" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber0" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon0" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
 
                 </Grid>
@@ -68,11 +71,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber1" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon1" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber1" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon1" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber1" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon1" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber1" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon1" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
 
                 </Grid>
@@ -99,11 +105,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber2" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon2" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber2" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon2" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber2" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon2" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber2" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon2" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
                 <Grid Name="Listing4" Margin="50">
@@ -129,11 +138,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber3" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon3" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber3" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon3" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber3" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon3" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber3" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon3" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
                 <Grid Name="Listing5" Margin="50">
@@ -159,11 +171,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber4" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon4" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber4" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon4" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber4" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon4" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber4" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon4" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
                 <Grid Name="Listing6" Margin="50">
@@ -189,11 +204,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber5" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon5" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber5" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon5" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber5" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon5" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber5" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon5" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
                 <Grid Name="Listing7" Margin="50">
@@ -219,11 +237,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber6" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon6" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber6" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon6" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber6" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon6" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber6" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon6" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
                 <Grid Name="Listing8" Margin="50">
@@ -249,11 +270,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber7" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon7" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber7" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon7" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber7" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon7" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber7" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon7" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
                 <Grid Name="Listing9" Margin="50">
@@ -279,11 +303,14 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
 
-                        <Label Name="BedNumber8" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#ff9900"></Label>
-                        <Image Name="BedIcon8" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 25 10 0"></Image>
-                        <Label Name="BathNumber8" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" Foreground="#55aaff"></Label>
-                        <Image Name="BathIcon8" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 25 10 0"></Image>
+                        <Label Name="BedNumber8" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon8" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                        <Label Name="BathNumber8" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon8" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
                 </Grid>
             </WrapPanel>
