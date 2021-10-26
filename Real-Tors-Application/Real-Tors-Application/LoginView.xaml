@@ -23,7 +23,7 @@
             <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Filters" VerticalAlignment="Top" FontSize="40"/>
         </Grid>
         <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="525,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="525,600,0,0" Height="40" Width="200" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="525,600,0,0" Height="40" Width="200" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
         <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="400,530,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
         <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="400,600,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
         <CheckBox x:Name="rememberMeCheckBox" Content="Remember me" HorizontalAlignment="Left" Margin="400,670,0,0" VerticalAlignment="Top" FontSize="24"/>

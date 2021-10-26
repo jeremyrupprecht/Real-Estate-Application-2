@@ -25,7 +25,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     
-                    <Image Name="HouseImage0" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage0" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood0" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left" Content="{Binding Path=neighbourhood[0], UpdateSourceTrigger=PropertyChanged}"></Label>
                     <Label Name="PriceNum0" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right" Content="{Binding Path=price[0], UpdateSourceTrigger=PropertyChanged}"></Label>
@@ -56,7 +56,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage1" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage1" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood1" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum1" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -87,7 +87,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage2" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage2" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood2" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum2" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -117,7 +117,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage3" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage3" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood3" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum3" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -147,7 +147,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage4" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage4" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood4" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum4" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -177,7 +177,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage5" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage5" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood5" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum5" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -207,7 +207,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage6" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage6" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood6" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum6" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -237,7 +237,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage7" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage7" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood7" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum7" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
@@ -267,7 +267,7 @@
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-                    <Image Name="HouseImage8" Grid.Row="0" Source="./resources/houseImg1.jpg" Margin="25"/>
+                    <Image Name="HouseImage8" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood8" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum8" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
