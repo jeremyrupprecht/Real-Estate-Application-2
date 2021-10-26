@@ -16,18 +16,19 @@ using System.Windows.Shapes;
 namespace Real_Tors_Application
 {
     /// <summary>
-    /// Interaction logic for MapView.xaml
+    /// Interaction logic for JeremyWindow3.xaml
     /// </summary>
-    public partial class MapView : Window
+    public partial class JeremyWindow3 : Page
     {
-        public MapView()
+        public JeremyWindow3()
         {
             InitializeComponent();
         }
 
+        // button listener to go back to home page
         private void btn_HomePage_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
     }
 }

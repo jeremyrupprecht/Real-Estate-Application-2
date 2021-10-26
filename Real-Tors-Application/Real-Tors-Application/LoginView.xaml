@@ -1,0 +1,54 @@
+﻿<Page x:Class="Real_Tors_Application.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Real_Tors_Application"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="LoginPage">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" RenderTransformOrigin="0.5,0.5">
+
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
+            <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
+            <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0"/>
+        </StackPanel>
+        <Image x:Name="logoImage" Height="258" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="688" Source="Logo.png" Margin="0,130,0,0"/>
+        <Grid Height="980" Width="320" Background="Aquamarine" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="Hidden">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Filters" VerticalAlignment="Top" FontSize="40"/>
+        </Grid>
+        <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="525,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="525,600,0,0" Height="40" Width="200" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+        <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="400,530,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
+        <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="400,600,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
+        <CheckBox x:Name="rememberMeCheckBox" Content="Remember me" HorizontalAlignment="Left" Margin="400,670,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock x:Name="createAccountTextBlock" HorizontalAlignment="Left" Margin="400,720,0,0" TextWrapping="Wrap" Text="Create a new account" VerticalAlignment="Top" FontSize="24" Foreground="#FF1004FF"/>
+        <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="488,790,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" />
+        <ComboBox x:Name="houseTypeComboBox" HorizontalAlignment="Left" Margin="1195,530,0,0" VerticalAlignment="Top" Width="250" Height="40">
+            <ComboBoxItem>
+                <Button x:Name="comboItem1Button" Content="Single family home" Height="40" Width="250" FontSize="24" Click="comboItem1Button_Click" />
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="comboItem2Button" Content="Duplex home" Height="40" Width="250" FontSize="24" Click="comboItem2Button_Click" />
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="comboItem3Button" Content="Triplex Home" Height="40" Width="250" FontSize="24" Click="comboItem3Button_Click" />
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="comboItem4Button" Content="Townhouse" Height="40" Width="250" FontSize="24" Click="comboItem4Button_Click"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="comboItem5Button" Content="Apartment" Height="40" Width="250" FontSize="24" Click="comboItem5Button_Click"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="comboItem6Button" Content="Loft" Height="40" Width="250" FontSize="24" Click="comboItem6Button_Click"/>
+            </ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Page>

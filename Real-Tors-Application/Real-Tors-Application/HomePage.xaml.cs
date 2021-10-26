@@ -35,6 +35,11 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
+        private void btn_MapView_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+        }
+
         private void btn_TestView_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("TestPage.xaml", UriKind.Relative));
@@ -43,6 +48,16 @@ namespace Real_Tors_Application
         private void btn_FilterView_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("FilterView.xaml", UriKind.Relative)); 
+        }
+
+        private void btn_JeremyView_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("JeremyWindow3.xaml", UriKind.Relative));
+        }
+
+        private void btn_LogInView_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
     }
 }
