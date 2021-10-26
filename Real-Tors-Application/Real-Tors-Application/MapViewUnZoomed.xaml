@@ -11,10 +11,18 @@
         <Grid>
             <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
 
-            <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="409,132,409,106.5" Click="Btn_Map_Click">
-                <Button.Template>
+            <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,-8,0,9" Click="Btn_Map_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.059"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
                     <ControlTemplate>
-                        <Image Source="/Calgary.jpg"/>
+                        <Image Source="/Calgary.jpg" Stretch="UniformToFill" StretchDirection="Both"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
