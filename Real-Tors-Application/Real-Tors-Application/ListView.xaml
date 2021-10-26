@@ -24,7 +24,7 @@
 
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
-                    
+
                     <Image Name="HouseImage0" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
                     <Label Name="Neighbourhood0" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left" Content="{Binding Path=neighbourhood[0], UpdateSourceTrigger=PropertyChanged}"></Label>
@@ -326,6 +326,8 @@
 
 
         <Button x:Name="btn_HomePage" Content="Go to Home Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="btn_HomePage_Click"/>
-        <Button x:Name="btn_MapView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="btn_HomePage_Click"/>
+        <Button x:Name="btn_MapView" HorizontalAlignment="Right" Margin="0,0,30,30" VerticalAlignment="Bottom" Click="btn_HomePage_Click">
+            <Image Name="MapIcon" Source="MapIcon.png" Height="157" Width="139"></Image>
+        </Button>
     </Grid>
 </Page>
