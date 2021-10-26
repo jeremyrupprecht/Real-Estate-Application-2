@@ -46,7 +46,7 @@
                         <Label Name="BathNumber0" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon0" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
-
+                    <Image Name="Heart0" Source="HeartIconFilled.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing2" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -80,7 +80,7 @@
                         <Label Name="BathNumber1" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon1" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
-
+                    <Image Name="Heart1" Source="HeartIconEmpty.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing3" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -114,6 +114,7 @@
                         <Label Name="BathNumber2" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon2" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart2" Source="HeartIconEmpty.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing4" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -147,6 +148,7 @@
                         <Label Name="BathNumber3" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon3" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart3" Source="HeartIconFilled.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing5" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -180,6 +182,7 @@
                         <Label Name="BathNumber4" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon4" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart4" Source="HeartIconEmpty.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing6" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -213,6 +216,7 @@
                         <Label Name="BathNumber5" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon5" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart5" Source="HeartIconFilled.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing7" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -246,6 +250,7 @@
                         <Label Name="BathNumber6" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon6" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart6" Source="HeartIconFilled.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing8" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -279,6 +284,7 @@
                         <Label Name="BathNumber7" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon7" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart7" Source="HeartIconEmpty.png" Margin="-75,-50,250,200"/>
                 </Grid>
                 <Grid Name="Listing9" Margin="50">
                     <Grid.ColumnDefinitions>
@@ -312,6 +318,7 @@
                         <Label Name="BathNumber8" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
                         <Image Name="BathIcon8" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
                     </Grid>
+                    <Image Name="Heart8" Source="HeartIconEmpty.png" Margin="-75,-50,250,200"/>
                 </Grid>
             </WrapPanel>
         </ScrollViewer>
