@@ -61,8 +61,6 @@ namespace Real_Tors_Application {
             
             Neighbourhood = listOfNeighbourhoods[rand.Next(listOfNeighbourhoods.Length)];
 
-            Console.WriteLine("Random is : " + rand.Next(1000));
-
             Address = rand.Next(1000) + " " + Neighbourhood + " " + listOfStreetNames[rand.Next(listOfStreetNames.Length)];
 
             Description = "Some description here. Can randomize here too";
