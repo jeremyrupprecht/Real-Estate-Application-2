@@ -174,5 +174,11 @@
     <Resource Include="HeartIconEmpty.png" />
     <Resource Include="HeartIconFilled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ListIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
