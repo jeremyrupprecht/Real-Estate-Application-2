@@ -22,7 +22,7 @@
             </Button.RenderTransform>
             <Button.Template>
                     <ControlTemplate>
-                        <Image Source="/Calgary.jpg" Stretch="UniformToFill" StretchDirection="Both"/>
+                        <Image Source="Calgary.jpg" Stretch="UniformToFill" StretchDirection="Both"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>

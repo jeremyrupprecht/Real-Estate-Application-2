@@ -74,6 +74,9 @@
     <Compile Include="MapViewZoomed.xaml.cs">
       <DependentUpon>MapViewZoomed.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SignupView.xaml.cs">
+      <DependentUpon>SignupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MapViewZoomed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,6 +187,35 @@
   <ItemGroup>
     <Resource Include="Images\MapIcon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="houseImg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BedroomIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BathroomIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HeartIconFilled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HeartIconEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary_Zoomed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapPin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
