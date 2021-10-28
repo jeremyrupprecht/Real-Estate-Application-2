@@ -51,10 +51,55 @@ namespace Real_Tors_Application
 
         private void createAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            Grid signupGrid = this.FindName("signupGrid") as Grid;
-            Grid successSignupGrid = this.FindName("successSignupGrid") as Grid;
-            signupGrid.Visibility = Visibility.Hidden;
-            successSignupGrid.Visibility = Visibility.Visible;
+            if (inputValidation())
+            {
+                Grid signupGrid = this.FindName("signupGrid") as Grid;
+                Grid successSignupGrid = this.FindName("successSignupGrid") as Grid;
+                signupGrid.Visibility = Visibility.Hidden;
+                successSignupGrid.Visibility = Visibility.Visible;
+            }
+        }
+
+        private bool inputValidation()
+        {
+            var bc = new BrushConverter();
+            bool valid = true;
+            // Error Background = "#FFFFB7B7"
+            String username = userNameTextBox.Text;
+            String password = passwordTextBox.Password;
+            String email = emailTextBox.Text;
+            // Check username 
+            if (username.Equals(""))
+            {
+                userNameTextBox.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            } 
+            else
+            {
+                userNameTextBox.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check password
+            if (password.Equals(""))
+            {
+                passwordTextBox.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                passwordTextBox.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check email
+            if (email.Equals(""))
+            {
+                emailTextBox.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                emailTextBox.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+
+            return valid;
         }
     }
 }
