@@ -16,7 +16,7 @@
             <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
-            <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
         <Image x:Name="logoImage" Height="258" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="688" Source="Logo.png" Margin="0,130,0,0"/>
         <Grid Height="980" Width="320" Background="Aquamarine" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="Hidden">

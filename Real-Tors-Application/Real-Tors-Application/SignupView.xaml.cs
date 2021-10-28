@@ -23,6 +23,38 @@ namespace Real_Tors_Application
         public SignupView()
         {
             InitializeComponent();
+            //Grid signupGrid = this.FindName("signupGrid") as Grid;
+            //Grid successSignupGrid = this.FindName("successSignupGrid") as Grid;
+            //signupGrid.Visibility = Visibility.Visible;
+            //successSignupGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+        }
+
+        private void navLogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
+        }
+
+        private void createAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            Grid signupGrid = this.FindName("signupGrid") as Grid;
+            Grid successSignupGrid = this.FindName("successSignupGrid") as Grid;
+            signupGrid.Visibility = Visibility.Hidden;
+            successSignupGrid.Visibility = Visibility.Visible;
         }
     }
 }
