@@ -5,16 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Real_Tors_Application"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1420"
-      Title="MapViewZoomed">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MapViewZoomed"
+      Background="White">
 
     <Grid>
-        <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="0,0,604,238" Click="Btn_Map_Click">
+        <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
+            <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
+            <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
+        </StackPanel>
+
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="0,120,604,238" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
-                    <Image Source="Calgary_Zoomed.jpg" Stretch="UniformToFill" Margin="0,0,-806,-234"/>
+                    <Image Source="Calgary_Zoomed.jpg" Margin="0,0,-806,-234" Stretch="UniformToFill"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -25,7 +34,6 @@
         <Image Source="/MapPin.png" Margin="264,303,595,564" RenderTransformOrigin="1.17,1.11"/>
         <Image Source="/MapPin.png" Margin="244,121,615,746" RenderTransformOrigin="1.17,1.11"/>
 
-        <Button x:Name="btn_HomePage" Content="Go to Home Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="Btn_HomePage_Click"/>
         <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
     
     </Grid>

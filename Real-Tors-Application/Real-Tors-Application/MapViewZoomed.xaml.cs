@@ -39,6 +39,21 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+        }
+
+        private void navLogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
+        }
     }
 
 }
