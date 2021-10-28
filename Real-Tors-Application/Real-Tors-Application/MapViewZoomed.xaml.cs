@@ -25,11 +25,6 @@ namespace Real_Tors_Application
             InitializeComponent();
         }
 
-        private void Btn_HomePage_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
-        }
-
         private void Btn_Map_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));

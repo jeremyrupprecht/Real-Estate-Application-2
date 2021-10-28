@@ -5,13 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Real_Tors_Application"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1420"
-      Title="MapViewUnZoomed">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MapViewUnZoomed"
+      Background="White">
 
         <Grid>
-            <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
+            <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
+                <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+                <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
+                <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
+                <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
+                <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
+                <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
+            </StackPanel>
 
-            <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,-8,0,9" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,92,0,9" Click="Btn_Map_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,14 +30,12 @@
             </Button.RenderTransform>
             <Button.Template>
                     <ControlTemplate>
-                        <Image Source="Calgary.jpg" Stretch="UniformToFill" StretchDirection="Both"/>
+                        <Image Source="Calgary_cropped.jpg" Stretch="UniformToFill"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-
-            <Button x:Name="btn_HomePage" Content="Go to Home Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="Btn_HomePage_Click"/>
             <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
-            <Label x:Name="lbl_Instructions" Content="Please click on an area on the map to view specific neighbourhoods" HorizontalAlignment="Center" Margin="0,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="lbl_Instructions" Content="Please click on an area on the map to view specific neighbourhoods" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="20"/>
 
         </Grid>
 
