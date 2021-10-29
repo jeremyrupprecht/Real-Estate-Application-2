@@ -10,6 +10,8 @@
 
     <Grid>
 
+        <Image Source="Calgary_Zoomed2.jpg" Margin="0,0,0,-14" Stretch="UniformToFill" />
+
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
             <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
@@ -19,15 +21,14 @@
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="0,120,823,232" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="610,822,226,44" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
-                    <Image Source="Calgary_Zoomed2.jpg" Margin="0,-18,-830,-238" Stretch="UniformToFill"/>
+                    <Image Source="MapPin.png"  RenderTransformOrigin="1.17,1.11"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
 
-        <Image Source="MapPin.png" Margin="346,822,490,44" RenderTransformOrigin="1.17,1.11"/>
         <Image Source="/MapPin.png" Margin="1097,669,-229,197" RenderTransformOrigin="1.17,1.11"/>
         <Image Source="/MapPin.png" Margin="878,183,-19,684" RenderTransformOrigin="1.17,1.11"/>
 
@@ -44,7 +45,7 @@
         <Image Source="LegendSquare.png" Margin="1505,202,330,806" RenderTransformOrigin="1.17,1.11"/>
         <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
         <Image Source="LegendCircle.png" Margin="1505,292,330,716" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,300,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
+        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,297,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
 
         <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
 

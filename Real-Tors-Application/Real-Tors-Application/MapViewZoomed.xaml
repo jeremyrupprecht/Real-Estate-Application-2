@@ -40,7 +40,7 @@
         <Image Source="LegendSquare.png" Margin="1505,202,330,806" RenderTransformOrigin="1.17,1.11"/>
         <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
         <Image Source="LegendCircle.png" Margin="1505,292,330,716" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,300,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
+        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,298,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
 
         <Image Source="left-arrow.png" Margin="16,423,1684,299" RenderTransformOrigin="1.17,1.11"/>
 
