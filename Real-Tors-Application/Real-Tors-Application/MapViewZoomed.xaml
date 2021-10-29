@@ -22,6 +22,11 @@
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
 
+        <Image Source="LegendCircle.png" Margin="747,781,1133,267" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="LegendCircle.png" Margin="1184,677,696,371" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="LegendCircle.png" Margin="620,569,1260,479" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="LegendCircle.png" Margin="929,404,951,644" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="LegendCircle.png" Margin="620,351,1260,697" RenderTransformOrigin="1.17,1.11"/>
 
         <Image Source="MapPin.png" Margin="316,674,520,192" RenderTransformOrigin="1.17,1.11"/>
         <Image Source="/MapPin.png" Margin="587,405,281,461" RenderTransformOrigin="1.17,1.11"/>
@@ -30,23 +35,19 @@
         <Image Source="/MapPin.png" Margin="94,96,765,771" RenderTransformOrigin="1.17,1.11"/>
 
         <Image Source="Legend.png" Margin="1367,50,-79,616" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="747,781,1133,267" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="1184,677,696,371" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="620,569,1260,479" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="929,404,951,644" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="620,351,1260,697" RenderTransformOrigin="1.17,1.11"/>
 
-        <Label Content="Legend" HorizontalAlignment="Left" Margin="1604,126,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50" RenderTransformOrigin="0.836,0.614"/>
+
+        <Label Content="Legend" HorizontalAlignment="Left" Margin="1590,121,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50" RenderTransformOrigin="0.836,0.614"/>
         <Image Source="LegendSquare.png" Margin="1505,202,330,806" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
-        <Image Source="LegendCircle.png" Margin="1505,292,330,716" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,298,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
+        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,180,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
+        <Image Source="LegendCircle.png" Margin="1505,292,330,716" />
+        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,278,0,0" VerticalAlignment="Top" FontSize="40" />
 
-        <Image Source="left-arrow.png" Margin="16,423,1684,299" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="left-arrow.png" Margin="26,459,1770,444" RenderTransformOrigin="1.17,1.11"/>
 
         <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="1.17,1.11" Margin="1668,494,16,372" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="1.17,1.11" Margin="1745,494,16,444" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="right-arrow.png"/>
