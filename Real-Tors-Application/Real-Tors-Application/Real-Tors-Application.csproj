@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MapViewHovered.xaml.cs">
+      <DependentUpon>MapViewHovered.xaml</DependentUpon>
+    </Compile>
     <Compile Include="JeremyWindow3.xaml.cs">
       <DependentUpon>JeremyWindow3.xaml</DependentUpon>
     </Compile>
@@ -74,12 +77,22 @@
     <Compile Include="MapViewZoomed.xaml.cs">
       <DependentUpon>MapViewZoomed.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapViewZoomed2.xaml.cs">
+      <DependentUpon>MapViewZoomed2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapViewZoomed2Hovered.xaml.cs">
+      <DependentUpon>MapViewZoomed2Hovered.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignupView.xaml.cs">
       <DependentUpon>SignupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="MapViewHovered.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FilterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +133,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MapViewZoomed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapViewZoomed2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapViewZoomed2Hovered.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,6 +243,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Calgary_cropped.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="left-arrow.png" />
+    <Resource Include="right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary_Hovered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary_Zoomed2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LegendSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Legend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LegendCircle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

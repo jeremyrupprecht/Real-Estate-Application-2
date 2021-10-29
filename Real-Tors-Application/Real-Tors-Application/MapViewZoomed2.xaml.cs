@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace Real_Tors_Application
 {
     /// <summary>
-    /// Interaction logic for MapViewUnZoomed.xaml
+    /// Interaction logic for MapViewZoomed2.xaml
     /// </summary>
-    public partial class MapViewUnZoomed : Page
+    public partial class MapViewZoomed2 : Page
     {
-        public MapViewUnZoomed()
+        public MapViewZoomed2()
         {
             InitializeComponent();
         }
 
         private void Btn_Map_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("MapViewHovered.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
         }
 
         private void Btn_ListView_Click(object sender, RoutedEventArgs e)
@@ -49,6 +49,5 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
         }
-
     }
 }
