@@ -5,14 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Real_Tors_Application"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1420"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="ListView">
 
-    <Grid>
-        <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="1000" Stroke="Black" VerticalAlignment="Top" Width="1420"/>
+    <Grid Width="1420" Height="980" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+        <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="980" Stroke="Black" VerticalAlignment="Top" Width="1920"/>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="center">
-                <Label Name="ListTitle" FontSize="60" Margin="20" FontWeight="Bold" Width="1300">Results:</Label>
+                <Label Name="ListTitle" FontSize="60" Margin="20" FontWeight="Bold" Width="1920">Results:</Label>
                 <Grid Name="Listing1" Margin="50">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
