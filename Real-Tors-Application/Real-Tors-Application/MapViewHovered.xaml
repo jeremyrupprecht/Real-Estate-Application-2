@@ -10,14 +10,6 @@
 
     <Grid>
         <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="0,92,2,9" Click="Btn_Map_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.059"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="Calgary_Hovered.png" Stretch="UniformToFill" Margin="-34,-134,-254,-150"/>
@@ -36,16 +28,16 @@
 
         <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
 
-        <Label Content="11" HorizontalAlignment="Left" Margin="780,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
-        <Label Content="15" HorizontalAlignment="Left" Margin="1014,302,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF134203"/>
-        <Label Content="8" HorizontalAlignment="Left" Margin="692,366,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
+        <Label Content="23" HorizontalAlignment="Left" Margin="780,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
+        <Label Content="30" HorizontalAlignment="Left" Margin="1014,302,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF134203"/>
+        <Label Content="18" HorizontalAlignment="Left" Margin="666,354,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
         <Label Content="3" HorizontalAlignment="Left" Margin="740,518,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
-        <Label Content="10" HorizontalAlignment="Left" Margin="811,552,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
-        <Label Content="5" HorizontalAlignment="Left" Margin="931,556,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
-        <Label Content="3" HorizontalAlignment="Left" Margin="1063,558,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
-        <Label Content="10" HorizontalAlignment="Left" Margin="779,774,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
-        <Label Content="7" HorizontalAlignment="Left" Margin="939,836,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
-        <Label Content="12" HorizontalAlignment="Left" Margin="1073,796,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
+        <Label Content="20" HorizontalAlignment="Left" Margin="809,552,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
+        <Label Content="34" HorizontalAlignment="Left" Margin="911,550,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF134203"/>
+        <Label Content="13" HorizontalAlignment="Left" Margin="1039,558,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
+        <Label Content="29" HorizontalAlignment="Left" Margin="779,774,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
+        <Label Content="17" HorizontalAlignment="Left" Margin="939,836,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
+        <Label Content="21" HorizontalAlignment="Left" Margin="1073,796,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
 
     </Grid>
 </Page>

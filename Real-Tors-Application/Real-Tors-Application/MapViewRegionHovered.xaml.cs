@@ -16,18 +16,23 @@ using System.Windows.Shapes;
 namespace Real_Tors_Application
 {
     /// <summary>
-    /// Interaction logic for Calgary_Hovered.xaml
+    /// Interaction logic for MapViewRegionHovered.xaml
     /// </summary>
-    public partial class Calgary_Hovered : Page
+    public partial class MapViewRegionHovered : Page
     {
-        public Calgary_Hovered()
+        public MapViewRegionHovered()
         {
             InitializeComponent();
         }
 
         private void Btn_Map_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("MapViewRegion.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("MapViewZoomed.xaml", UriKind.Relative));
+        }
+
+        private void Btn_Zoomout_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
         }
 
         private void Btn_ListView_Click(object sender, RoutedEventArgs e)

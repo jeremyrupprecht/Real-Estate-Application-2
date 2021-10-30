@@ -71,6 +71,12 @@
     <Compile Include="LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapViewRegion.xaml.cs">
+      <DependentUpon>MapViewRegion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapViewRegionHovered.xaml.cs">
+      <DependentUpon>MapViewRegionHovered.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapViewUnZoomed.xaml.cs">
       <DependentUpon>MapViewUnZoomed.xaml</DependentUpon>
     </Compile>
@@ -128,6 +134,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MapViewRegion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapViewRegionHovered.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MapViewUnZoomed.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -274,6 +288,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Calgary_Southview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary_Region1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
