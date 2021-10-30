@@ -62,21 +62,23 @@
 
             <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="90"/>
-                    <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
 
                 <Label Name="BedNumber0" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
-                <Image Name="BedIcon0" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                <Image Name="BedIcon0" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="0"></Image>
                 <Label Name="BathNumber0" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
-                <Image Name="BathIcon0" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
+                <Image Name="BathIcon0" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="0"></Image>
+                <Label Name="SizeNumber0" Grid.Column="4" FontSize="30" FontWeight="Normal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"></Label>
             </Grid>
-            <Image Name="Heart0" Source="HeartIconFilled.png" Margin="-75,-50,250,200"/>
+            <Image Name="Heart0" Source="HeartIconEmpty.png" Margin="-75,-50,250,200"/>
         </Grid>
 
         <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click">

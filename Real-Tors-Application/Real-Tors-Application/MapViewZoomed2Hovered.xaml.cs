@@ -36,6 +36,7 @@ namespace Real_Tors_Application
             PriceNum0.Content = "$" + listingDefault.Price;
             BedNumber0.Content = listingDefault.BedNum;
             BathNumber0.Content = listingDefault.BathNum;
+            SizeNumber0.Content = listingDefault.Size + " sq ft";
         }
 
         private void Btn_Map_Click(object sender, RoutedEventArgs e)

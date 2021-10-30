@@ -25,6 +25,8 @@ namespace Real_Tors_Application {
 
         public string Neighbourhood { get; set; }
         public string Address { get; set; }
+
+        public int Size { get; set; }
         public string Description { get; set; }
         public List<string> Amenities { get; set; }
         public int Price { get; set; }
@@ -36,7 +38,7 @@ namespace Real_Tors_Application {
         public Tuple<double, double> Coordinates { get; set; }
         public bool Favorited { get; set; }
 
-        public Listing(string neighbourhood, string address, 
+        public Listing(string neighbourhood, string address, int size,
             string description, List<string> amenities, 
             int price, int bathNum, int bedNum, 
             int yearBuilt, ListingType type, int numOfImg, 
@@ -44,6 +46,7 @@ namespace Real_Tors_Application {
         {
             Neighbourhood = neighbourhood;
             Address = address;
+            Size = size;
             Description = description;
             Amenities = amenities;
             Price = price;
@@ -62,6 +65,8 @@ namespace Real_Tors_Application {
             Neighbourhood = listOfNeighbourhoods[rand.Next(listOfNeighbourhoods.Length)];
 
             Address = rand.Next(1000) + " " + Neighbourhood + " " + listOfStreetNames[rand.Next(listOfStreetNames.Length)];
+
+            Size = (rand.Next(50)+1)*100;
 
             Description = "Some description here. Can randomize here too";
 
