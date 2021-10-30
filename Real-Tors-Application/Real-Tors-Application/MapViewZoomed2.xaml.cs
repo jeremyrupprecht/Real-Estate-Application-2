@@ -20,6 +20,7 @@ namespace Real_Tors_Application
     /// </summary>
     public partial class MapViewZoomed2 : Page
     {
+
         public MapViewZoomed2()
         {
             InitializeComponent();
@@ -28,6 +29,11 @@ namespace Real_Tors_Application
         private void Btn_Map_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("MapViewZoomed2Hovered.xaml", UriKind.Relative));
+        }
+
+        private void Btn_Zoomout_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
         }
 
         private void Btn_ListView_Click(object sender, RoutedEventArgs e)

@@ -30,6 +30,11 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(new Uri("MapViewZoomed2.xaml", UriKind.Relative));
         }
 
+        private void Btn_Zoomout_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+        }
+
         private void Btn_ListView_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));

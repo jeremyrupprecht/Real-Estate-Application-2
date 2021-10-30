@@ -8,9 +8,10 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="MapViewZoomed2Hovered">
 
+
     <Grid>
 
-        <Image Source="Calgary_Zoomed2.jpg" Margin="0,0,0,-14" Stretch="UniformToFill" />
+        <Image Source="Calgary_Southview.png" Margin="-957,-93,-888,1" Stretch="UniformToFill" />
 
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
@@ -20,36 +21,75 @@
             <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
+        <Image Source="Southview.png" Margin="399,60,419,8" RenderTransformOrigin="0.5,0.5"/>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="610,822,226,44" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="1077,503,693,421">
             <Button.Template>
                 <ControlTemplate>
-                    <Image Source="MapPin.png"  RenderTransformOrigin="1.17,1.11"/>
+                    <Image Source="/MapPin.png"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Image Source="/MapPin.png" Margin="1333,697,437,227" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="697,264,1073,660" RenderTransformOrigin="1.17,1.11"/>
 
-        <Image Source="/MapPin.png" Margin="1097,669,-229,197" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="/MapPin.png" Margin="878,183,-19,684" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="left-arrow.png" Margin="16,475,1770,425" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
 
-        <Image Source="right-arrow.png" Margin="1668,494,16,372" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="left-arrow.png" Margin="16,494,1668,372" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="Legend.png" Margin="1367,50,-79,616"/>
+        <Label Content="Legend" HorizontalAlignment="Left" Margin="1590,121,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,211,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
+        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,283,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
+        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,270,0,0" VerticalAlignment="Top" FontSize="40"/>
 
+        <Grid Name="Listing1" Margin="986,139,532,536">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
 
-        <Image Source="LegendCircle.png" Margin="959,952,921,96" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="1565,585,315,463" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="832,776,1048,272" RenderTransformOrigin="1.17,1.11"/>
+            <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
+            <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
 
-        <Image Source="Legend.png" Margin="1367,50,-79,616" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Legend" HorizontalAlignment="Left" Margin="1604,126,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50" RenderTransformOrigin="0.836,0.614"/>
-        <Image Source="LegendSquare.png" Margin="1505,202,330,806" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
-        <Image Source="LegendCircle.png" Margin="1505,292,330,716" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,298,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
+            <Image Name="HouseImage0" Grid.Row="0" Source="houseImg1.jpg" Margin="25"/>
 
-        
-        
-        <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
+            <Label Name="Neighbourhood0" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left" Content="{Binding Path=neighbourhood[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+            <Label Name="PriceNum0" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right" Content="{Binding Path=price[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+
+            <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Label Name="BedNumber0" Grid.Column="0" FontSize="30" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                <Image Name="BedIcon0" Grid.Column="1" HorizontalAlignment="Left" Source="BedroomIcon.png" Margin="10 5 10 0"></Image>
+                <Label Name="BathNumber0" Grid.Column="2" FontSize="30" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                <Image Name="BathIcon0" Grid.Column="3" HorizontalAlignment="Left" Source="BathroomIcon.png" Margin="10 5 10 0"></Image>
+            </Grid>
+            <Image Name="Heart0" Source="HeartIconFilled.png" Margin="-75,-50,250,200"/>
+        </Grid>
+
+        <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click">
+            <Image Source="ListIcon.png" Height="131" Width="124" />
+        </Button>
+
+        <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="890,555,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1388,384,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1034,718,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1180,616,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1346,837,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
 
     </Grid>
 </Page>

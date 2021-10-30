@@ -23,9 +23,27 @@ namespace Real_Tors_Application
         public MapViewZoomed2Hovered()
         {
             InitializeComponent();
+
+            ShowListings();
+        }
+
+
+        public void ShowListings()
+        {
+            Random rand = new Random();
+            Listing listingDefault = new Listing(rand);
+            Neighbourhood0.Content = listingDefault.Neighbourhood;
+            PriceNum0.Content = "$" + listingDefault.Price;
+            BedNumber0.Content = listingDefault.BedNum;
+            BathNumber0.Content = listingDefault.BathNum;
         }
 
         private void Btn_Map_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+        }
+
+        private void Btn_Zoomout_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
         }

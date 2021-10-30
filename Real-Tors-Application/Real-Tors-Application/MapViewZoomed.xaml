@@ -11,7 +11,17 @@
 
     <Grid>
 
-        <Image Source="Calgary_Zoomed.jpg" Margin="0,0,0,-4" Stretch="UniformToFill"/>
+        <Image Source="Calgary_Inglewood.png" Margin="-708,-114,-7,-499" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.058"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Inglewood.png" Margin="466,58,352,10"/>
 
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
@@ -22,37 +32,40 @@
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
 
-        <Image Source="LegendCircle.png" Margin="747,781,1133,267" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="1184,677,696,371" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="620,569,1260,479" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="929,404,951,644" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="LegendCircle.png" Margin="620,351,1260,697" RenderTransformOrigin="1.17,1.11"/>
-
-        <Image Source="MapPin.png" Margin="316,674,520,192" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="/MapPin.png" Margin="587,405,281,461" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="/MapPin.png" Margin="-16,423,1057,444" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="/MapPin.png" Margin="318,297,541,570" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="/MapPin.png" Margin="94,96,765,771" RenderTransformOrigin="1.17,1.11"/>
-
-        <Image Source="Legend.png" Margin="1367,50,-79,616" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="633,188,1137,736" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="874,364,896,560" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="1037,674,733,250" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="979,432,791,492" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="1037,188,733,736" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="783,188,987,736" RenderTransformOrigin="1.17,1.11"/>
 
 
-        <Label Content="Legend" HorizontalAlignment="Left" Margin="1590,121,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50" RenderTransformOrigin="0.836,0.614"/>
-        <Image Source="LegendSquare.png" Margin="1505,202,330,806" RenderTransformOrigin="1.17,1.11"/>
-        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,180,0,0" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.836,0.614"/>
-        <Image Source="LegendCircle.png" Margin="1505,292,330,716" />
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,278,0,0" VerticalAlignment="Top" FontSize="40" />
+        <Image Source="Legend.png" Margin="1367,50,-79,616"/>
+        <Label Content="Legend" HorizontalAlignment="Left" Margin="1590,121,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,211,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
+        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,283,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
+        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,270,0,0" VerticalAlignment="Top" FontSize="40"/>
 
-        <Image Source="left-arrow.png" Margin="26,459,1770,444" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="left-arrow.png" Margin="16,475,1770,425" RenderTransformOrigin="1.17,1.11"/>
 
-        <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
-
-        <Button x:Name="btn_Map" RenderTransformOrigin="1.17,1.11" Margin="1745,494,16,444" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="1.17,1.11" Margin="1759,494,16,444" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="right-arrow.png"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
+
+        <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click" Grid.Row="1">
+            <Image Source="ListIcon.png" Height="131" Width="124" />
+        </Button>
+        <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="889,341,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1190,540,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1017,565,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1137,827,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+
     </Grid>
 </Page>

@@ -255,13 +255,25 @@
     <Resource Include="Calgary_Zoomed2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="LegendSquare.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Legend.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="LegendCircle.png" />
+    <Resource Include="Inglewood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary_Inglewood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SouthView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ListIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ListIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Calgary_Southview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
