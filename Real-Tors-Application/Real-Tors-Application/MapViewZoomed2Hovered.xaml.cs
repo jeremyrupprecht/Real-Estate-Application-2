@@ -31,12 +31,14 @@ namespace Real_Tors_Application
         public void ShowListings()
         {
             Random rand = new Random();
-            Listing listingDefault = new Listing(rand);
+            string[] neighbourhoodList = { "Inglewood" };
+            Listing listingDefault = new Listing(rand, neighbourhoodList);
             Neighbourhood0.Content = listingDefault.Neighbourhood;
             PriceNum0.Content = "$" + listingDefault.Price;
             BedNumber0.Content = listingDefault.BedNum;
             BathNumber0.Content = listingDefault.BathNum;
             SizeNumber0.Content = listingDefault.Size + " sq ft";
+            HouseImage0.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
         }
 
         private void Btn_Map_Click(object sender, RoutedEventArgs e)

@@ -68,8 +68,6 @@ namespace Real_Tors_Application {
 
             Size = (rand.Next(50)+1)*100;
 
-            Description = "Some description here. Can randomize here too";
-
             Amenities = new List<string> { "granite countertops", "walkout basement"};
 
             Price = (rand.Next(2000)+1) * 1000;
@@ -87,6 +85,39 @@ namespace Real_Tors_Application {
             Coordinates = new Tuple<double, double> ( -141.12, 51.12 );
 
             Favorited = false;
+
+            Description = "This house is a beautfiul home built in " + YearBuilt + ". It is nestled in the pristine neighbourhood of " + Neighbourhood + ".";
+
+        }
+
+        public Listing(Random rand, string[] neighbourhoodSelect)
+        {
+
+            Neighbourhood = neighbourhoodSelect[rand.Next(neighbourhoodSelect.Length)];
+
+            Address = rand.Next(1000) + " " + Neighbourhood + " " + listOfStreetNames[rand.Next(listOfStreetNames.Length)];
+
+            Size = (rand.Next(50) + 1) * 100;
+
+            Amenities = new List<string> { "Granite countertops", "Walkout basement" };
+
+            Price = (rand.Next(2000) + 1) * 1000;
+
+            BathNum = rand.Next(5) + 1;
+
+            BedNum = rand.Next(5) + 1;
+
+            YearBuilt = 2020 - rand.Next(50);
+
+            Type = ListingType.SingleFamily;
+
+            NumOfImg = 1;
+
+            Coordinates = new Tuple<double, double>(-141.12, 51.12);
+
+            Favorited = false;
+
+            Description = "This house is a beautfiul home built in " + YearBuilt + ". It is nestled in the pristine neighbourhood of " + Neighbourhood + ".";
 
         }
 

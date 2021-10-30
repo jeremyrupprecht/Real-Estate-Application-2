@@ -292,5 +292,33 @@
   <ItemGroup>
     <Resource Include="Calgary_Region1.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="houseImg2.jpg" />
+    <Resource Include="houseImg3.jpg" />
+    <Resource Include="houseImg4.jpg" />
+    <Resource Include="houseImg5.jpg" />
+    <Resource Include="houseImg6.jpg" />
+    <Resource Include="houseImg7.jpg" />
+    <Resource Include="houseImg8.jpg" />
+    <Resource Include="houseImg9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="houseImg0.jpg" />
+    <Resource Include="houseImg10.jpg" />
+    <Resource Include="houseImg11.jpg" />
+    <Resource Include="houseImg12.jpg" />
+    <Resource Include="houseImg13.jpg" />
+    <Resource Include="houseImg14.jpg" />
+    <Resource Include="houseImg15.jpg" />
+    <Resource Include="houseImg16.jpg" />
+    <Resource Include="houseImg17.jpg" />
+    <Resource Include="houseImg18.jpg" />
+    <Resource Include="houseImg19.jpg" />
+    <Resource Include="houseImg20.jpg" />
+    <Resource Include="houseImg21.jpg" />
+    <Resource Include="houseImg22.jpg" />
+    <Resource Include="houseImg23.jpg" />
+    <Resource Include="houseImg24.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
