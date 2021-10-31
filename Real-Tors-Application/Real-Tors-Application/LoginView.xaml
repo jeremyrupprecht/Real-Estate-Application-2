@@ -22,6 +22,7 @@
         <Image x:Name="logoImage" Height="258" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="688" Source="Logo.png" Margin="0,130,0,0"/>
         
         <Grid Visibility="Visible" x:Name="logInGrid">
+            <Label Content="Log in to save your favourite listings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,465,0,0" FontSize="24" Background="#FFD1D1D1" />
             <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="525,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
             <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="525,600,0,0" Height="40" Width="200" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
             <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="400,530,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
@@ -34,7 +35,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="488,790,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" Click="logInButton_Click" />
+            <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="500,790,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" Click="logInButton_Click" />
         </Grid>
 
         <Grid Visibility="Hidden" x:Name="signupGrid">

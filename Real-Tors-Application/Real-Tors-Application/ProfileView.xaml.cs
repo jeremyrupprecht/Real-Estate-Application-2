@@ -34,5 +34,20 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
+
+        private void myAccountDropdownButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (accountViewCollapse.Visibility == Visibility.Collapsed)
+            {
+                myAccountButtonImage.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
+                accountViewCollapse.Visibility = Visibility.Visible;
+            } 
+            else
+            {
+                myAccountButtonImage.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
+                accountViewCollapse.Visibility = Visibility.Collapsed;
+            }
+            
+        }
     }
 }

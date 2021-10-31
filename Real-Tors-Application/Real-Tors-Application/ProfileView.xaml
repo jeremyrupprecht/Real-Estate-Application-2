@@ -11,47 +11,45 @@
 
     <Grid>
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
-            <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
-            <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="navLogOutButton" Content="Log Out" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogOutButton_Click"/>
+            <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="navLogOutButton" Content="Log Out" Width="384" FontSize="40" Background="#FF7B82A0" Click="navLogOutButton_Click"/>
         </StackPanel>
 
-        <Grid Margin="640,150,640,0" HorizontalAlignment="Center" Height="500" VerticalAlignment="Top" Width="640">
-            <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Top" Width="640" HorizontalAlignment="Left" Margin="0,0,0,0">
-                <Label x:Name="myAccountLabel" Content="My Account" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="40" Width="600" Background="#FFB0B0B0"/>
-                <Button x:Name="myAccountDropdownButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="40" Height="40">
-                    <Image x:Name="myAccountButtonImage" Source="sortdown_icon.png"/>
-                </Button>
+
+        <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="640,150,0,0" Width="650">
+            <Label x:Name="myAccountLabel" Content="My Account" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="50" Width="600" Background="#FFB0B0B0"/>
+            <Button x:Name="myAccountDropdownButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" Click="myAccountDropdownButton_Click">
+                <Image x:Name="myAccountButtonImage" Source="sortdown_icon.png"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel x:Name="accountViewCollapse" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="640, 190, 0, 0" Width="640" Visibility="Collapsed">
+            <Image x:Name="image" Height="100" Source="user_icon.png"/>
+            <Button x:Name="button" Content="Upload Image" FontSize="20" Width="200"/>
+            <Label Height="40" />
+            <StackPanel Orientation="Horizontal" Height="40" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label x:Name="label" Content="First Name: " FontSize="24" Width="150"/>
+                <TextBox x:Name="textBox" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 40, 0, 0" Width="640" Visibility="Visible">
-                <Image x:Name="image" Height="100" Source="user_icon.png"/>
-                <Button x:Name="button" Content="Upload Image" FontSize="20" Width="200"/>
-                <Label Height="40" />
-                <StackPanel Orientation="Horizontal" Height="40" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Label x:Name="label" Content="First Name: " FontSize="24" Width="150"/>
-                    <TextBox x:Name="textBox" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Height="40"  Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Label x:Name="label1" Content="Last Name: "  FontSize="24" Width="150"/>
-                    <TextBox x:Name="textBox1" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Height="40"  Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Label x:Name="label2" Content="City: "  FontSize="24" Width="150"/>
-                    <TextBox x:Name="textBox2" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Height="40"  Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Label x:Name="label3" Content="Country: "  FontSize="24" Width="150"/>
-                    <TextBox x:Name="textBox3" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
-                </StackPanel>
-                <Label Height="40" />
-                <Button x:Name="button1" Content="Update Information" FontSize="24"/>
-
-
-
+            <StackPanel Orientation="Horizontal" Height="40"  Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label x:Name="label1" Content="Last Name: "  FontSize="24" Width="150"/>
+                <TextBox x:Name="textBox1" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
             </StackPanel>
-        </Grid>
+            <StackPanel Orientation="Horizontal" Height="40"  Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label x:Name="label2" Content="City: "  FontSize="24" Width="150"/>
+                <TextBox x:Name="textBox2" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40"  Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label x:Name="label3" Content="Country: "  FontSize="24" Width="150"/>
+                <TextBox x:Name="textBox3" TextWrapping="Wrap" Text="" Width="200"  FontSize="24"/>
+            </StackPanel>
+            <Label Height="40" />
+            <Button x:Name="button1" Content="Update Information" FontSize="24"/>
+        </StackPanel>
+
 
 
     </Grid>

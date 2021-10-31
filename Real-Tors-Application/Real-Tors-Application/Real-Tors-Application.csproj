@@ -340,5 +340,8 @@
   <ItemGroup>
     <Resource Include="user_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sortup_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
