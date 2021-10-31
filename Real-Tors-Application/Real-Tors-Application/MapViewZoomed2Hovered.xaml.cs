@@ -31,7 +31,7 @@ namespace Real_Tors_Application
         public void ShowListings()
         {
             Random rand = new Random();
-            string[] neighbourhoodList = { "Inglewood" };
+            string[] neighbourhoodList = { "Southview" };
             Listing listingDefault = new Listing(rand, neighbourhoodList);
             Neighbourhood0.Content = listingDefault.Neighbourhood;
             PriceNum0.Content = "$" + listingDefault.Price;

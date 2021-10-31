@@ -26,7 +26,9 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btn_ListView" Content="List Results" FontSize="40" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click"/>
+        <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click" Grid.Row="1">
+            <Image Source="ListIcon.png" Height="131" Width="124" />
+        </Button>
 
         <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
         <Label Content="23" HorizontalAlignment="Left" Margin="780,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
