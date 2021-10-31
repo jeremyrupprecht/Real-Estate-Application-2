@@ -9,7 +9,7 @@
       Title="MapViewZoomed2Hovered">
 
 
-    <Grid>
+    <Grid Width="Auto">
 
         <Image Source="Calgary_Southview.png" Margin="-957,-93,-888,1" Stretch="UniformToFill" />
 
