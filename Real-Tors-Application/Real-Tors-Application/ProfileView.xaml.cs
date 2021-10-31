@@ -24,5 +24,15 @@ namespace Real_Tors_Application
         {
             InitializeComponent();
         }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
+        }
+
+        private void navLogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
+        }
     }
 }

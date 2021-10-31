@@ -6,27 +6,56 @@
       xmlns:local="clr-namespace:Real_Tors_Application"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="LoginPage">
+      Title="LoginPage"
+      Background="White">
 
-    <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" RenderTransformOrigin="0.5,0.5">
+    <Grid>
 
-        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
-            <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
-            <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
-            <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="Auto">
+            <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0" Click="profileButton_Click"/>
         </StackPanel>
+        
         <Image x:Name="logoImage" Height="258" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="688" Source="Logo.png" Margin="0,130,0,0"/>
+        
         <Grid Visibility="Visible" x:Name="logInGrid">
             <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="525,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
             <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="525,600,0,0" Height="40" Width="200" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
             <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="400,530,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
             <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="400,600,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
             <CheckBox x:Name="rememberMeCheckBox" Content="Remember me" HorizontalAlignment="Left" Margin="400,670,0,0" VerticalAlignment="Top" FontSize="24"/>
-            <TextBlock x:Name="createAccountTextBlock" HorizontalAlignment="Left" Margin="400,720,0,0" TextWrapping="Wrap" Text="Create a new account" VerticalAlignment="Top" FontSize="24" Foreground="#FF1004FF"/>
+            <Button x:Name="createAcccountButton" Content="Create an account" HorizontalAlignment="Left" Margin="400, 720, 0, 0" VerticalAlignment="Top" Width="Auto" FontSize="24" Height="40" Click="createAcccountTextButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock Text="Create an Account" Foreground="#FF4556FF" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
             <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="488,790,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" Click="logInButton_Click" />
+        </Grid>
+
+        <Grid Visibility="Hidden" x:Name="signupGrid">
+            <Label x:Name="createAccountLabel" Content="Create an Account" HorizontalAlignment="Left" Margin="200,500,0,0" VerticalAlignment="Top" FontSize="40" Width="585" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="70" BorderThickness="0"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="300" Margin="200,570,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="585"/>
+            <TextBox x:Name="userNameTextBoxAC" HorizontalAlignment="Left" Height="40" Margin="340,600,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" />
+            <PasswordBox x:Name="passwordTextBoxAC" HorizontalAlignment="Left" Margin="340,670,0,0" Height="40" Width="400" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
+            <TextBlock x:Name="userNameTextBlockAC" HorizontalAlignment="Left" Margin="220,600,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
+            <TextBlock x:Name="passwordTextBlockAC" HorizontalAlignment="Left" Margin="220,670,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="emailTextBoxAC" HorizontalAlignment="Left" Height="40" Margin="340,740,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Width="400" FontSize="24"/>
+            <TextBlock x:Name="emailTextBlockAC" HorizontalAlignment="Left" Margin="220,740,0,0" Height="40" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" FontSize="24"/>
+            <Button x:Name="createAccountButtonAC" Content="Create Account" HorizontalAlignment="Left" Margin="400,810,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="24" Background="#FFCBCBCB" Click="createAccountButtonAC_Click"/>
+        </Grid>
+
+        <Grid Visibility="Hidden" x:Name="successSignupGrid">
+            
+            <Label x:Name="createAccountLabel2" Content="Create an Account" HorizontalAlignment="Left" Margin="200,500,0,0" VerticalAlignment="Top" FontSize="40" Width="620" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="65"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="220" Margin="200,565,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="620"/>
+            <Label x:Name="accountCreatedLabel" Content="Your account has been successfully created!" HorizontalAlignment="Center" Margin="200,591,1100,0" VerticalAlignment="Top" FontSize="24" Foreground="#FF209B05" FontWeight="SemiBold" Width="620" HorizontalContentAlignment="Center"/>
+            <Label x:Name="accountCreatedLabel2" Content="You can now save your favourite listings to your profile!" HorizontalAlignment="Center" Margin="200,638,1100,0" VerticalAlignment="Top" FontSize="24" Width="620" HorizontalContentAlignment="Center"/>
+            <Button x:Name="loginButton" Content="Click here to login" HorizontalAlignment="Left" Margin="385,710,0,0" VerticalAlignment="Top" Width="250" Height="40" FontSize="24" Background="#FF9DEA8C" Click="loginButtonSUCC_Click"/>
         </Grid>
 
         <Grid Margin="1125,515,315,0" x:Name="homeTypeGrid" >

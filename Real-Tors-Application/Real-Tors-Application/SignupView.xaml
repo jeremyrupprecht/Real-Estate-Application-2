@@ -19,21 +19,20 @@
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
 
-        <Grid Visibility="Visible" x:Name="signupGrid">
-            <Rectangle Fill="#FF7B82A0" HorizontalAlignment="Left" Height="65" Margin="560,240,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="800"/>
-            <Label x:Name="createAccountLabel" Content="Create an Account" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" FontSize="40"/>
-            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="357" Margin="560,305,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="800"/>
+        <Grid Visibility="Hidden" x:Name="signupGrid">
+            <Label x:Name="createAccountLabel" Content="Create an Account" HorizontalAlignment="Left" Margin="640,242,0,0" VerticalAlignment="Top" FontSize="40" Width="585" HorizontalContentAlignment="Center" Background="#FF7B82A0" />
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="357" Margin="640,305,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="585"/>
             <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="793,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" />
             <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="793,425,0,0" Height="40" Width="400" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
             <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="668,355,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
             <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="668,425,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
             <TextBox x:Name="emailTextBox" HorizontalAlignment="Left" Height="40" Margin="793,495,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Width="400" FontSize="24"/>
             <TextBlock x:Name="emailTextBlock" HorizontalAlignment="Left" Margin="668,495,0,0" Height="40" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" FontSize="24"/>
-            <Button x:Name="createAccountButton" Content="Create Account" HorizontalAlignment="Center" Margin="0,565,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="24" Background="#FFCBCBCB" Click="createAccountButton_Click"/>
+            <Button x:Name="createAccountButton" Content="Create Account" HorizontalAlignment="Left" Margin="840,565,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="24" Background="#FFCBCBCB" Click="createAccountButton_Click"/>
 
         </Grid>
 
-        <Grid Visibility="Hidden" x:Name="successSignupGrid">
+        <Grid Visibility="Visible" x:Name="successSignupGrid">
             <Rectangle Fill="#FF7B82A0" HorizontalAlignment="Left" Height="65" Margin="560,240,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="800"/>
             <Label x:Name="createAccountLabel2" Content="Create an Account" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" FontSize="40"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="357" Margin="560,305,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="800"/>

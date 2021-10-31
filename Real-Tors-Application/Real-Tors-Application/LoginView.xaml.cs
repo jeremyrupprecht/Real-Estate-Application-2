@@ -25,15 +25,6 @@ namespace Real_Tors_Application
             InitializeComponent();
         }
 
-        private void navLogInButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (logInGrid.Visibility == Visibility.Hidden)
-            {
-
-            }
-            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
-        }
-
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
@@ -69,10 +60,6 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
-        private void signUpButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
-        }
 
         private void logInButton_Click(object sender, RoutedEventArgs e)
         {
@@ -83,7 +70,79 @@ namespace Real_Tors_Application
             margin.Left = 824;
             homeTypeGrid.Margin = margin;
 
-            navLogInButton.Content = "Profile";
+            profileButton.Content = "My Profile";
+        }
+
+        private void loginButtonSUCC_Click(object sender, RoutedEventArgs e)
+        {
+            successSignupGrid.Visibility = Visibility.Hidden;
+            logInGrid.Visibility = Visibility.Visible;
+        }
+
+
+        private void createAccountButtonAC_Click(object sender, RoutedEventArgs e)
+        {
+            if (inputValidation())
+            {
+                signupGrid.Visibility = Visibility.Hidden;
+                successSignupGrid.Visibility = Visibility.Visible;
+            }
+        }
+
+        private bool inputValidation()
+        {
+            var bc = new BrushConverter();
+            bool valid = true;
+            // Error Background = "#FFFFB7B7"
+            String username = userNameTextBoxAC.Text;
+            String password = passwordTextBoxAC.Password;
+            String email = emailTextBoxAC.Text;
+            // Check username 
+            if (username.Equals(""))
+            {
+                userNameTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                userNameTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check password
+            if (password.Equals(""))
+            {
+                passwordTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                passwordTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check email
+            if (email.Equals(""))
+            {
+                emailTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                emailTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+
+            return valid;
+        }
+
+        private void createAcccountTextButton_Click(object sender, RoutedEventArgs e)
+        {
+            logInGrid.Visibility = Visibility.Hidden;
+            signupGrid.Visibility = Visibility.Visible;
+        }
+
+        private void profileButton_Click(object sender, RoutedEventArgs e)
+        {
+            if((string)profileButton.Content == "My Profile")
+            {
+                this.NavigationService.Navigate(new Uri("ProfileView.xaml", UriKind.Relative));
+            }
         }
     }
 }
