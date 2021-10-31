@@ -23,6 +23,11 @@ namespace Real_Tors_Application
         public readonly Random rand = new Random();
         public List<Listing> ListOfListings = new List<Listing>();
 
+        private bool homeOpen = true;
+        private bool amenOpen = false;
+        private bool neighOpen = false;
+        private bool filterOpen = true;
+
         public ListView()
         {
             InitializeComponent();
@@ -137,6 +142,60 @@ namespace Real_Tors_Application
         private void signUpButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
+        }
+
+        private void toggleTypes(object sender, RoutedEventArgs e)
+        {
+            if (homeOpen)
+            {
+                HomeTypesSelect.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                HomeTypesSelect.Visibility = Visibility.Visible;
+            }
+            homeOpen = !homeOpen;
+        }
+
+        private void OpenAmenities_Click(object sender, RoutedEventArgs e)
+        {
+            if (amenOpen)
+            {
+                AmenTypesSelect.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                AmenTypesSelect.Visibility = Visibility.Visible;
+            }
+            amenOpen = !amenOpen;
+        }
+
+        private void toggleNeigh(object sender, RoutedEventArgs e)
+        {
+            if (neighOpen)
+            {
+                NeighTypesSelect.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                NeighTypesSelect.Visibility = Visibility.Visible;
+            }
+            neighOpen = !neighOpen;
+        }
+
+        private void ToggleFilter(object sender, RoutedEventArgs e)
+        {
+            if (filterOpen)
+            {
+                FilterPanel.Visibility = Visibility.Collapsed;
+                listResultsGrid.Width = 1850;
+            }
+            else
+            {
+                FilterPanel.Visibility = Visibility.Visible;
+                listResultsGrid.Width = 1420;
+            }
+            filterOpen = !filterOpen;
         }
     }
 }

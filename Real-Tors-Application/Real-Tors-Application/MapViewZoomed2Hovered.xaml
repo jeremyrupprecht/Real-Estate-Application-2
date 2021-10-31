@@ -9,9 +9,14 @@
       Title="MapViewZoomed2Hovered">
 
 
+<<<<<<< HEAD
     <Grid>
+        <Image Source="Calgary_Southview.png" Margin="-876,-54,-969,-38" Stretch="UniformToFill" />
+=======
+    <Grid Width="Auto">
 
         <Image Source="Calgary_Southview.png" Margin="-957,-93,-888,1" Stretch="UniformToFill" />
+>>>>>>> 6df7cdf3151c3890d4be3e98137fc802cc0d5e69
 
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
@@ -21,7 +26,7 @@
             <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
-        <Image Source="Southview.png" Margin="399,60,419,8" RenderTransformOrigin="0.5,0.5"/>
+        <Image Source="Southview.png" Margin="484,99,334,-31" RenderTransformOrigin="0.5,0.5"/>
 
         <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="1077,503,693,421">
             <Button.Template>
@@ -30,18 +35,30 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Image Source="/MapPin.png" Margin="1333,697,437,227" RenderTransformOrigin="1.17,1.11"/>
-        <Image Source="/MapPin.png" Margin="697,264,1073,660" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="1414,736,356,188" RenderTransformOrigin="1.17,1.11"/>
+        <Image Source="/MapPin.png" Margin="778,303,992,621" RenderTransformOrigin="1.17,1.11"/>
 
         <Image Source="left-arrow.png" Margin="16,475,1770,425" RenderTransformOrigin="1.17,1.11"/>
         <Image Source="right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
 
-        <Image Source="Legend.png" Margin="1367,50,-79,616"/>
-        <Label Content="Legend" HorizontalAlignment="Left" Margin="1590,121,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,211,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
-        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,283,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,270,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="348" Margin="1532,107,0,0" VerticalAlignment="Top" Width="365" Fill="#FFB7B4B4"/>
+        <Label Content="Legend" HorizontalAlignment="Left" Margin="1612,101,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,170,0,0" VerticalAlignment="Top" Width="50" Fill="#FFE89012"/>
+        <Label Content="School Zone" HorizontalAlignment="Left" Margin="1610,160,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1554,240,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
+        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1610,230,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,310,0,0" VerticalAlignment="Top" Width="50" Fill="#FF1D7B1F"/>
+        <Label Content="Shopping Area" HorizontalAlignment="Left" Margin="1610,300,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,380,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
+        <Label Content="Transit" HorizontalAlignment="Left" Margin="1610,376,0,0" VerticalAlignment="Top" FontSize="40"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="890,555,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1388,384,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1034,718,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1180,616,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1346,837,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1214,386,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE89012"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="836,824,0,0" VerticalAlignment="Top" Width="20" Fill="#FF1D7B1F"/>
 
         <Grid Name="Listing1" Margin="986,139,532,536">
             <Grid.ColumnDefinitions>
@@ -86,12 +103,6 @@
         </Button>
 
         <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
-
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="890,555,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1388,384,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1034,718,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1180,616,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="1346,837,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
 
     </Grid>
 </Page>
