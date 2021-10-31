@@ -89,6 +89,9 @@
     <Compile Include="MapViewZoomed2Hovered.xaml.cs">
       <DependentUpon>MapViewZoomed2Hovered.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignupView.xaml.cs">
       <DependentUpon>SignupView.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MapViewZoomed2Hovered.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -319,6 +326,19 @@
     <Resource Include="houseImg22.jpg" />
     <Resource Include="houseImg23.jpg" />
     <Resource Include="houseImg24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sortdown_icon.png" />
+    <Resource Include="Images\sortup_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sortdown_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="user_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

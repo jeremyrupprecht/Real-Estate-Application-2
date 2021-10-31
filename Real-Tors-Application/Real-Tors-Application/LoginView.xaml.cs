@@ -27,6 +27,10 @@ namespace Real_Tors_Application
 
         private void navLogInButton_Click(object sender, RoutedEventArgs e)
         {
+            if (logInGrid.Visibility == Visibility.Hidden)
+            {
+
+            }
             this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
 
@@ -68,6 +72,18 @@ namespace Real_Tors_Application
         private void signUpButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
+        }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            logInGrid.Visibility = Visibility.Hidden;
+
+            //  824,515,315,0
+            Thickness margin = homeTypeGrid.Margin;
+            margin.Left = 824;
+            homeTypeGrid.Margin = margin;
+
+            navLogInButton.Content = "Profile";
         }
     }
 }
