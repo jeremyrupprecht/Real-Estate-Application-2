@@ -9,7 +9,7 @@
       Title="MapViewRegion">
 
     <Grid>
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="-708,-114,-7,-499" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="-534,-114,-181,-499" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="Calgary_Region1.png" Stretch="UniformToFill"/>
@@ -26,12 +26,8 @@
             <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
         </StackPanel>
 
-        <Image Source="Legend.png" Margin="1367,50,-79,616"/>
-        <Label Content="Legend" HorizontalAlignment="Left" Margin="1590,121,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,211,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
-        <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1588,200,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1514,283,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
-        <Label Content="Transit" HorizontalAlignment="Left" Margin="1588,270,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Grid Width="1420" Height="980" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="listResultsGrid" Margin="0, 100, 0, 0">
+        </Grid>
 
         <Image Source="left-arrow.png" Margin="16,475,1770,425" RenderTransformOrigin="1.17,1.11"/>
         <Image Source="right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
@@ -39,15 +35,15 @@
         <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click" Grid.Row="1">
             <Image Source="ListIcon.png" Height="131" Width="124" RenderTransformOrigin="0.5,0.527" />
         </Button>
-        <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
+        <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,65" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
 
-        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific neighbourhoods" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
+        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific neighbourhoods" Margin="505,166,396,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
 
-        <Label Content="10" HorizontalAlignment="Left" Margin="347,604,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04" RenderTransformOrigin="-1.373,1.203"/>
-        <Label Content="8" HorizontalAlignment="Left" Margin="367,922,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A" RenderTransformOrigin="-3.143,2.434"/>
-        <Label Content="7" HorizontalAlignment="Left" Margin="679,816,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A" RenderTransformOrigin="-3.143,2.434"/>
-        <Label Content="3" HorizontalAlignment="Left" Margin="1254,462,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
-        <Label Content="6" HorizontalAlignment="Left" Margin="777,462,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
+        <Label Content="10" HorizontalAlignment="Left" Margin="521,604,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04" RenderTransformOrigin="-1.373,1.203"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="541,922,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A" RenderTransformOrigin="-3.143,2.434"/>
+        <Label Content="7" HorizontalAlignment="Left" Margin="853,816,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A" RenderTransformOrigin="-3.143,2.434"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="1428,462,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
+        <Label Content="6" HorizontalAlignment="Left" Margin="950,462,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
 
     </Grid>
 </Page>
