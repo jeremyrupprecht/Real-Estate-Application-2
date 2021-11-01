@@ -13,15 +13,14 @@
         <Image Source="Calgary_Region1.png" Margin="-534,-114,-181,-499" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5"/>
 
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
-            <Button x:Name="homeButton" Content="Home" Width="320" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
-            <Button x:Name="aboutButton" Content="About" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="teamButton" Content="Our team" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="contactButton" Content="Contact Us" Width="320" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="navLogInButton" Content="Log In" Width="320" FontSize="40" Background="#FF7B82A0" Click="navLogInButton_Click"/>
-            <Button x:Name="signUpButton" Content="Sign Up" Width="320" FontSize="40" Background="#FF7B82A0" Click="signUpButton_Click"/>
+            <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
 
-        <Image Source="left-arrow.png" Margin="16,475,1770,425" RenderTransformOrigin="1.17,1.11"/>
+        
         <Image Source="right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
 
         <Button x:Name="btn_Map" Margin="613,211,628,270" Click="Btn_Map_Click">
@@ -42,6 +41,90 @@
         <Label Content="7" HorizontalAlignment="Left" Margin="853,816,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A" RenderTransformOrigin="-3.143,2.434"/>
         <Label Content="3" HorizontalAlignment="Left" Margin="1428,462,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
         <Label Content="6" HorizontalAlignment="Left" Margin="950,462,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 100, 0, 0">
+            <ScrollViewer Background="White">
+                <StackPanel Name="FilterPanel" Width="400" Visibility="Collapsed">
+
+                    <Label FontSize="36" FontWeight="Bold" Padding="24" Background="#FFAAAAAA" HorizontalContentAlignment="Center">Filters</Label>
+                    <Label Height="10" />
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Home Type:</Label>
+                        <Button Name="OpenHomeTypes" Content="Change" FontSize="24" Click="toggleTypes"/>
+                    </StackPanel>
+
+                    <StackPanel Name="HomeTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Visible">
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Single Family"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Duplex"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Triplex"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Townhome"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Apartment"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Loft"/>
+                    </StackPanel>
+
+                    <Label Content="Price" FontWeight="Bold" Padding="24 12 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+
+
+                    <Label Content="Size (sq ft)" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+
+
+                    <Label Content="# of Beds" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+
+                    <Label Content="# of Baths" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+
+                    <Label Content="Year Built" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 200 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Amenities:</Label>
+                        <Button Name="OpenAmenities" Content="Change" FontSize="24" Click="OpenAmenities_Click" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                    <StackPanel Name="AmenTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Granite Countertops"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Walkout Basement"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Rennovated Kitchen"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="High Ceiling"/>
+                    </StackPanel>
+                    <Label Height="10" />
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
+                        <Button Name="OpenNeighTypes" Content="Change" FontSize="24" Click="toggleNeigh"/>
+                    </StackPanel>
+                    <StackPanel Name="NeighTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Dover Glen" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Inglewood" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Mills Estate" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Ramsay" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Radisson Heights" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Southview" IsChecked="True"/>
+                    </StackPanel>
+                    <Grid Height="400"/>
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
+            <Grid>
+                <Image Source="left-arrow.png" VerticalAlignment="Center" Width="115" Margin="0,385,0,445"/>
+            </Grid>
+
+
+
+        </StackPanel>
 
     </Grid>
 </Page>

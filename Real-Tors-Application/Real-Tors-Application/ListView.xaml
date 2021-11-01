@@ -349,7 +349,7 @@
             </Button>
         </Grid>
 
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="1080" Margin="0, 100, 0, 0">
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="1080" Margin="0, 100, 0, 0" Background="White">
             <ScrollViewer>
                 <StackPanel Name="FilterPanel" Width="400">
 

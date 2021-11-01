@@ -20,6 +20,9 @@ namespace Real_Tors_Application
     /// </summary>
     public partial class MapViewZoomed : Page
     {
+
+
+
         public MapViewZoomed()
         {
             InitializeComponent();
@@ -54,6 +57,59 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
         }
+
+        private void toggleTypes(object sender, RoutedEventArgs e)
+        {
+            if (HomeTypesSelect.Visibility == Visibility.Collapsed)
+            {
+                HomeTypesSelect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HomeTypesSelect.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void OpenAmenities_Click(object sender, RoutedEventArgs e)
+        {
+            if (AmenTypesSelect.Visibility == Visibility.Collapsed)
+            {
+                AmenTypesSelect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AmenTypesSelect.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
+        private void toggleNeigh(object sender, RoutedEventArgs e)
+        {
+            if (NeighTypesSelect.Visibility == Visibility.Collapsed)
+            {
+                NeighTypesSelect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                NeighTypesSelect.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void ToggleFilter(object sender, RoutedEventArgs e)
+        {
+            if (FilterPanel.Visibility == Visibility.Collapsed)
+            {
+                FilterPanel.Visibility = Visibility.Visible;
+
+            }
+            else
+            {
+                FilterPanel.Visibility = Visibility.Collapsed;
+
+            }
+
+        }
+
     }
 
 }
