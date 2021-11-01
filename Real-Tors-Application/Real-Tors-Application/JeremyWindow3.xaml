@@ -16,8 +16,8 @@
             <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
-        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <ScrollViewer VerticalAlignment="Top"  HorizontalAlignment="Right" Height ="980" Width ="1420" VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="expandedListingGrid" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 100, 0, 0" >
+            <ScrollViewer x:Name="expandedListingScrollViewer" VerticalAlignment="Top"  HorizontalAlignment="Right" Height ="980" Width="1420" VerticalScrollBarVisibility="Auto">
                 <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 50">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="100"/>
@@ -46,31 +46,31 @@
 
                                 <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="30 0">
                                     <Label x:Name="sizeTextBlock" Content="Size:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                    <Label Name="SizeNumber"  Margin="20 0" Height="50"  FontSize="28" Content="{Binding Path=sizenum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                                    <Label Name="SizeNumber"  Margin="20 0" Height="50"  FontSize="28"  VerticalAlignment="Top" Content="{Binding Path=sizenum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="30 0">
                                     <Label x:Name="bedsTextBlock" Content="Beds:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold"/>
-                                    <Label Name="BedNumber"  Margin="20 0" Height="50"  FontSize="28" Content="{Binding Path=bednum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                                    <Label Name="BedNumber"  Margin="20 0" Height="50"  FontSize="28"  VerticalAlignment="Top" Content="{Binding Path=bednum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="30 0">
                                     <Label x:Name="bathroomsTextBlock" Content="Bathrooms:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                    <Label Name="BathNumber"  Margin="20 0" Height="50"  FontSize="28" Content="{Binding Path=bathnum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                                    <Label Name="BathNumber"  Margin="20 0" Height="50"  FontSize="28"  VerticalAlignment="Top" Content="{Binding Path=bathnum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="30 0">
                                     <Label x:Name="priceTextBlock" Content="Price:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold"/>
-                                    <Label Name="PriceNumber"  Margin="20 0 " Height="50"  FontSize="28" Content="{Binding Path=pricenum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                                    <Label Name="PriceNumber"  Margin="20 0 " Height="50"  FontSize="28"  VerticalAlignment="Top" Content="{Binding Path=pricenum[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="30 0">
                                     <Label x:Name="neighbourhoodTextBlock" Content="Neighbourhood:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                    <Label Name="Neighbourhood"  Margin="20 0" Height="50" FontSize="28" Content="{Binding Path=neighbourhood[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+                                    <Label Name="Neighbourhood"  Margin="20 0" Height="50" FontSize="28" VerticalAlignment="Top" Content="{Binding Path=neighbourhood[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="30 0">
                                     <Label x:Name="moveInReadyTextBlock" Content="Move In Ready:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                    <Viewbox Margin="20 0" Height="30" >
+                                    <Viewbox Margin="20, 10, 0, 0" Height="30"  VerticalAlignment="Top">
                                         <CheckBox IsChecked="True" IsHitTestVisible="False" Focusable="False" />
                                     </Viewbox>
                                 </StackPanel>
@@ -94,7 +94,7 @@
                             
                             
                         </Grid>
-                        <TextBox Name="DescriptionText" Margin="100 12" Height="130" Width="Auto" AcceptsReturn="True" TextWrapping="Wrap" FontSize="15" IsReadOnly="True"/>
+                        <TextBox Name="DescriptionText" Margin="100 12" Height="130" Width="Auto" AcceptsReturn="True" TextWrapping="Wrap" FontSize="24" IsReadOnly="True"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 0">
                             <Image Source="HeartIconEmpty.png" Height="163" Width="85"/>
                             <Button x:Name="saveForLater" Content="Save For Later" Padding="8" Margin="20 0 20 0" Height="100" Width="320" FontSize="40" Background="#d71616" Foreground="White" Click="btn_saveForLater_Click"/>
@@ -346,6 +346,84 @@
 
 
         </Grid>
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="1080" Margin="0, 100, 0, 0" Background="White">
+            <ScrollViewer>
+                <StackPanel Name="FilterPanel" Width="400">
+
+                    <Label FontSize="36" FontWeight="Bold" Padding="24" Background="#FFAAAAAA" HorizontalContentAlignment="Center">Filters</Label>
+                    <Label Height="10" />
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Home Type:</Label>
+                        <Button Name="OpenHomeTypes" Content="Change" FontSize="24" Click="toggleTypes"/>
+                    </StackPanel>
+
+                    <StackPanel Name="HomeTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Visible">
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Single Family"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Duplex"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Triplex"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Townhome"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Apartment"/>
+                        <RadioButton FontSize = "26" Padding="0 6" Content="Loft"/>
+                    </StackPanel>
+
+                    <Label Content="Price" FontWeight="Bold" Padding="24 12 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+
+
+                    <Label Content="Size (sq ft)" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+
+
+                    <Label Content="# of Beds" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+
+                    <Label Content="# of Baths" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+
+                    <Label Content="Year Built" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 200 20" FontSize="25"/>
+                    <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
+                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Amenities:</Label>
+                        <Button Name="OpenAmenities" Content="Change" FontSize="24" Click="OpenAmenities_Click" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                    <StackPanel Name="AmenTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Granite Countertops"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Walkout Basement"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Rennovated Kitchen"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="High Ceiling"/>
+                    </StackPanel>
+                    <Label Height="10" />
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
+                        <Button Name="OpenNeighTypes" Content="Change" FontSize="24" Click="toggleNeigh"/>
+                    </StackPanel>
+                    <StackPanel Name="NeighTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Dover Glen" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Inglewood" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Mills Estate" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Ramsay" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Radisson Heights" IsChecked="True"/>
+                        <CheckBox FontSize = "26" Padding="0 6" Content="Southview" IsChecked="True"/>
+                    </StackPanel>
+                    <Grid Height="400"/>
+
+                </StackPanel>
+            </ScrollViewer>
+            <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
+        </StackPanel>
+
     </Grid>
     
 </Page>

@@ -23,10 +23,7 @@ namespace Real_Tors_Application
         public readonly Random rand = new Random();
         public List<Listing> ListOfListings = new List<Listing>();
 
-        private bool homeOpen = true;
-        private bool amenOpen = false;
-        private bool neighOpen = false;
-        private bool filterOpen = true;
+
 
         public ListView()
         {
@@ -146,56 +143,56 @@ namespace Real_Tors_Application
 
         private void toggleTypes(object sender, RoutedEventArgs e)
         {
-            if (homeOpen)
-            {
-                HomeTypesSelect.Visibility = Visibility.Collapsed;
-            }
-            else
+            if (HomeTypesSelect.Visibility == Visibility.Collapsed)
             {
                 HomeTypesSelect.Visibility = Visibility.Visible;
             }
-            homeOpen = !homeOpen;
+            else
+            {
+                HomeTypesSelect.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void OpenAmenities_Click(object sender, RoutedEventArgs e)
         {
-            if (amenOpen)
-            {
-                AmenTypesSelect.Visibility = Visibility.Collapsed;
-            }
-            else
+            if (AmenTypesSelect.Visibility == Visibility.Collapsed)
             {
                 AmenTypesSelect.Visibility = Visibility.Visible;
             }
-            amenOpen = !amenOpen;
+            else
+            {
+                AmenTypesSelect.Visibility = Visibility.Collapsed;
+            }
+
         }
 
         private void toggleNeigh(object sender, RoutedEventArgs e)
         {
-            if (neighOpen)
-            {
-                NeighTypesSelect.Visibility = Visibility.Collapsed;
-            }
-            else
+            if (NeighTypesSelect.Visibility == Visibility.Collapsed)
             {
                 NeighTypesSelect.Visibility = Visibility.Visible;
             }
-            neighOpen = !neighOpen;
+            else
+            {
+                NeighTypesSelect.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void ToggleFilter(object sender, RoutedEventArgs e)
         {
-            if (filterOpen)
-            {
-                FilterPanel.Visibility = Visibility.Collapsed;
-                listResultsGrid.Width = 1850;
-            }
-            else
+            if (FilterPanel.Visibility == Visibility.Collapsed)
             {
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
+
             }
-            filterOpen = !filterOpen;
+            else
+            {
+                FilterPanel.Visibility = Visibility.Collapsed;
+                listResultsGrid.Width = 1850;
+
+            }
+
         }
     }
 }

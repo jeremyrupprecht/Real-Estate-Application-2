@@ -59,8 +59,8 @@
             <Button x:Name="loginButton" Content="Click here to login" HorizontalAlignment="Left" Margin="385,710,0,0" VerticalAlignment="Top" Width="250" Height="40" FontSize="24" Background="#FF9DEA8C" Click="loginButtonSUCC_Click"/>
         </Grid>
 
-        <Grid Margin="1125,515,315,0" x:Name="homeTypeGrid" >
-            <ComboBox x:Name="houseTypeComboBox" HorizontalAlignment="Left" Margin="0,40,0,0" VerticalAlignment="Top" Width="280" Height="40">
+        <Grid Margin="1125,490,315,0" x:Name="homeTypeGrid" >
+            <ComboBox x:Name="houseTypeComboBox" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="280" Height="40">
                 <ComboBoxItem>
                     <Button x:Name="comboItem1Button" Content="Single family home" Height="40" Width="250" FontSize="24" Click="comboItem1Button_Click" />
                 </ComboBoxItem>
@@ -80,7 +80,7 @@
                     <Button x:Name="comboItem6Button" Content="Loft" Height="40" Width="250" FontSize="24" Click="comboItem6Button_Click"/>
                 </ComboBoxItem>
             </ComboBox>
-            <Label x:Name="label" Content="Please select a home type:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="40" FontSize="24" Width="300"/>
+            <Label x:Name="label" Content="Please select a home type:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="50" FontSize="28" Width="340"/>
         </Grid>
 
 

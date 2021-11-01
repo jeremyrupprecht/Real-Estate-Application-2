@@ -15,7 +15,7 @@
             <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="profileButton" Content="My Profile" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
 
         
