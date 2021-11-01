@@ -20,7 +20,7 @@
         </StackPanel>
         <Image Source="Southview.png" Margin="484,99,334,-31" RenderTransformOrigin="0.5,0.5"/>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="1158,542,612,382" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="1077,503,693,421" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapPin.png"/>

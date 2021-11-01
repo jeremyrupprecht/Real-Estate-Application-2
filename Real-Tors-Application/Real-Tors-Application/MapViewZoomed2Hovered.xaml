@@ -9,11 +9,9 @@
       Title="MapViewZoomed2Hovered">
 
     <Grid>
-        <Image Source="Calgary_Southview.png" Margin="-876,-54,-969,-38" Stretch="UniformToFill" />
-
         <Grid Width="Auto">
 
-            <Image Source="Calgary_Southview.png" Margin="-957,-93,-888,1" Stretch="UniformToFill" />
+            <Image Source="Calgary_Southview.png" Margin="-876,-54,-969,-38" Stretch="UniformToFill" />
 
 
             <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
@@ -49,13 +47,13 @@
             <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,380,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
             <Label Content="Transit" HorizontalAlignment="Left" Margin="1610,376,0,0" VerticalAlignment="Top" FontSize="40"/>
 
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="890,555,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1388,384,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1034,718,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1180,616,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="971,594,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1439,423,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1115,757,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1261,655,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
             <Rectangle HorizontalAlignment="Left" Height="20" Margin="1346,837,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1214,386,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE89012"/>
-            <Rectangle HorizontalAlignment="Left" Height="20" Margin="836,824,0,0" VerticalAlignment="Top" Width="20" Fill="#FF1D7B1F"/>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="1295,425,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE89012"/>
+            <Rectangle HorizontalAlignment="Left" Height="20" Margin="917,863,0,0" VerticalAlignment="Top" Width="20" Fill="#FF1D7B1F"/>
 
             <Grid Name="Listing1" Margin="986,139,532,536">
                 <Grid.ColumnDefinitions>
