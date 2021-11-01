@@ -36,7 +36,7 @@ namespace Real_Tors_Application
         }
 
         // button listener to go back to home page
-        private void btn_HomePage_Click(object sender, RoutedEventArgs e)
+        private void homeButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
