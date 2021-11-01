@@ -29,7 +29,7 @@
             <Image Source="ListIcon.png" Height="131" Width="124" />
         </Button>
 
-        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
+        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
         <Label Content="23" HorizontalAlignment="Left" Margin="780,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
         <Label Content="30" HorizontalAlignment="Left" Margin="1014,302,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF134203"/>
         <Label Content="18" HorizontalAlignment="Left" Margin="666,354,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
@@ -118,7 +118,7 @@
             <Grid>
                 <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
             </Grid>
-            
+
         </StackPanel>
 
     </Grid>
