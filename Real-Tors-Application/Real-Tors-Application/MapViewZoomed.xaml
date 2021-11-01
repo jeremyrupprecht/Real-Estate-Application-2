@@ -32,14 +32,14 @@
         <Label Content="Legend" HorizontalAlignment="Left" Margin="1612,101,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,170,0,0" VerticalAlignment="Top" Width="50" Fill="#FFE89012"/>
         <Label Content="School Zone" HorizontalAlignment="Left" Margin="1610,160,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1554,240,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,240,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA8DAB5"/>
         <Label Content="Park Areas" HorizontalAlignment="Left" Margin="1610,230,0,0" VerticalAlignment="Top" FontSize="40"/>
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,310,0,0" VerticalAlignment="Top" Width="50" Fill="#FF1D7B1F"/>
         <Label Content="Shopping Area" HorizontalAlignment="Left" Margin="1610,300,0,0" VerticalAlignment="Top" FontSize="40"/>
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,380,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
         <Label Content="Transit" HorizontalAlignment="Left" Margin="1610,376,0,0" VerticalAlignment="Top" FontSize="40"/>
 
-        
+
 
         <Button x:Name="btn_Arrow" RenderTransformOrigin="1.17,1.11" Margin="1759,494,16,444" Click="Btn_Map_Click">
             <Button.Template>
