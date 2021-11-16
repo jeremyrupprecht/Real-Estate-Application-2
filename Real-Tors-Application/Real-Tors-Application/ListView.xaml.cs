@@ -43,10 +43,6 @@ namespace Real_Tors_Application
                 ListOfListings.Add(new Listing(rand));
             }
 
-            for(int i = 0; i<9; i++)
-            {
-                Console.WriteLine(ListOfListings[i].toString());
-            }
             //for(int i = 0; i<2; i++)
             //{
             Neighbourhood0.Content = ListOfListings[0].Neighbourhood;
@@ -194,6 +190,18 @@ namespace Real_Tors_Application
             }
 
         }
+
+        private void expandListing(object sender, MouseButtonEventArgs e)
+        {
+            String numOfListing = sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(7);
+            Console.WriteLine(numOfListing);
+            Tuple<List<Listing>, int> listAndNum = new Tuple<List<Listing>, int>(ListOfListings, Int32.Parse(numOfListing));
+            JeremyWindow3 pNext = new JeremyWindow3();
+            pNext.SetUpNvaigationHandler(this.NavigationService);
+            this.NavigationService.Navigate(pNext, listAndNum);
+        }
+
+
     }
 }
 

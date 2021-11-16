@@ -22,17 +22,29 @@ namespace Real_Tors_Application
     {
 
         public readonly Random rand = new Random();
+        public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;
         public Listing list1;
         public List<Listing> ListOfListings = new List<Listing>();
+        public List<Listing> OldListings = new List<Listing>(); 
 
         public JeremyWindow3()
         {
             InitializeComponent();
-            list1 = new Listing(rand);
-            ShowMainListing();
             GenerateListings();
+        }
 
+        public void SetUpNvaigationHandler(NavigationService ns)
+        {
+            ns.LoadCompleted += NavigationService_LoadCompleted;
+        }
 
+        private void NavigationService_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            Tuple<List<Listing>, int> listAndNum = (Tuple<List<Listing>, int>)e.ExtraData;
+            OldListings = listAndNum.Item1;
+            list1 = OldListings[listAndNum.Item2-1];
+            ShowMainListing();
+            
         }
 
         // button listener to go back to home page
@@ -112,6 +124,7 @@ namespace Real_Tors_Application
 
         public void ShowMainListing()
         {
+
             Address.Content = list1.Address;
             PriceNumber.Content = "$" + list1.Price;
             Neighbourhood.Content = list1.Neighbourhood;
@@ -120,16 +133,6 @@ namespace Real_Tors_Application
             BathNumber.Content = list1.BathNum;
             SizeNumber.Content = list1.Size + " sq ft";
             MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
-
-            /*
-            Address.Content = list1.Address;
-            Description.Content = list1.Description;
-            PriceNum.Content = "$" + list1.Price;
-            BedNumber.Content = list1.BedNum;
-            BathNumber.Content = list1.BathNum;
-            Amenities.Conent = list1.Amenities;
-            NumOfImg = list1.NumofImg
-            */
         }
 
         public void GenerateListings()
