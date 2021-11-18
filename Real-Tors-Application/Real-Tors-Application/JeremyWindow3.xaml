@@ -96,7 +96,7 @@
                         </Grid>
                         <TextBox Name="DescriptionText" Margin="100 12" Height="130" Width="Auto" AcceptsReturn="True" TextWrapping="Wrap" FontSize="24" IsReadOnly="True"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 0">
-                            <Image Source="HeartIconEmpty.png" Height="163" Width="85"/>
+                            <Image Name="FavoritedListing" Source="HeartIconEmpty.png" Height="163" Width="85" MouseLeftButtonDown="ChangeFavorite"/>
                             <Button x:Name="saveForLater" Content="Save For Later" Padding="8" Margin="20 0 20 0" Height="100" Width="320" FontSize="40" Background="#d71616" Foreground="White" Click="btn_saveForLater_Click"/>
                             <Button x:Name="contactRealtor" Content="Contact Realtor!" Padding="8" Margin="20 0 20 0" Height="100" Width="320" FontSize="40" Background="#296dcf" Foreground="White" Click="btn_contractRealtor_Click"/>
                         </StackPanel>
@@ -423,11 +423,11 @@
             </ScrollViewer>
             <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
             <Grid>
-                <Image Source="left-arrow.png" VerticalAlignment="Top" Width="115" Margin="0,725,0,0"/>
+                <Image Name="LeftArrow" Source="left-arrow.png" VerticalAlignment="Top" Width="115" Margin="0,725,0,0" MouseLeftButtonDown="prevLisiting"/>
             </Grid>
 
         </StackPanel>
-        <Image Source="right-arrow.png" Margin="1759,812,16,126" RenderTransformOrigin="1.17,1.11" />
+        <Image Name="RightArrow" Source="right-arrow.png" Margin="1759,812,16,126" RenderTransformOrigin="1.17,1.11" MouseLeftButtonDown="nextListing" />
 
     </Grid>
 

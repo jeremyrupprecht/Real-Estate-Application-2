@@ -38,6 +38,7 @@ namespace Real_Tors_Application {
         public Tuple<double, double> Coordinates { get; set; }
         public bool Favorited { get; set; }
 
+
         public Listing(string neighbourhood, string address, int size,
             string description, List<string> amenities, 
             int price, int bathNum, int bedNum, 
@@ -80,7 +81,7 @@ namespace Real_Tors_Application {
 
             Type = ListingType.SingleFamily;
 
-            NumOfImg = 1;
+            NumOfImg = rand.Next(25);
 
             Coordinates = new Tuple<double, double> ( -141.12, 51.12 );
 
@@ -111,7 +112,7 @@ namespace Real_Tors_Application {
 
             Type = ListingType.SingleFamily;
 
-            NumOfImg = 1;
+            NumOfImg = rand.Next(25);
 
             Coordinates = new Tuple<double, double>(-141.12, 51.12);
 

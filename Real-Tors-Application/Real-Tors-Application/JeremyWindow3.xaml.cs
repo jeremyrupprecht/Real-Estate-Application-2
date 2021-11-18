@@ -22,10 +22,12 @@ namespace Real_Tors_Application
     {
 
         public readonly Random rand = new Random();
+        public int numOfListing;
         public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;
         public Listing list1;
         public List<Listing> ListOfListings = new List<Listing>();
-        public List<Listing> OldListings = new List<Listing>(); 
+        public List<Listing> OldListings = new List<Listing>();
+        public List<Listing> FavoritedListings = new List<Listing>();
 
         public JeremyWindow3()
         {
@@ -33,16 +35,27 @@ namespace Real_Tors_Application
             GenerateListings();
         }
 
-        public void SetUpNvaigationHandler(NavigationService ns)
+        public void SetUpNavigationHandler(NavigationService ns)
         {
             ns.LoadCompleted += NavigationService_LoadCompleted;
         }
 
         private void NavigationService_LoadCompleted(object sender, NavigationEventArgs e)
         {
-            Tuple<List<Listing>, int> listAndNum = (Tuple<List<Listing>, int>)e.ExtraData;
+            Tuple<List<Listing>, List<Listing>, int> listAndNum = (Tuple<List<Listing>, List<Listing>, int>)e.ExtraData;
             OldListings = listAndNum.Item1;
-            list1 = OldListings[listAndNum.Item2-1];
+            FavoritedListings = listAndNum.Item2;
+            numOfListing = listAndNum.Item3;
+            
+            if (numOfListing==1)
+            {
+                LeftArrow.Visibility = Visibility.Collapsed;
+            }
+            else if(numOfListing==9)
+            {
+                RightArrow.Visibility = Visibility.Collapsed;
+            }
+            list1 = OldListings[numOfListing-1];
             ShowMainListing();
             
         }
@@ -55,7 +68,17 @@ namespace Real_Tors_Application
 
         private void btn_saveForLater_Click(object sender, RoutedEventArgs e)
         {
-
+            OldListings[numOfListing].Favorited = !ListOfListings[numOfListing].Favorited;
+            list1.Favorited = !list1.Favorited;
+            if (ListOfListings[numOfListing].Favorited)
+            {
+                FavoritedListings.Add(list1);
+            }
+            else
+            {
+                FavoritedListings.Remove(list1);
+            }
+            FavoritedListing.Source = list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
         }
 
         private void btn_contractRealtor_Click(object sender, RoutedEventArgs e)
@@ -121,10 +144,24 @@ namespace Real_Tors_Application
 
         }
 
+        private void prevLisiting(object sender, MouseButtonEventArgs e)
+        {
+            Tuple<List<Listing>, List<Listing>, int> listAndNum = new Tuple<List<Listing>, List<Listing>, int>(OldListings, FavoritedListings, numOfListing - 1);
+            JeremyWindow3 pNext = new JeremyWindow3();
+            pNext.SetUpNavigationHandler(this.NavigationService);
+            this.NavigationService.Navigate(pNext, listAndNum);
+        }
+
+        private void nextListing(object sender, MouseButtonEventArgs e)
+        {
+            Tuple<List<Listing>, List<Listing>, int> listAndNum = new Tuple<List<Listing>, List<Listing>, int>(OldListings, FavoritedListings, numOfListing + 1);
+            JeremyWindow3 pNext = new JeremyWindow3();
+            pNext.SetUpNavigationHandler(this.NavigationService);
+            this.NavigationService.Navigate(pNext, listAndNum);
+        }
 
         public void ShowMainListing()
         {
-
             Address.Content = list1.Address;
             PriceNumber.Content = "$" + list1.Price;
             Neighbourhood.Content = list1.Neighbourhood;
@@ -132,7 +169,9 @@ namespace Real_Tors_Application
             BedNumber.Content = list1.BedNum;
             BathNumber.Content = list1.BathNum;
             SizeNumber.Content = list1.Size + " sq ft";
-            MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +list1.NumOfImg + ".jpg", UriKind.Relative));
+            FavoritedListing.Source = (list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative)));
+
         }
 
         public void GenerateListings()
@@ -147,45 +186,61 @@ namespace Real_Tors_Application
             BedNumber0.Content = ListOfListings[0].BedNum;
             BathNumber0.Content = ListOfListings[0].BathNum;
             SizeNumber0.Content = ListOfListings[0].Size + " sq ft";
-            HouseImage0.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            HouseImage0.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[0].NumOfImg + ".jpg", UriKind.Relative));
 
             Neighbourhood1.Content = ListOfListings[1].Neighbourhood;
             PriceNum1.Content = "$" + ListOfListings[1].Price;
             BedNumber1.Content = ListOfListings[1].BedNum;
             BathNumber1.Content = ListOfListings[1].BathNum;
             SizeNumber1.Content = ListOfListings[1].Size + " sq ft";
-            HouseImage1.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            HouseImage1.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[1].NumOfImg + ".jpg", UriKind.Relative));
 
             Neighbourhood2.Content = ListOfListings[2].Neighbourhood;
             PriceNum2.Content = "$" + ListOfListings[2].Price;
             BedNumber2.Content = ListOfListings[2].BedNum;
             BathNumber2.Content = ListOfListings[2].BathNum;
             SizeNumber2.Content = ListOfListings[2].Size + " sq ft";
-            HouseImage2.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            HouseImage2.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[2].NumOfImg + ".jpg", UriKind.Relative));
 
             Neighbourhood3.Content = ListOfListings[3].Neighbourhood;
             PriceNum3.Content = "$" + ListOfListings[3].Price;
             BedNumber3.Content = ListOfListings[3].BedNum;
             BathNumber3.Content = ListOfListings[3].BathNum;
             SizeNumber3.Content = ListOfListings[3].Size + " sq ft";
-            HouseImage3.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            HouseImage3.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[3].NumOfImg + ".jpg", UriKind.Relative));
 
             Neighbourhood4.Content = ListOfListings[4].Neighbourhood;
             PriceNum4.Content = "$" + ListOfListings[4].Price;
             BedNumber4.Content = ListOfListings[4].BedNum;
             BathNumber4.Content = ListOfListings[4].BathNum;
             SizeNumber4.Content = ListOfListings[4].Size + " sq ft";
-            HouseImage4.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            HouseImage4.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[4].NumOfImg + ".jpg", UriKind.Relative));
 
             Neighbourhood5.Content = ListOfListings[5].Neighbourhood;
             PriceNum5.Content = "$" + ListOfListings[5].Price;
             BedNumber5.Content = ListOfListings[5].BedNum;
             BathNumber5.Content = ListOfListings[5].BathNum;
             SizeNumber5.Content = ListOfListings[5].Size + " sq ft";
-            HouseImage5.Source = new BitmapImage(new Uri(@"/houseImg" + rand.Next(25) + ".jpg", UriKind.Relative));
+            HouseImage5.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[5].NumOfImg + ".jpg", UriKind.Relative));
+
 
 
         }
 
+
+        private void ChangeFavorite(object sender, MouseButtonEventArgs e)
+        {
+            OldListings[numOfListing].Favorited = !ListOfListings[numOfListing].Favorited;
+            list1.Favorited = !list1.Favorited;
+            if (ListOfListings[numOfListing].Favorited)
+            {
+                FavoritedListings.Add(list1);
+            }
+            else
+            {
+                FavoritedListings.Remove(list1);
+            }
+            FavoritedListing.Source = list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+        }
     }
 }
