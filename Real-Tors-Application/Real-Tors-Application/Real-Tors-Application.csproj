@@ -343,5 +343,24 @@
   <ItemGroup>
     <Resource Include="sortup_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="arbourLake.png" />
+    <Resource Include="citadel.png" />
+    <Resource Include="dalhousie.png" />
+    <Resource Include="edgemont.png" />
+    <Resource Include="hamptons.png" />
+    <Resource Include="hawkwood.png" />
+    <Resource Include="houseImg25.jpg" />
+    <Resource Include="nolanHill.png" />
+    <Resource Include="ranchlands.png" />
+    <Resource Include="rockeyRidge.png" />
+    <Resource Include="royalOak.png" />
+    <Resource Include="royalVista.png" />
+    <Resource Include="sageHill.png" />
+    <Resource Include="scenicAcres.png" />
+    <Resource Include="silverSprings.png" />
+    <Resource Include="simonsValley.png" />
+    <Resource Include="tuscany.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
