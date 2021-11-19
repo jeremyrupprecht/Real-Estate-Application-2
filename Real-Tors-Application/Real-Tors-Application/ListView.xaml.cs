@@ -39,7 +39,7 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-            for(int i = 0; i<9; i++)
+            for (int i = 0; i < 9; i++)
             {
                 ListOfListings.Add(new Listing(rand));
             }
@@ -123,6 +123,27 @@ namespace Real_Tors_Application
             SizeNumber8.Content = ListOfListings[8].Size + " sq ft";
             HouseImage8.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[8].NumOfImg + ".jpg", UriKind.Relative));
             Heart8.Source = (ListOfListings[0].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative)));
+
+            ShrinkNeighbourhoodText(Neighbourhood0);
+            ShrinkNeighbourhoodText(Neighbourhood1);
+            ShrinkNeighbourhoodText(Neighbourhood2);
+            ShrinkNeighbourhoodText(Neighbourhood3);
+            ShrinkNeighbourhoodText(Neighbourhood4);
+            ShrinkNeighbourhoodText(Neighbourhood5);
+            ShrinkNeighbourhoodText(Neighbourhood6);
+            ShrinkNeighbourhoodText(Neighbourhood7);
+            ShrinkNeighbourhoodText(Neighbourhood8);
+
+        }
+
+        public void ShrinkNeighbourhoodText(Label nText)
+        {
+            int smallerFontSize = 20;
+            int neighbourhoodLengthLimit = 15;
+            if (nText.Content.ToString().Length > neighbourhoodLengthLimit)
+            {
+                nText.FontSize = smallerFontSize;
+            }
         }
 
         private void aboutButton_Click(object sender, RoutedEventArgs e)

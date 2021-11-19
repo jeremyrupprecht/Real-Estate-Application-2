@@ -234,7 +234,22 @@ namespace Real_Tors_Application
             SizeNumber6.Content = ListOfListings[5].Size + " sq ft";
             HouseImage6.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[5].NumOfImg + ".jpg", UriKind.Relative));
 
+            ShrinkNeighbourhoodText(Neighbourhood1);
+            ShrinkNeighbourhoodText(Neighbourhood2);
+            ShrinkNeighbourhoodText(Neighbourhood3);
+            ShrinkNeighbourhoodText(Neighbourhood4);
+            ShrinkNeighbourhoodText(Neighbourhood5);
+            ShrinkNeighbourhoodText(Neighbourhood6);
+        }
 
+        public void ShrinkNeighbourhoodText(Label nText)
+        {
+            int smallerFontSize = 20;
+            int neighbourhoodLengthLimit = 15;
+            if (nText.Content.ToString().Length > neighbourhoodLengthLimit)
+            {
+                nText.FontSize = smallerFontSize;
+            }
         }
 
 
