@@ -209,7 +209,7 @@ namespace Real_Tors_Application
             var currentListing = (sender as Rectangle).Parent;
             Console.WriteLine(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString());
             int numOfListing = Int16.Parse(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString().Substring(7));
-            Tuple<List<Listing>, List<Listing>, int> listAndNum = new Tuple<List<Listing>, List<Listing>, int>(ListOfListings, FavoritedListings, numOfListing);
+            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = new Tuple<List<Listing>, List<Listing>, Listing, int>(ListOfListings, FavoritedListings, null, numOfListing);
             JeremyWindow3 pNext = new JeremyWindow3();
             pNext.SetUpNavigationHandler(this.NavigationService);
             this.NavigationService.Navigate(pNext, listAndNum);
@@ -220,7 +220,7 @@ namespace Real_Tors_Application
             var currentListing = (sender as Image).Parent;
             Console.WriteLine(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString());
             int numOfListing = Int16.Parse(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString().Substring(7));
-            Tuple<List<Listing>, List<Listing>, int> listAndNum = new Tuple<List<Listing>, List<Listing>, int>(ListOfListings, FavoritedListings, numOfListing);
+            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = new Tuple<List<Listing>, List<Listing>, Listing, int>(ListOfListings, FavoritedListings, null, numOfListing);
             JeremyWindow3 pNext = new JeremyWindow3();
             pNext.SetUpNavigationHandler(this.NavigationService);
             this.NavigationService.Navigate(pNext, listAndNum);
