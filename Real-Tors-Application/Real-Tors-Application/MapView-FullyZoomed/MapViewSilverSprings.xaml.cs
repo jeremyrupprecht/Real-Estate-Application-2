@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Real_Tors_Application.MapView_FullyZoomed
 {
     /// <summary>
-    /// Interaction logic for MapViewSilverSrings.xaml
+    /// Interaction logic for MapViewSilverSprings.xaml
     /// </summary>
-    public partial class MapViewSilverSrings : Page
+    public partial class MapViewSilverSprings : Page
     {
-        public MapViewSilverSrings()
+        public MapViewSilverSprings()
         {
             InitializeComponent();
         }

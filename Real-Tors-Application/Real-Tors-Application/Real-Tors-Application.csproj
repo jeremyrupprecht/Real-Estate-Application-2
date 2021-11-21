@@ -88,8 +88,8 @@
     <Compile Include="MapView-FullyZoomed\MapViewScenicAcres.xaml.cs">
       <DependentUpon>MapViewScenicAcres.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapView-FullyZoomed\MapViewSilverSrings.xaml.cs">
-      <DependentUpon>MapViewSilverSrings.xaml</DependentUpon>
+    <Compile Include="MapView-FullyZoomed\MapViewSilverSprings.xaml.cs">
+      <DependentUpon>MapViewSilverSprings.xaml</DependentUpon>
     </Compile>
     <Compile Include="MapView-FullyZoomed\MapViewSimonsValley.xaml.cs">
       <DependentUpon>MapViewSimonsValley.xaml</DependentUpon>
@@ -187,7 +187,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MapView-FullyZoomed\MapViewSilverSrings.xaml">
+    <Page Include="MapView-FullyZoomed\MapViewSilverSprings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -490,6 +490,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MapView-FullyZoomed-Images\royalVistaMap.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapView-FullyZoomed-Images\royalVista.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
