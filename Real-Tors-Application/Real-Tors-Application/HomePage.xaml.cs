@@ -37,7 +37,8 @@ namespace Real_Tors_Application
 
         private void btn_MapView_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+            //this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewHawkwood.xaml", UriKind.Relative));
         }
 
         private void btn_TestView_Click(object sender, RoutedEventArgs e)

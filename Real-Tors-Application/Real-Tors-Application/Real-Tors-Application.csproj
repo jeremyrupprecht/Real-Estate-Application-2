@@ -55,6 +55,48 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MapView-FullyZoomed\MapViewCitadel.xaml.cs">
+      <DependentUpon>MapViewCitadel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewDalhousie.xaml.cs">
+      <DependentUpon>MapViewDalhousie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewEdgemont.xaml.cs">
+      <DependentUpon>MapViewEdgemont.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewHamptons.xaml.cs">
+      <DependentUpon>MapViewHamptons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewHawkwood.xaml.cs">
+      <DependentUpon>MapViewHawkwood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewRanchlands.xaml.cs">
+      <DependentUpon>MapViewRanchlands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewRockeyRidge.xaml.cs">
+      <DependentUpon>MapViewRockeyRidge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewRoyalOak.xaml.cs">
+      <DependentUpon>MapViewRoyalOak.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewRoyalVista.xaml.cs">
+      <DependentUpon>MapViewRoyalVista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewSageHill.xaml.cs">
+      <DependentUpon>MapViewSageHill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewScenicAcres.xaml.cs">
+      <DependentUpon>MapViewScenicAcres.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewSilverSrings.xaml.cs">
+      <DependentUpon>MapViewSilverSrings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewSimonsValley.xaml.cs">
+      <DependentUpon>MapViewSimonsValley.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewTuscany.xaml.cs">
+      <DependentUpon>MapViewTuscany.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapViewHovered.xaml.cs">
       <DependentUpon>MapViewHovered.xaml</DependentUpon>
     </Compile>
@@ -70,6 +112,9 @@
     </Compile>
     <Compile Include="LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapView-FullyZoomed\MapViewNolanHill.xaml.cs">
+      <DependentUpon>MapViewNolanHill.xaml</DependentUpon>
     </Compile>
     <Compile Include="MapViewRegion.xaml.cs">
       <DependentUpon>MapViewRegion.xaml</DependentUpon>
@@ -98,6 +143,62 @@
     <Compile Include="TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="MapView-FullyZoomed\MapViewCitadel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewDalhousie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewEdgemont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewHamptons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewHawkwood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewRanchlands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewRockeyRidge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewRoyalOak.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewRoyalVista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewSageHill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewScenicAcres.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewSilverSrings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewSimonsValley.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapView-FullyZoomed\MapViewTuscany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MapViewHovered.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +238,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MapView-FullyZoomed\MapViewNolanHill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MapViewRegion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -266,8 +371,8 @@
     <Resource Include="Calgary_cropped.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="left-arrow.png" />
-    <Resource Include="right-arrow.png" />
+    <Resource Include="Images\left-arrow.png" />
+    <Resource Include="Images\right-arrow.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Calgary_Hovered.png" />
@@ -345,22 +450,35 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="arbourLake.png" />
-    <Resource Include="citadel.png" />
-    <Resource Include="dalhousie.png" />
-    <Resource Include="edgemont.png" />
-    <Resource Include="hamptons.png" />
-    <Resource Include="hawkwood.png" />
+    <Resource Include="MapView-FullyZoomed-Images\citadel.png" />
+    <Resource Include="MapView-FullyZoomed-Images\dalhousie.png" />
+    <Resource Include="MapView-FullyZoomed-Images\edgemont.png" />
+    <Resource Include="MapView-FullyZoomed-Images\hamptons.png" />
+    <Resource Include="MapView-FullyZoomed-Images\hawkwood.png" />
     <Resource Include="houseImg25.jpg" />
-    <Resource Include="nolanHill.png" />
-    <Resource Include="ranchlands.png" />
-    <Resource Include="rockeyRidge.png" />
-    <Resource Include="royalOak.png" />
-    <Resource Include="royalVista.png" />
-    <Resource Include="sageHill.png" />
-    <Resource Include="scenicAcres.png" />
-    <Resource Include="silverSprings.png" />
-    <Resource Include="simonsValley.png" />
-    <Resource Include="tuscany.png" />
+    <Resource Include="MapView-FullyZoomed-Images\nolanHill.png" />
+    <Resource Include="MapView-FullyZoomed-Images\ranchlands.png" />
+    <Resource Include="MapView-FullyZoomed-Images\rockeyRidge.png" />
+    <Resource Include="MapView-FullyZoomed-Images\royalOak.png" />
+    <Resource Include="MapView-FullyZoomed-Images\royalVista.png" />
+    <Resource Include="MapView-FullyZoomed-Images\sageHill.png" />
+    <Resource Include="MapView-FullyZoomed-Images\scenicAcres.png" />
+    <Resource Include="MapView-FullyZoomed-Images\silverSprings.png" />
+    <Resource Include="MapView-FullyZoomed-Images\simonsValley.png" />
+    <Resource Include="MapView-FullyZoomed-Images\tuscany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapView-FullyZoomed-Images\nolanHillMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapView-FullyZoomed-Images\sageHillMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapView-FullyZoomed-Images\citadelMap.png" />
+    <Resource Include="MapView-FullyZoomed-Images\dalhousieMap.png" />
+    <Resource Include="MapView-FullyZoomed-Images\edgemontMap.png" />
+    <Resource Include="MapView-FullyZoomed-Images\hamptonsMap.png" />
+    <Resource Include="MapView-FullyZoomed-Images\hawkwoodMap.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
