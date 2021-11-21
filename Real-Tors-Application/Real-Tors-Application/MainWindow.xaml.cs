@@ -21,12 +21,21 @@ namespace Real_Tors_Application
     /// </summary>
     public partial class MainWindow : Window
     {
-
+       
 
         public MainWindow()
         {
 
             InitializeComponent();
+            string[] linesOfCSV = System.IO.File.ReadAllLines("../../resources/1000_listings.csv");
+            foreach(string line in linesOfCSV) {
+                string[] data = line.Split(',');
+                GlobalState.totalList.Add(new Listing(data[0], data[1], Convert.ToInt32(data[2]), Convert.ToInt32(data[3]), 
+                    Convert.ToInt32(data[4]), Convert.ToInt32(data[5]), Convert.ToInt32(data[6]), Convert.ToInt32(data[7]), 
+                    Convert.ToInt32(data[8]), Convert.ToInt32(data[9])));
+            }
+
+
             _NavigationFrame.Navigate(new HomePage()); // First page thats displayed on program start
         }
 

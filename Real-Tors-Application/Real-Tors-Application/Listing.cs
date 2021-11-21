@@ -91,6 +91,22 @@ namespace Real_Tors_Application {
 
         }
 
+        public Listing(String n, String a, int s, int p, int bath, int bed, int year, int img, int longitude, int latitude)
+        {
+            Neighbourhood = n;
+            Address = a;
+            Size = s;
+            Price = p;
+            BathNum = bath;
+            BedNum = bed;
+            YearBuilt = year;
+            NumOfImg = img;
+            Type = ListingType.SingleFamily;
+            Coordinates = new Tuple<double, double>((double)longitude/100, (double)latitude/100);
+            Description = "This house is a beautfiul home built in " + YearBuilt + ". It is nestled in the pristine neighbourhood of " + Neighbourhood + ".";
+
+
+        }
         public Listing(Random rand, string[] neighbourhoodSelect)
         {
 

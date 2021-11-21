@@ -20,56 +20,37 @@ namespace Real_Tors_Application
     /// </summary>
     public partial class JeremyWindow3 : Page
     {
-
         public readonly Random rand = new Random();
-        public int numOfListing;
-        public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;
         public Listing list1;
         public List<Listing> ListOfListings = new List<Listing>();
-        public List<Listing> OldListings = new List<Listing>();
-        public List<Listing> FavoritedListings = new List<Listing>();
+
 
         public JeremyWindow3()
         {
             InitializeComponent();
-            GenerateListings();
-        }
-
-        public void SetUpNavigationHandler(NavigationService ns)
-        {
-            ns.LoadCompleted += NavigationService_LoadCompleted;
-        }
-
-        private void NavigationService_LoadCompleted(object sender, NavigationEventArgs e)
-        {
-            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = (Tuple<List<Listing>, List<Listing>, Listing, int>)e.ExtraData;
-            OldListings = listAndNum.Item1;
-            FavoritedListings = listAndNum.Item2;
-            numOfListing = listAndNum.Item4;
-            
-            if(listAndNum.Item3!=null)
+            if (GlobalState.similar != null)
             {
-                Console.WriteLine("Similar Listing " + listAndNum.Item3.Address);
+                Console.WriteLine("Similar Listing " + GlobalState.similar.Address);
                 LeftArrow.Visibility = Visibility.Collapsed;
                 RightArrow.Visibility = Visibility.Collapsed;
                 BackIfSimilar.Visibility = Visibility.Visible;
-                list1 = listAndNum.Item3;
+                //BackIfSimilar.Content = "Back to " + GlobalState.totalList[GlobalState.currentList[GlobalState.currentIndex]].Address;
+                list1 = GlobalState.similar;
             }
             else
             {
-                if (numOfListing == 1)
+                if (GlobalState.currentIndex == 0)
                 {
                     LeftArrow.Visibility = Visibility.Collapsed;
                 }
-                else if (numOfListing == OldListings.Count())
+                else if (GlobalState.currentIndex == 8 || GlobalState.currentList[GlobalState.currentIndex+1]==-1)
                 {
                     RightArrow.Visibility = Visibility.Collapsed;
                 }
-                list1 = OldListings[numOfListing - 1];
+                list1 = GlobalState.totalList[GlobalState.currentList[GlobalState.currentIndex]];
             }
-            
             ShowMainListing();
-            
+            GenerateListings();
         }
 
         // button listener to go back to home page
@@ -80,16 +61,7 @@ namespace Real_Tors_Application
 
         private void btn_saveForLater_Click(object sender, RoutedEventArgs e)
         {
-            OldListings[numOfListing-1].Favorited = !OldListings[numOfListing-1].Favorited;
-            if (OldListings[numOfListing-1].Favorited)
-            {
-                FavoritedListings.Add(list1);
-            }
-            else
-            {
-                FavoritedListings.Remove(list1);
-            }
-            FavoritedListing.Source = OldListings[numOfListing-1].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+            ChangeFavoriteActivate();
         }
 
         private void btn_contractRealtor_Click(object sender, RoutedEventArgs e)
@@ -157,18 +129,16 @@ namespace Real_Tors_Application
 
         private void prevLisiting(object sender, MouseButtonEventArgs e)
         {
-            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = new Tuple<List<Listing>, List<Listing>, Listing, int>(OldListings, FavoritedListings, null, numOfListing - 1);
+            GlobalState.currentIndex--;
             JeremyWindow3 pNext = new JeremyWindow3();
-            pNext.SetUpNavigationHandler(this.NavigationService);
-            this.NavigationService.Navigate(pNext, listAndNum);
+            this.NavigationService.Navigate(pNext);
         }
 
         private void nextListing(object sender, MouseButtonEventArgs e)
         {
-            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = new Tuple<List<Listing>, List<Listing>, Listing, int>(OldListings, FavoritedListings, null, numOfListing + 1);
+            GlobalState.currentIndex++;
             JeremyWindow3 pNext = new JeremyWindow3();
-            pNext.SetUpNavigationHandler(this.NavigationService);
-            this.NavigationService.Navigate(pNext, listAndNum);
+            this.NavigationService.Navigate(pNext);
         }
 
         public void ShowMainListing()
@@ -252,36 +222,49 @@ namespace Real_Tors_Application
             }
         }
 
-
-        private void ChangeFavorite(object sender, MouseButtonEventArgs e)
+        private void ChangeFavoriteActivate()
         {
-            OldListings[numOfListing-1].Favorited = !OldListings[numOfListing-1].Favorited;
-            if (OldListings[numOfListing-1].Favorited)
+            if (GlobalState.similar != null)
             {
-                FavoritedListings.Add(list1);
+                list1.Favorited = !list1.Favorited;
+                if (list1.Favorited)
+                {
+                    GlobalState.additionalFavorites.Add(list1);
+                }
+                else
+                {
+                    GlobalState.additionalFavorites.Remove(list1);
+                }
+                FavoritedListing.Source = list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
             }
             else
             {
-                FavoritedListings.Remove(list1);
+                int numOfListing = GlobalState.currentIndex;
+                GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
+
+                var heartImg = FavoritedListing;
+                heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
             }
-            FavoritedListing.Source = OldListings[numOfListing-1].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+        }
+
+        private void ChangeFavorite(object sender, MouseButtonEventArgs e)
+        {
+            ChangeFavoriteActivate();
         }
 
         private void expandListing(object sender, MouseButtonEventArgs e)
         {
-            int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(7));
-            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = new Tuple<List<Listing>, List<Listing>, Listing, int>(OldListings, FavoritedListings, ListOfListings[numOfListing-1], numOfListing);
+            int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(7))-1;
+            GlobalState.similar = ListOfListings[numOfListing];
             JeremyWindow3 pNext = new JeremyWindow3();
-            pNext.SetUpNavigationHandler(this.NavigationService);
-            this.NavigationService.Navigate(pNext, listAndNum);
+            this.NavigationService.Navigate(pNext);
         }
 
         private void BackToSelection(object sender, RoutedEventArgs e)
         {
-            Tuple<List<Listing>, List<Listing>, Listing, int> listAndNum = new Tuple<List<Listing>, List<Listing>, Listing, int>(OldListings, FavoritedListings, null, numOfListing);
+            GlobalState.similar = null;
             JeremyWindow3 pNext = new JeremyWindow3();
-            pNext.SetUpNavigationHandler(this.NavigationService);
-            this.NavigationService.Navigate(pNext, listAndNum);
+            this.NavigationService.Navigate(pNext);
         }
     }
 }

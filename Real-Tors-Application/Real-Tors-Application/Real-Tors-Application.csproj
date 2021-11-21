@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GlobalState.cs" />
     <Compile Include="MapView-FullyZoomed\MapViewCitadel.xaml.cs">
       <DependentUpon>MapViewCitadel.xaml</DependentUpon>
     </Compile>

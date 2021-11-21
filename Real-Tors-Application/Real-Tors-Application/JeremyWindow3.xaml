@@ -422,11 +422,11 @@
             </ScrollViewer>
             <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
             <Grid>
-                <Image Name="LeftArrow" Source="left-arrow.png" VerticalAlignment="Top" Width="115" Margin="0,725,0,0" MouseLeftButtonDown="prevLisiting"/>
+                <Image Name="LeftArrow" Source="sortdown_icon.png" VerticalAlignment="Top" Width="115" Margin="0,725,0,0" MouseLeftButtonDown="prevLisiting"/>
             </Grid>
 
         </StackPanel>
-        <Image Name="RightArrow" Source="right-arrow.png" Margin="1759,812,16,126" RenderTransformOrigin="1.17,1.11" MouseLeftButtonDown="nextListing" />
+        <Image Name="RightArrow" Source="sortdown_icon.png" Margin="1759,812,16,126" RenderTransformOrigin="1.17,1.11" MouseLeftButtonDown="nextListing" />
 
     </Grid>
 
