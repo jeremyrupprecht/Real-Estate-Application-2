@@ -18,28 +18,30 @@
             <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0" Click="profileButton_Click"/>
         </StackPanel>
-        
+
         <Image x:Name="logoImage" Height="258" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="688" Source="Logo.png" Margin="0,130,0,0"/>
-        
+
         <Grid Visibility="Visible" x:Name="logInGrid">
-            <Label Content="Log in to save your favourite listings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,465,0,0" FontSize="24" Background="#FFD1D1D1" />
-            <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="525,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
-            <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="525,600,0,0" Height="40" Width="200" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
-            <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="400,530,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
-            <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="400,600,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
-            <CheckBox x:Name="rememberMeCheckBox" Content="Remember me" HorizontalAlignment="Left" Margin="400,670,0,0" VerticalAlignment="Top" FontSize="24"/>
-            <Button x:Name="createAcccountButton" Content="Create an account" HorizontalAlignment="Left" Margin="400, 720, 0, 0" VerticalAlignment="Top" Width="Auto" FontSize="24" Height="40" Click="createAcccountTextButton_Click">
+            <Label Content="Log in to save your favourite listings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,465,0,0" FontSize="24" Background="#FFD1D1D1" BorderBrush="Black" BorderThickness="3"/>
+            <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="528,530,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+            <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="528,600,0,0" Height="40" Width="260" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
+            <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="410,530,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
+            <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="410,600,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
+            <CheckBox x:Name="rememberMeCheckBox" Content="Remember me" HorizontalAlignment="Left" Margin="410,670,0,0" VerticalAlignment="Top" FontSize="24"/>
+            <Button x:Name="createAcccountButton" Content="Create an account" HorizontalAlignment="Left" Margin="410, 720, 0, 0" VerticalAlignment="Top" Width="Auto" FontSize="24" Height="40" Click="createAcccountTextButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <TextBlock Text="Create an Account" Foreground="#FF4556FF" />
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="500,790,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" Click="logInButton_Click" />
+            <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="525,790,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" Click="logInButton_Click" />
+            <Rectangle HorizontalAlignment="Left" Height="380" Margin="400,465,0,0" VerticalAlignment="Top" Width="398" Stroke="Black" StrokeThickness="3"/>
+            <Label x:Name="orTextLabel" Content="Or" HorizontalAlignment="Left" Margin="932,465,0,0" VerticalAlignment="Top" FontSize="24" Width="50" Height="40"/>
         </Grid>
 
         <Grid Visibility="Hidden" x:Name="signupGrid">
-            <Label x:Name="createAccountLabel" Content="Create an Account" HorizontalAlignment="Left" Margin="200,500,0,0" VerticalAlignment="Top" FontSize="40" Width="585" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="70" BorderThickness="0"/>
+            <Label x:Name="createAccountLabel" Content="Create an Account" HorizontalAlignment="Left" Margin="200,500,0,0" VerticalAlignment="Top" FontSize="40" Width="585" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="70" BorderThickness="3" BorderBrush="Black"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="300" Margin="200,570,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="585"/>
             <TextBox x:Name="userNameTextBoxAC" HorizontalAlignment="Left" Height="40" Margin="340,600,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" />
             <PasswordBox x:Name="passwordTextBoxAC" HorizontalAlignment="Left" Margin="340,670,0,0" Height="40" Width="400" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
@@ -51,7 +53,7 @@
         </Grid>
 
         <Grid Visibility="Hidden" x:Name="successSignupGrid">
-            
+
             <Label x:Name="createAccountLabel2" Content="Create an Account" HorizontalAlignment="Left" Margin="200,500,0,0" VerticalAlignment="Top" FontSize="40" Width="620" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="65"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="220" Margin="200,565,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="620"/>
             <Label x:Name="accountCreatedLabel" Content="Your account has been successfully created!" HorizontalAlignment="Center" Margin="200,591,1100,0" VerticalAlignment="Top" FontSize="24" Foreground="#FF209B05" FontWeight="SemiBold" Width="620" HorizontalContentAlignment="Center"/>
@@ -59,28 +61,23 @@
             <Button x:Name="loginButton" Content="Click here to login" HorizontalAlignment="Left" Margin="385,710,0,0" VerticalAlignment="Top" Width="250" Height="40" FontSize="24" Background="#FF9DEA8C" Click="loginButtonSUCC_Click"/>
         </Grid>
 
-        <Grid Margin="1125,490,315,0" x:Name="homeTypeGrid" >
-            <ComboBox x:Name="houseTypeComboBox" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="280" Height="40">
-                <ComboBoxItem>
-                    <Button x:Name="comboItem1Button" Content="Single family home" Height="40" Width="250" FontSize="24" Click="comboItem1Button_Click" />
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <Button x:Name="comboItem2Button" Content="Duplex home" Height="40" Width="250" FontSize="24" Click="comboItem2Button_Click" />
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <Button x:Name="comboItem3Button" Content="Triplex Home" Height="40" Width="250" FontSize="24" Click="comboItem3Button_Click" />
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <Button x:Name="comboItem4Button" Content="Townhouse" Height="40" Width="250" FontSize="24" Click="comboItem4Button_Click"/>
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <Button x:Name="comboItem5Button" Content="Apartment" Height="40" Width="250" FontSize="24" Click="comboItem5Button_Click"/>
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <Button x:Name="comboItem6Button" Content="Loft" Height="40" Width="250" FontSize="24" Click="comboItem6Button_Click"/>
-                </ComboBoxItem>
-            </ComboBox>
-            <Label x:Name="label" Content="Please select a home type:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="50" FontSize="28" Width="340"/>
+        <Grid Margin="1125,465,315,0" x:Name="homeTypeGrid" Height="315" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Visibility="Visible" Width="340" HorizontalAlignment="Left">
+                <Label x:Name="label" Content="Please select a home type:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="50" FontSize="28" Width="340"/>
+                <Button x:Name="comboItem1Button" HorizontalAlignment="Left" Content="Single family home" Height="40" Width="340" FontSize="24" Click="comboItem1Button_Click" />
+                <Label Height="5"/>
+                <Button x:Name="comboItem2Button" HorizontalAlignment="Left" Content="Duplex home" Height="40" Width="340" FontSize="24" Click="comboItem2Button_Click" />
+                <Label Height="5"/>
+                <Button x:Name="comboItem3Button" HorizontalAlignment="Left" Content="Triplex Home" Height="40" Width="340" FontSize="24" Click="comboItem3Button_Click" />
+                <Label Height="5"/>
+                <Button x:Name="comboItem4Button" HorizontalAlignment="Left" Content="Townhouse" Height="40" Width="340" FontSize="24" Click="comboItem4Button_Click"/>
+                <Label Height="5"/>
+                <Button x:Name="comboItem5Button" HorizontalAlignment="Left" Content="Apartment" Height="40" Width="340" FontSize="24" Click="comboItem5Button_Click"/>
+                <Label Height="5"/>
+                <Button x:Name="comboItem6Button" HorizontalAlignment="Left" Content="Loft" Height="40" Width="340" FontSize="24" Click="comboItem6Button_Click"/>
+            </StackPanel>
+
+
         </Grid>
 
 

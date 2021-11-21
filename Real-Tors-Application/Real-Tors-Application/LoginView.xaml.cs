@@ -67,7 +67,7 @@ namespace Real_Tors_Application
 
             //  824,515,315,0
             Thickness margin = homeTypeGrid.Margin;
-            margin.Left = 824;
+            margin.Left = 790;
             homeTypeGrid.Margin = margin;
 
             profileButton.Content = "My Profile";
