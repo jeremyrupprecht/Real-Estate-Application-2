@@ -460,7 +460,6 @@
     <Resource Include="MapView-FullyZoomed-Images\ranchlands.png" />
     <Resource Include="MapView-FullyZoomed-Images\rockeyRidge.png" />
     <Resource Include="MapView-FullyZoomed-Images\royalOak.png" />
-    <Resource Include="MapView-FullyZoomed-Images\royalVista.png" />
     <Resource Include="MapView-FullyZoomed-Images\sageHill.png" />
     <Resource Include="MapView-FullyZoomed-Images\scenicAcres.png" />
     <Resource Include="MapView-FullyZoomed-Images\silverSprings.png" />
@@ -479,6 +478,18 @@
     <Resource Include="MapView-FullyZoomed-Images\edgemontMap.png" />
     <Resource Include="MapView-FullyZoomed-Images\hamptonsMap.png" />
     <Resource Include="MapView-FullyZoomed-Images\hawkwoodMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapView-FullyZoomed-Images\ranchlandsMap.PNG" />
+    <Resource Include="MapView-FullyZoomed-Images\rockeyRidgeMap.PNG" />
+    <Resource Include="MapView-FullyZoomed-Images\royalOakMap.PNG" />
+    <Resource Include="MapView-FullyZoomed-Images\scenicAcresMap.PNG" />
+    <Resource Include="MapView-FullyZoomed-Images\silverSpringsMap.PNG" />
+    <Resource Include="MapView-FullyZoomed-Images\simonsValleyMap.PNG" />
+    <Resource Include="MapView-FullyZoomed-Images\tuscanyMap.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapView-FullyZoomed-Images\royalVistaMap.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
