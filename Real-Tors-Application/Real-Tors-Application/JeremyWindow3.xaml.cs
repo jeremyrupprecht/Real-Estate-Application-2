@@ -157,7 +157,7 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 12; i++)
             {
                 ListOfListings.Add(new Listing(rand));
             }
@@ -204,12 +204,61 @@ namespace Real_Tors_Application
             SizeNumber6.Content = ListOfListings[5].Size + " sq ft";
             HouseImage6.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[5].NumOfImg + ".jpg", UriKind.Relative));
 
+            Neighbourhood7.Content = ListOfListings[6].Neighbourhood;
+            PriceNum7.Content = "$" + ListOfListings[6].Price;
+            BedNumber7.Content = ListOfListings[6].BedNum;
+            BathNumber7.Content = ListOfListings[6].BathNum;
+            SizeNumber7.Content = ListOfListings[6].Size + " sq ft";
+            HouseImage7.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[6].NumOfImg + ".jpg", UriKind.Relative));
+
+            Neighbourhood8.Content = ListOfListings[7].Neighbourhood;
+            PriceNum8.Content = "$" + ListOfListings[7].Price;
+            BedNumber8.Content = ListOfListings[7].BedNum;
+            BathNumber8.Content = ListOfListings[7].BathNum;
+            SizeNumber8.Content = ListOfListings[7].Size + " sq ft";
+            HouseImage8.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[7].NumOfImg + ".jpg", UriKind.Relative));
+
+            Neighbourhood9.Content = ListOfListings[8].Neighbourhood;
+            PriceNum9.Content = "$" + ListOfListings[8].Price;
+            BedNumber9.Content = ListOfListings[8].BedNum;
+            BathNumber9.Content = ListOfListings[8].BathNum;
+            SizeNumber9.Content = ListOfListings[8].Size + " sq ft";
+            HouseImage9.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[8].NumOfImg + ".jpg", UriKind.Relative));
+
+            Neighbourhood10.Content = ListOfListings[9].Neighbourhood;
+            PriceNum10.Content = "$" + ListOfListings[9].Price;
+            BedNumber10.Content = ListOfListings[9].BedNum;
+            BathNumber10.Content = ListOfListings[9].BathNum;
+            SizeNumber10.Content = ListOfListings[9].Size + " sq ft";
+            HouseImage10.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[9].NumOfImg + ".jpg", UriKind.Relative));
+
+            Neighbourhood11.Content = ListOfListings[10].Neighbourhood;
+            PriceNum11.Content = "$" + ListOfListings[10].Price;
+            BedNumber11.Content = ListOfListings[10].BedNum;
+            BathNumber11.Content = ListOfListings[10].BathNum;
+            SizeNumber11.Content = ListOfListings[10].Size + " sq ft";
+            HouseImage11.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[10].NumOfImg + ".jpg", UriKind.Relative));
+
+            Neighbourhood12.Content = ListOfListings[11].Neighbourhood;
+            PriceNum12.Content = "$" + ListOfListings[11].Price;
+            BedNumber12.Content = ListOfListings[11].BedNum;
+            BathNumber12.Content = ListOfListings[11].BathNum;
+            SizeNumber12.Content = ListOfListings[11].Size + " sq ft";
+            HouseImage12.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[11].NumOfImg + ".jpg", UriKind.Relative));
+
             ShrinkNeighbourhoodText(Neighbourhood1);
             ShrinkNeighbourhoodText(Neighbourhood2);
             ShrinkNeighbourhoodText(Neighbourhood3);
             ShrinkNeighbourhoodText(Neighbourhood4);
             ShrinkNeighbourhoodText(Neighbourhood5);
             ShrinkNeighbourhoodText(Neighbourhood6);
+            ShrinkNeighbourhoodText(Neighbourhood7);
+            ShrinkNeighbourhoodText(Neighbourhood8);
+            ShrinkNeighbourhoodText(Neighbourhood9);
+            ShrinkNeighbourhoodText(Neighbourhood10);
+            ShrinkNeighbourhoodText(Neighbourhood11);
+            ShrinkNeighbourhoodText(Neighbourhood12);
+
         }
 
         public void ShrinkNeighbourhoodText(Label nText)
