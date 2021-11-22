@@ -70,6 +70,11 @@ namespace Real_Tors_Application
             
         }
 
+        // TODO:
+        // Get listings from all listings in global state
+        // Check if the listing is faved
+        // If so populate the fave listing in profile with 9?
+        // If it does not fill, grab from additional listing
         public void GenerateListings()
         {
             for (int i = 0; i < 9; i++)
