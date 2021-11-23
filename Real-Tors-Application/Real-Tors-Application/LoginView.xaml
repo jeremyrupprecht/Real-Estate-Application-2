@@ -13,9 +13,9 @@
 
         <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="Auto">
             <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
-            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0" Click="aboutButton_Click"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0" Click="teamButton_Click"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0" Click="contactButton_Click"/>
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0" Click="profileButton_Click"/>
         </StackPanel>
 
