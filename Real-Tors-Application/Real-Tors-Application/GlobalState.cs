@@ -49,7 +49,7 @@ namespace Real_Tors_Application
             int count = 0;
             for(int i = 0; i<1000 && count<limit && count<9; i++)
             {
-                if (paramNeighbourhood!=null)
+                if (paramNeighbourhood.Count!=0)
                 {
                     if(!paramNeighbourhood.Contains(totalList[i].Neighbourhood))
                         continue;
@@ -86,7 +86,7 @@ namespace Real_Tors_Application
                 }
                 currentList[count] = i;
                 count++;
-
+                Console.WriteLine(count);
             }
             while(count<9)
             {

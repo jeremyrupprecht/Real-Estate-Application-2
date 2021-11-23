@@ -38,7 +38,7 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-           
+            Console.WriteLine(GlobalState.currentList[0]);
             Neighbourhood0.Content = GlobalState.totalList[GlobalState.currentList[0]].Neighbourhood;
             PriceNum0.Content = "$" + GlobalState.totalList[GlobalState.currentList[0]].Price;
             BedNumber0.Content = GlobalState.totalList[GlobalState.currentList[0]].BedNum;
