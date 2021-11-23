@@ -20,10 +20,20 @@ namespace Real_Tors_Application.MapView_FullyZoomed
     /// </summary>
     public partial class MapViewCitadel : Page
     {
+        public String nameOfCurrentNeighbourhood = "Citadel";
         public MapViewCitadel()
         {
             InitializeComponent();
             GetListings();
+        }
+
+        private Tuple<int,int> offsetFrom100(double x, double y)
+        {
+            int xmin = GlobalState.neighbourhoodBounds[nameOfCurrentNeighbourhood].Item1, xmax = GlobalState.neighbourhoodBounds[nameOfCurrentNeighbourhood].Item2,
+                ymin = GlobalState.neighbourhoodBounds[nameOfCurrentNeighbourhood].Item3, ymax = GlobalState.neighbourhoodBounds[nameOfCurrentNeighbourhood].Item4;
+
+            return new Tuple<int, int>((int)((xmax - xmin) * x + xmin), (int)((ymax - ymin) * y + ymin));
+           
         }
 
         private void GetListings()
@@ -31,14 +41,14 @@ namespace Real_Tors_Application.MapView_FullyZoomed
             GlobalState.paramNeighbourhood.Clear();
             GlobalState.paramNeighbourhood.Add("Citadel");
             GlobalState.Generate();
-            Tuple<double, double> offset;
+            Tuple<int, int> offset;
             Listing curr;
+            
 
             if(GlobalState.currentList[0]!=-1)
             {
                 btn_Pin1.Visibility = Visibility.Visible;
                 curr = GlobalState.totalList[GlobalState.currentList[0]];
-                offset = curr.Coordinates;
                 Neighbourhood1.Content = curr.Neighbourhood;
                 PriceNum1.Content = "$"+curr.Price;
                 SizeNumber1.Content = curr.Size + " sqft";
@@ -46,6 +56,14 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                 BathNumber1.Content = curr.BathNum;
                 HouseImage1.Source = new BitmapImage(new Uri(@"../houseImg" + curr.NumOfImg + ".jpg", UriKind.Relative));
                 Heart1.Source = curr.Favorited ? new BitmapImage(new Uri(@"../HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"../HeartIconEmpty.png", UriKind.Relative));
+
+                TranslateTransform translateT = new TranslateTransform();
+                offset = offsetFrom100(curr.Coordinates.Item1, curr.Coordinates.Item2);
+                translateT.X = offset.Item1;
+                translateT.Y = offset.Item2;
+                TransformGroup tg = new TransformGroup();
+                tg.Children.Add(translateT);
+                Listing1Grid.RenderTransform = tg;
             }
         }
 
@@ -156,20 +174,21 @@ namespace Real_Tors_Application.MapView_FullyZoomed
 
         private void expandListing(object sender, MouseButtonEventArgs e)
         {
-            //var currentListing = (sender as Rectangle).Parent;
-            //int numOfListing = Int16.Parse(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString().Substring(7)) - 1;
-            //GlobalState.currentIndex = numOfListing;
-            //JeremyWindow3 pNext = new JeremyWindow3();
-            //this.NavigationService.Navigate(pNext);
+            var currentListing = (sender as Rectangle).Parent;
+            Console.WriteLine(currentListing);
+            int numOfListing = Int16.Parse(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString().Substring(7)) - 1;
+            GlobalState.currentIndex = numOfListing;
+            JeremyWindow3 pNext = new JeremyWindow3();
+            this.NavigationService.Navigate(pNext);
         }
 
-        private void expandListingImg(object sender, MouseButtonEventArgs e)
+        private void expandListingBorder(object sender, MouseButtonEventArgs e)
         {
-            //var currentListing = (sender as Image).Parent;
-            //int numOfListing = Int16.Parse(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString().Substring(7)) - 1;
-            //GlobalState.currentIndex = numOfListing;
-            //JeremyWindow3 pNext = new JeremyWindow3();
-            //this.NavigationService.Navigate(pNext);
+            var currentListing = (sender as Border).Parent;
+            int numOfListing = Int16.Parse(currentListing.GetType().GetProperty("Name").GetValue(currentListing).ToString().Substring(7)) - 1;
+            GlobalState.currentIndex = numOfListing;
+            JeremyWindow3 pNext = new JeremyWindow3();
+            this.NavigationService.Navigate(pNext);
         }
 
         private void ChangeFavorite(object sender, MouseButtonEventArgs e)

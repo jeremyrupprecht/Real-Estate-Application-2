@@ -44,8 +44,8 @@
 
                     <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="150" Width="250" HorizontalAlignment="Center" Stroke="Black" VerticalAlignment="Top"/>
                     <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="80" Width="250" HorizontalAlignment="Center" Stroke="Black" VerticalAlignment="Top" MouseLeftButtonDown="expandListing"/>
-                    <Border BorderThickness="0" BorderBrush="#555" VerticalAlignment="Center" Margin="15">
-                        <Image Name="HouseImage1" Grid.Row="0" Source="../houseImg1.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Height="120" MouseLeftButtonDown="expandListingImg" MouseEnter="GiveBorder" MouseLeave="TakeBorder"/>
+                    <Border BorderThickness="0" BorderBrush="#555" VerticalAlignment="Center" Margin="15" MouseLeftButtonDown="expandListingBorder">
+                        <Image Name="HouseImage1" Grid.Row="0" Source="../houseImg1.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Height="120" MouseEnter="GiveBorder" MouseLeave="TakeBorder"/>
                     </Border>
                     <Label Name="Neighbourhood1" Grid.Row="1" FontSize="18" FontWeight="Bold" Margin="2,4,0,4" HorizontalAlignment="Left"></Label>
                     <Label Name="PriceNum1" Grid.Row="1" FontSize="18" FontWeight="Black" Margin="0,4,4,4" HorizontalAlignment="Right"></Label>
