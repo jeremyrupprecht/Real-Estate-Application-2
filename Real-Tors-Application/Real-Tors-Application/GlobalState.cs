@@ -35,7 +35,7 @@ namespace Real_Tors_Application
             paramNeighbourhood = new List<String>();
             currentList = new int[9];
             neighbourhoodBounds = new Dictionary<string, Tuple<int, int, int, int>>();
-            neighbourhoodBounds.Add("Citadel", new Tuple<int, int, int, int>( -300, 500, -30, 50));
+            neighbourhoodBounds.Add("Citadel", new Tuple<int, int, int, int>( -300, 500, -300, 30));
             
         }
 
