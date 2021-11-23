@@ -15,6 +15,6 @@
         <Button x:Name="btn_TestView" Content="Go to TestView" HorizontalAlignment="Left" Margin="320,260,0,0" VerticalAlignment="Top" Width="160" Click="btn_TestView_Click"/>
         <Button x:Name="btn_JeremyView" Content="Go To JeremyView" HorizontalAlignment="Left" Margin="320,310,0,0" VerticalAlignment="Top" Width="160" Click="btn_JeremyView_Click"/>
         <Button x:Name="btn_LogInView" Content="Go To LoginView" HorizontalAlignment="Left" Margin="320,360,0,0" VerticalAlignment="Top" Width="160" Click="btn_LogInView_Click"/>
-        <Button x:Name="btn_Citadel" Content="Go To Citadel" HorizontalAlignment="Left" Margin="320,360,0,0" VerticalAlignment="Top" Width="160" Click="btn_Citadel_Click"/>
+        <Button x:Name="btn_Citadel" Content="Go To Citadel" HorizontalAlignment="Left" Margin="320,410,0,0" VerticalAlignment="Top" Width="160" Click="btn_Citadel_Click"/>
     </Grid>
 </Page>

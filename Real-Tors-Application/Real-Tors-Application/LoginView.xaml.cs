@@ -60,6 +60,21 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
+        private void teamButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("OurTeamView.xaml", UriKind.Relative));
+        }
+
+        private void contactButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ContactUsView.xaml", UriKind.Relative));
+        }
+
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("AboutView.xaml", UriKind.Relative));
+        }
+
 
         private void logInButton_Click(object sender, RoutedEventArgs e)
         {

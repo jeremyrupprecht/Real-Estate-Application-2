@@ -1,0 +1,29 @@
+﻿<Page x:Class="Real_Tors_Application.OurTeamView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Real_Tors_Application"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="OurTeamView"
+      Background="White">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="Auto" Background="#FF302222">
+            <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0" Click="aboutButton_Click"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0" Click="teamButton_Click"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0" Click="contactButton_Click"/>
+            <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0" Click="profileButton_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="540" Margin="385,190,0,0" VerticalAlignment="Top" Width="1150" Background="#FFF0F0F0">
+            <Label Content="Our Team" FontSize="50" FontWeight="Bold" Background="#FFD1D1D1" Height="80"/>
+            <TextBlock TextWrapping="Wrap" FontSize="30" >Real-Tors is a non-profit professional association regulated by the Cooperatives Act. In collaboration with the Canadian Real Estate Association (CREA) and the Alberta Real Estate Association (AREA), the board promotes the value of a realtor and advocates for members at all levels of government.</TextBlock>
+            <Label Height="30"/>
+            <TextBlock TextWrapping="Wrap" FontSize="30" >Real-Tors is governed by an elected board of directors comprised of volunteer member leaders who work to advance the organization’s vision and mission.</TextBlock>
+            <Label Height="30"/>
+            <TextBlock TextWrapping="Wrap" FontSize="30" >To enrich the local communities members serve, the Real-Tors realtor Community Foundation administers several annual funding grants to support local charities. The foundation also organizes volunteer opportunities and encourages the philanthropic work of Real-Tors members in the community.</TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

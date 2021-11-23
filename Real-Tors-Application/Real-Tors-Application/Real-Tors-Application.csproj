@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUsView.xaml.cs">
+      <DependentUpon>ContactUsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GlobalState.cs" />
     <Compile Include="MapView-FullyZoomed\MapViewCitadel.xaml.cs">
       <DependentUpon>MapViewCitadel.xaml</DependentUpon>
@@ -135,6 +141,9 @@
     <Compile Include="MapViewZoomed2Hovered.xaml.cs">
       <DependentUpon>MapViewZoomed2Hovered.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OurTeamView.xaml.cs">
+      <DependentUpon>OurTeamView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProfileView.xaml.cs">
       <DependentUpon>ProfileView.xaml</DependentUpon>
     </Compile>
@@ -144,6 +153,14 @@
     <Compile Include="TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContactUsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MapView-FullyZoomed\MapViewCitadel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -264,6 +281,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MapViewZoomed2Hovered.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OurTeamView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

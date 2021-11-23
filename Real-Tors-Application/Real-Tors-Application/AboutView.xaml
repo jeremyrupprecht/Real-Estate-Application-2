@@ -1,0 +1,31 @@
+﻿<Page x:Class="Real_Tors_Application.AboutView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Real_Tors_Application"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AboutView"
+      Background="White">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="Auto" Background="#FF302222">
+            <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0" Click="aboutButton_Click"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0" Click="teamButton_Click"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0" Click="contactButton_Click"/>
+            <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0" Click="profileButton_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="540" Margin="385,190,0,0" VerticalAlignment="Top" Width="1150" Background="#FFF0F0F0">
+            <Label Content="About Us" FontSize="50" FontWeight="Bold" Background="#FFD1D1D1" Height="80"/>
+            <TextBlock TextWrapping="Wrap" FontSize="30" >The Calgary Real-Tors board is a professional association of over 5,800 licensed realtors across the Calgary region. As one of the largest real estate boards in Canada, Real-Tors ensures that realtors have the tools and support they need to be successful.</TextBlock>
+            <Label Height="30"/>
+            <TextBlock TextWrapping="Wrap" FontSize="30" >Real-Tors board is a founding partner of Pillar 9™ Technologies, providing realtors access to a province-wide Multiple Listing Service (MLS) System. Through the MLS System, members and their clients can access the most comprehensive database of property listings and sales history in the region.</TextBlock>
+            <Label Height="30"/>
+            <TextBlock TextWrapping="Wrap" FontSize="30" >Real-Tors is also a trusted source for local housing statistics and real estate news. The board's much anticipated regional housing market forecast is presented in January. Updates on housing statistics and sales performance are distributed monthly.</TextBlock>
+        </StackPanel>
+
+
+    </Grid>
+</Page>
