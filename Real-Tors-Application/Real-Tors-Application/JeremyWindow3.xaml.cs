@@ -74,6 +74,12 @@ namespace Real_Tors_Application
 
         }
 
+        private void btn_listView_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
+        }
+
+
         private void toggleTypes(object sender, RoutedEventArgs e)
         {
             if (HomeTypesSelect.Visibility == Visibility.Collapsed)
@@ -117,6 +123,7 @@ namespace Real_Tors_Application
             {
                 FilterPanel.Visibility = Visibility.Visible;
                 expandedListingScrollViewer.Width = 1420;
+
             }
             else
             {
