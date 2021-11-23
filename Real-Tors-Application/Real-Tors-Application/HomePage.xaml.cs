@@ -60,5 +60,10 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
+
+        private void btn_Citadel_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./MapView-FullyZoomed/MapViewCitadel.xaml", UriKind.Relative));
+        }
     }
 }

@@ -19,16 +19,71 @@
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
         <Image Source="/MapView-FullyZoomed-Images/citadel.png" Margin="517,58,363,-101"/>
+        <Border>
+            <Grid Name="Listing1Grid" Width="280" Height="350" MouseLeave="MouseOut1">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-300" Y="50"/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="260"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Name="Listing1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
 
-        <Button x:Name="btn_Pin1" RenderTransformOrigin="5.875,2.445" Margin="588,435,1182,489" Click="Btn_Map_Click">
-            <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/MapPin.png"/>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+                    <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="150" Width="250" HorizontalAlignment="Center" Stroke="Black" VerticalAlignment="Top"/>
+                    <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="80" Width="250" HorizontalAlignment="Center" Stroke="Black" VerticalAlignment="Top" MouseLeftButtonDown="expandListing"/>
+                    <Border BorderThickness="0" BorderBrush="#555" VerticalAlignment="Center" Margin="15">
+                        <Image Name="HouseImage1" Grid.Row="0" Source="../houseImg1.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Height="120" MouseLeftButtonDown="expandListingImg" MouseEnter="GiveBorder" MouseLeave="TakeBorder"/>
+                    </Border>
+                    <Label Name="Neighbourhood1" Grid.Row="1" FontSize="18" FontWeight="Bold" Margin="2,4,0,4" HorizontalAlignment="Left"></Label>
+                    <Label Name="PriceNum1" Grid.Row="1" FontSize="18" FontWeight="Black" Margin="0,4,4,4" HorizontalAlignment="Right"></Label>
 
-        <Button x:Name="btn_Pin2" RenderTransformOrigin="5.875,2.445" Margin="663,357,1107,567" Click="Btn_Map_Click">
+                    <Grid Grid.Row="1" HorizontalAlignment="center" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="120"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Name="BedNumber1" Grid.Column="0" FontSize="25" FontWeight="Black" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Foreground="#ff9900"></Label>
+                        <Image Name="BedIcon1" Grid.Column="1" HorizontalAlignment="Left" Source="../BedroomIcon.png" Margin="0"></Image>
+                        <Label Name="BathNumber1" Grid.Column="2" FontSize="25" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#55aaff"></Label>
+                        <Image Name="BathIcon1" Grid.Column="3" HorizontalAlignment="Left" Source="../BathroomIcon.png" Margin="0"></Image>
+                        <Label Name="SizeNumber1" Grid.Column="4" FontSize="25" FontWeight="Normal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"></Label>
+                    </Grid>
+                    <Image Name="Heart1" Source="../HeartIconFilled.png"  Height="90" Margin="-30,-50,190,100" MouseLeftButtonDown="ChangeFavorite"/>
+                </Grid>
+                <Button Grid.Row="1" x:Name="btn_Pin1" Height="90" Width="90" Click="Btn_Map_Click" MouseEnter="MouseOverPin1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="/Images/MapPin.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+        </Border>
+
+
+
+        <!--<Button x:Name="btn_Pin2" RenderTransformOrigin="5.875,2.445" Margin="663,357,1107,567" Click="Btn_Map_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/Images/MapPin.png"/>
@@ -58,7 +113,7 @@
                     <Image Source="/Images/MapPin.png"/>
                 </ControlTemplate>
             </Button.Template>
-        </Button>
+        </Button>-->
 
         <Image Source="/Images/right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
 

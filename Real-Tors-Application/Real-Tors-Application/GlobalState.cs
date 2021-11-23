@@ -11,13 +11,15 @@ namespace Real_Tors_Application
         public static List<Listing> totalList { get; set; }
         public static List<Listing> additionalFavorites { get; set; }
         public static Dictionary<string, int> perNeighbourhood { get; set; }
+        public static Dictionary<string, Tuple<int,int,int,int>> neighbourhoodBounds { get; set; }
+        //x min, x max, y min, y max
         public static int[] currentList { get; set; }
         public static int currentIndex { get; set; }
 
         public static Listing similar { get; set; }
 
         public static ListingType paramType { get; set; }
-        public static String paramNeighbourhood { get; set; }
+        public static List<String> paramNeighbourhood { get; set; }
         public static Tuple<int,int> paramSize { get; set; }
         public static Tuple<int,int> paramPrice { get; set; }
         public static Tuple<int, int> paramBed { get; set; }
@@ -30,7 +32,10 @@ namespace Real_Tors_Application
             totalList = new List<Listing>();
             additionalFavorites = new List<Listing>();
             perNeighbourhood = new Dictionary<string, int>();
+            paramNeighbourhood = new List<String>();
             currentList = new int[9];
+            neighbourhoodBounds = new Dictionary<string, Tuple<int, int, int, int>>();
+            neighbourhoodBounds.Add("Citadel", new Tuple<int, int, int, int>( -300, 500, -30, 50));
             
         }
 
@@ -46,7 +51,7 @@ namespace Real_Tors_Application
             {
                 if (paramNeighbourhood!=null)
                 {
-                    if(paramNeighbourhood != totalList[i].Neighbourhood)
+                    if(!paramNeighbourhood.Contains(totalList[i].Neighbourhood))
                         continue;
                 }
                 if (paramSize!=null)
