@@ -36,7 +36,12 @@ namespace Real_Tors_Application
             currentList = new int[9];
             neighbourhoodBounds = new Dictionary<string, Tuple<int, int, int, int>>();
             neighbourhoodBounds.Add("Citadel", new Tuple<int, int, int, int>( -300, 500, -300, 30));
-            
+            neighbourhoodBounds.Add("Hamptons", new Tuple<int, int, int, int>(-300, 350, -300, 100));
+            neighbourhoodBounds.Add("Edgemont", new Tuple<int, int, int, int>(-300, 150, -350, 150));
+            neighbourhoodBounds.Add("Hawkwood", new Tuple<int, int, int, int>(-200, 400, -300, 200));
+            neighbourhoodBounds.Add("Simons Valley", new Tuple<int, int, int, int>(-300, 350, -300, 150));
+
+
         }
 
         public static void Generate()
@@ -86,8 +91,8 @@ namespace Real_Tors_Application
                 }
                 currentList[count] = i;
                 count++;
-                Console.WriteLine(count);
             }
+
             while(count<9)
             {
                 currentList[count] = -1;

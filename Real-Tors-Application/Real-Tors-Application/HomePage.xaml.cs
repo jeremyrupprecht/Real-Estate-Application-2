@@ -65,5 +65,23 @@ namespace Real_Tors_Application
         {
             this.NavigationService.Navigate(new Uri("./MapView-FullyZoomed/MapViewCitadel.xaml", UriKind.Relative));
         }
+
+        private void btn_Hamptons_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./MapView-FullyZoomed/MapViewHamptons.xaml", UriKind.Relative));
+        }
+        private void btn_Edgemont_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./MapView-FullyZoomed/MapViewEdgemont.xaml", UriKind.Relative));
+        }
+        private void btn_SimonsValley_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./MapView-FullyZoomed/MapViewSimonsValley.xaml", UriKind.Relative));
+        }
+        private void btn_Hawkwood_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("./MapView-FullyZoomed/MapViewHawkwood.xaml", UriKind.Relative));
+        }
+
     }
 }

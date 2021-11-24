@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Real_Tors_Application"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1050" d:DesignWidth="800"
       Title="HomePage">
 
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
@@ -15,6 +15,11 @@
         <Button x:Name="btn_TestView" Content="Go to TestView" HorizontalAlignment="Left" Margin="320,260,0,0" VerticalAlignment="Top" Width="160" Click="btn_TestView_Click"/>
         <Button x:Name="btn_JeremyView" Content="Go To JeremyView" HorizontalAlignment="Left" Margin="320,310,0,0" VerticalAlignment="Top" Width="160" Click="btn_JeremyView_Click"/>
         <Button x:Name="btn_LogInView" Content="Go To LoginView" HorizontalAlignment="Left" Margin="320,360,0,0" VerticalAlignment="Top" Width="160" Click="btn_LogInView_Click"/>
-        <Button x:Name="btn_Citadel" Content="Go To Citadel" HorizontalAlignment="Left" Margin="320,410,0,0" VerticalAlignment="Top" Width="160" Click="btn_Citadel_Click"/>
+        <Button x:Name="btn_Citadel" Content="Go To Citadel" HorizontalAlignment="Left" Margin="320,455,0,0" VerticalAlignment="Top" Width="160" Click="btn_Citadel_Click"/>
+        <Button x:Name="btn_Hamptons" Content="Go To Hamptons" HorizontalAlignment="Left" Margin="320,404,0,0" VerticalAlignment="Top" Width="160" Click="btn_Hamptons_Click"/>
+        <Button x:Name="btn_Edgemont" Content="Go To Edgemont" HorizontalAlignment="Left" Margin="320,610,0,0" VerticalAlignment="Top" Width="160" Click="btn_Edgemont_Click"/>
+        <Button x:Name="btn_SimonsValley" Content="Go To Simons Valley" HorizontalAlignment="Left" Margin="320,557,0,0" VerticalAlignment="Top" Width="160" Click="btn_SimonsValley_Click"/>
+        <Button x:Name="btn_Hawkwood" Content="Go To hawkwood" HorizontalAlignment="Left" Margin="320,502,0,0" VerticalAlignment="Top" Width="160" Click="btn_Hawkwood_Click"/>
+        
     </Grid>
 </Page>
