@@ -74,49 +74,38 @@ namespace Filters
         {
 
         }
-       
 
-        
+        List<string> inputList = new List<string>();
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
 
             List<string> inputList = new List<string>();
             
-                
+            string addedinput = AmenitiesInput.Text; //saves the user's input as a string
 
-                for (int i = 0; i < 5; i++)
-                {
-                    string addedinput = AmenitiesInput.Text; //saves the user's input as a string
+            inputList.Add(addedinput); //adds the amenity the user wants into inputList
 
-                    inputList.Add(addedinput); //adds the amenity the user wants into inputList
+         
 
-
-                    //Process:
-
-                    //User enters a string input: Works
-                    //Input is saved as a variable: Works
-                    //Variable is added to list: Works
-                    //The variable is displayed: Works
-                    //The process saves the previous input and displays another one next to it: Does not work
-
-                    if (inputList != null)
-                {
-                    amenity.Content = inputList[i]; //displays 
-                }
-                    
-                }
-
-            
-
-            // Console.WriteLine(amenity.Content = inputList[i]); //print out all the inputs entered 
-
+            Print_Amenity(inputList);
 
             //      AmenitiesInput -> User input from TextBox
             //      amenity        -> Label (the empty row underneath the "Add" button)
 
 
-
-
         }
+        private void Print_Amenity(List<string> listOfAmenities)
+        {
+
+            for (int i = 0; i < inputList.Count; i++)
+            {
+
+                amenity.Content = inputList[i] + ", ";
+
+
+            }
+        }
+
     }
 }
