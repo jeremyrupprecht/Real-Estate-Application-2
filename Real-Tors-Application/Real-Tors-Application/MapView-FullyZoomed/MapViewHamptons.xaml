@@ -9,7 +9,40 @@
       Title="MapViewHamptons">
 
     <Grid>
-        <Image Source="/MapView-FullyZoomed-Images/hamptonsMap.png" Margin="-482,-356,-789,-383"/>
+        <Image Source="/MapView-FullyZoomed-Images/hamptonsMap.png" Margin="-472,-348,-799,-391"/>
+
+
+        <Button x:Name="Citadel" Click="Btn_Citadel" MouseLeave ="MouseOutCitadel" MouseEnter="MouseOverCitadel" Margin="-324,295,1244,157" Opacity="0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/MapView-FullyZoomed-Images/citadel.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="Edgemont" Click="Btn_Edgemont" MouseLeave ="MouseOutEdgemont" MouseEnter="MouseOverEdgemont" Margin="518,624,6,-1034" Opacity="0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/MapView-FullyZoomed-Images/edgemont.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="SimonsValley" Click="Btn_SimonsValley" MouseLeave ="MouseOutSimonsValley" MouseEnter="MouseOverSimonsValley" Margin="638,-436,186,705" Opacity="0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/MapView-FullyZoomed-Images/simonsValley.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="Hawkwood" Click="Btn_Hawkwood" MouseLeave ="MouseOutHawkwood" MouseEnter="MouseOverHawkwood" Margin="-147,714,1088,-464" Opacity="0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/MapView-FullyZoomed-Images/hawkwood.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
@@ -18,7 +51,7 @@
             <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
-        <Image Source="/MapView-FullyZoomed-Images/hamptons.png" Margin="518,41,160,3"/>
+        <Image Source="/MapView-FullyZoomed-Images/hamptons.png" Margin="527,41,151,3"/>
 
         <Grid Name="Listing1Grid" Width="280" Height="350" MouseLeave="MouseOut1">
             <Grid.RowDefinitions>
@@ -472,8 +505,6 @@
             </Button>
         </Grid>
 
-        <Image Source="/Images/right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
-
         <Rectangle HorizontalAlignment="Left" Height="348" Margin="1532,107,0,0" VerticalAlignment="Top" Width="365" Fill="#FFB7B4B4"/>
         <Label Content="Legend" HorizontalAlignment="Left" Margin="1612,101,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,170,0,0" VerticalAlignment="Top" Width="50" Fill="#FFE89012"/>
@@ -485,10 +516,6 @@
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,380,0,0" VerticalAlignment="Top" Width="50" Fill="#FFA750D2"/>
         <Label Content="Transit" HorizontalAlignment="Left" Margin="1610,376,0,0" VerticalAlignment="Top" FontSize="40"/>
 
-        <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click" Grid.Row="1">
-            <Image Source="/Images/ListIcon.png" Height="131" Width="124" />
-        </Button>
-        <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
 
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="777,413,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE89012"/>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="1119,423,0,0" VerticalAlignment="Top" Width="20" Fill="#FFE89012"/>
@@ -578,10 +605,13 @@
             </ScrollViewer>
 
             <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
-            <Grid>
-                <Image Source="/Images/left-arrow.png" VerticalAlignment="Center" Width="115" Margin="0,385,0,445"/>
-            </Grid>
 
         </StackPanel>
+
+        <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click" Grid.Row="0">
+            <Image Source="/Images/ListIcon.png" Height="131" Width="124" />
+        </Button>
+        <Button Content="Zoom Out" HorizontalAlignment="Left" Margin="1523,939,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="30" FontWeight="Bold" Click="Btn_Zoomout_Click"/>
+        
     </Grid>
 </Page>

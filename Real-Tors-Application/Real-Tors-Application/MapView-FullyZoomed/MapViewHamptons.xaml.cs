@@ -463,5 +463,65 @@ namespace Real_Tors_Application.MapView_FullyZoomed
             var heartImg = (sender as Image);
             heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"../HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"../HeartIconEmpty.png", UriKind.Relative));
         }
+
+        private void Btn_Citadel(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewCitadel.xaml", UriKind.Relative));
+        }
+
+        private void MouseOverCitadel(object sender, MouseEventArgs e)
+        {
+            Citadel.Opacity = 1;
+        }
+
+        private void MouseOutCitadel(object sender, MouseEventArgs e)
+        {
+            Citadel.Opacity = 0;
+        }
+
+        private void Btn_Edgemont(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewEdgemont.xaml", UriKind.Relative));
+        }
+
+        private void MouseOverEdgemont(object sender, MouseEventArgs e)
+        {
+            Edgemont.Opacity = 1;
+        }
+
+        private void MouseOutEdgemont(object sender, MouseEventArgs e)
+        {
+            Edgemont.Opacity = 0;
+        }
+
+        private void Btn_SimonsValley(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewSimonsValley.xaml", UriKind.Relative));
+        }
+
+        private void MouseOverSimonsValley(object sender, MouseEventArgs e)
+        {
+            SimonsValley.Opacity = 1;
+        }
+
+        private void MouseOutSimonsValley(object sender, MouseEventArgs e)
+        {
+            SimonsValley.Opacity = 0;
+        }
+
+        private void Btn_Hawkwood(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewHawkwood.xaml", UriKind.Relative));
+        }
+
+        private void MouseOverHawkwood(object sender, MouseEventArgs e)
+        {
+            Hawkwood.Opacity = 1;
+        }
+
+        private void MouseOutHawkwood(object sender, MouseEventArgs e)
+        {
+            Hawkwood.Opacity = 0;
+        }
     }
 }

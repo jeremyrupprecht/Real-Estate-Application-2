@@ -11,6 +11,14 @@
     <Grid>
         <Image Source="/MapView-FullyZoomed-Images/citadelMap.png" Margin="-418,-442,-746,-600"/>
 
+        <Button x:Name="Hamptons" Click="Btn_Hamptons" MouseLeave ="MouseOutHamptons" MouseEnter="MouseOverHamptons" Margin="1364,275,-657,168" Opacity="0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/MapView-FullyZoomed-Images/hamptons.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
             <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
@@ -18,7 +26,7 @@
             <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
-        <Image Source="/MapView-FullyZoomed-Images/citadel.png" Margin="517,58,363,-101"/>
+        <Image Source="/MapView-FullyZoomed-Images/citadel.png" Margin="517,58,374,-70"/>
         <Grid Name="Listing1Grid" Width="280" Height="350" MouseLeave="MouseOut1">
             <Grid.RowDefinitions>
                     <RowDefinition Height="260"/>
@@ -470,9 +478,6 @@
             </Button>
         </Grid>
 
-
-        <Image Source="/Images/right-arrow.png" Margin="1759,494,16,444" RenderTransformOrigin="1.17,1.11" />
-
         <Rectangle HorizontalAlignment="Left" Height="348" Margin="1532,107,0,0" VerticalAlignment="Top" Width="365" Fill="#FFB7B4B4"/>
         <Label Content="Legend" HorizontalAlignment="Left" Margin="1612,101,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="50"/>
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="1551,170,0,0" VerticalAlignment="Top" Width="50" Fill="#FFE89012"/>
@@ -580,9 +585,6 @@
             </ScrollViewer>
 
             <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
-            <Grid>
-                <Image Source="/Images/left-arrow.png" VerticalAlignment="Center" Width="115" Margin="0,385,0,445"/>
-            </Grid>
 
         </StackPanel>
     </Grid>

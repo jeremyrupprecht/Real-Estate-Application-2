@@ -464,5 +464,20 @@ namespace Real_Tors_Application.MapView_FullyZoomed
             var heartImg = (sender as Image);
             heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"../HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"../HeartIconEmpty.png", UriKind.Relative));
         }
+
+        private void Btn_Hamptons(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewHamptons.xaml", UriKind.Relative));
+        }
+
+        private void MouseOverHamptons(object sender, MouseEventArgs e)
+        {
+            Hamptons.Opacity = 1;
+        }
+
+        private void MouseOutHamptons(object sender, MouseEventArgs e)
+        {
+            Hamptons.Opacity = 0;
+        }
     }
 }
