@@ -40,8 +40,6 @@ namespace Real_Tors_Application
             neighbourhoodBounds.Add("Edgemont", new Tuple<int, int, int, int>(-300, 150, -350, 150));
             neighbourhoodBounds.Add("Hawkwood", new Tuple<int, int, int, int>(-200, 400, -300, 200));
             neighbourhoodBounds.Add("Simons Valley", new Tuple<int, int, int, int>(-300, 350, -300, 150));
-
-
         }
 
         public static void Generate()
@@ -98,6 +96,82 @@ namespace Real_Tors_Application
                 currentList[count] = -1;
                 count++;
             }
+        }
+
+        public static int MapListingAmount(List<Listing> listOfListings)
+        {
+            int count = 0;
+
+            foreach (Listing listing in listOfListings)
+            {
+
+                //Checks the parameters
+
+                //Neighbourhood -----------------------------------------------------------------------------------
+                if (paramNeighbourhood.Count != 0) //only checks if this parameter is set
+                {
+                    //If this neighbourhood is not one of the ones in the parameter
+                    if (!paramNeighbourhood.Contains(listing.Neighbourhood))
+                    {
+                        //as soon as you know its not a match, move to the next neighbourhood
+                        continue;
+                    }
+                }
+
+                //Size --------------------------------------------------------------------------------------------
+                if (paramSize != null) //only checks if this parameter is set
+                {
+                    //If the listing's size is less than min or larger than max
+                    if (listing.Size < paramSize.Item1 || listing.Size > paramSize.Item2)
+                    {
+                        //as soon as you know its not a match, move to the next neighbourhood
+                        continue;
+                    }
+                }
+
+                //Bed Amount --------------------------------------------------------------------------------------
+                if (paramBed != null) //only checks if this parameter is set
+                {
+                    //If the listing's bedNum is less than min or larger than max
+                    if (listing.BedNum < paramBed.Item1 || listing.BedNum > paramBed.Item2)
+                    {
+                        //as soon as you know its not a match, move to the next neighbourhood
+                        continue;
+                    }
+                }
+
+                //Bath Amount -------------------------------------------------------------------------------------
+                if (paramBath != null) //only checks if this parameter is set
+                {
+                    //If the listing's bedNum is less than min or larger than max
+                    if (listing.BathNum < paramBath.Item1 || listing.BathNum > paramBath.Item2)
+                    {
+                        //as soon as you know its not a match, move to the next neighbourhood
+                        continue;
+                    }
+                }
+
+                //Year --------------------------------------------------------------------------------------------
+                if (paramYear != null) //only checks if this parameter is set
+                {
+                    //If the listing's bedNum is less than min or larger than max
+                    if (listing.YearBuilt < paramYear.Item1 || listing.YearBuilt > paramYear.Item2)
+                    {
+                        //as soon as you know its not a match, move to the next neighbourhood
+                        continue;
+                    }
+                }
+
+                //Amenities ---------------------------------------------------------------------------------------
+                //Not sure what was needed for this one
+
+
+                //If it has not yet hit a continue by this point, you know its a match
+                count++;
+                
+            }
+
+            return count;
         }
     }
 }
