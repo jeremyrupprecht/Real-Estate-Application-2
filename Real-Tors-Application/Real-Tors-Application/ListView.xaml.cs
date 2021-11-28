@@ -237,10 +237,12 @@ namespace Real_Tors_Application
         {
             if (HomeTypesSelect.Visibility == Visibility.Collapsed)
             {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
             }
             else
             {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
         }
@@ -252,19 +254,20 @@ namespace Real_Tors_Application
             //timer.Start();
             if (FilterPanel.Visibility == Visibility.Collapsed)
             {
+                
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
 
             }
             else
             {
+                
                 FilterPanel.Visibility = Visibility.Collapsed;
                 listResultsGrid.Width = 1850;
 
             }
         }
-
-
+        
         private void Add_Amenity_Click(object sender, RoutedEventArgs e)
         {
             AddAmenity();
@@ -338,6 +341,8 @@ namespace Real_Tors_Application
                 }
             }
         }
+
+
 
         private void Add_Neighbourhood_Click(object sender, RoutedEventArgs e)
         {
