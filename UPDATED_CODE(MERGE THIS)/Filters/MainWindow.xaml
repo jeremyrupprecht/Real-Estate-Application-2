@@ -9,7 +9,7 @@
 
         
     <ScrollViewer>
-    <StackPanel Height="984" Width="500">
+    <StackPanel Height="1249" Width="500">
         <Grid x:Name="sidePanel">
                 <Button x:Name ="Collapse" Click="Collapse_Click" Content="☰" Width="50" Height="50" HorizontalAlignment="Right" Background="#FF006DFF" FontFamily="Segoe UI">
                     <Button.Effect>
@@ -66,16 +66,13 @@
             <Button Click="Add_Click" Width="50" HorizontalAlignment="Left">Add</Button>
 
         <Label x:Name="amenity" Content="" FontSize="12"/>
-        <Label Content="Neighborhoods Found:" FontSize="22"/>
-        <RadioButton Content="Aspen Ridge"/>
-        <RadioButton Content="Brentwood"/>
-        <RadioButton Content="Varsity"/>
-        <RadioButton Content="Dalhousie"/>
+        <Label Content="Neighborhoods:" FontSize="22"/>
+            <TextBox Name ="NeighbourhoodInput" IsReadOnly="False" Background="#eee" Padding="2" HorizontalAlignment="Left" Width="100" TextChanged="TextBox_TextChanged" />
+            <Button Click="Neighbourhood_Click" Width="50" HorizontalAlignment="Left">Add</Button>
+            <Label x:Name="neighbourhood" Content="" FontSize="12"/>
 
 
 
-
-
-    </StackPanel>
+        </StackPanel>
     </ScrollViewer>
 </Window>
