@@ -675,8 +675,8 @@
             </Grid>
         </StackPanel>
 				
-        <Image Name="RightArrow" Source="sortdown_icon.png" Margin="1759,812,16,140" Width="115" Height="115" MouseLeftButtonDown="nextListing" MouseEnter="onButtons" MouseLeave="offButtons" />
-        <Image Name="LeftArrow" Source="sortdown_icon.png"  Width="110" Height="115" MouseLeftButtonDown="prevLisiting" MouseEnter="onButtons" MouseLeave="offButtons" Margin="452,804,1353,146"/>
+        <Image Name="RightArrow" Source="right.png" Margin="1759,792,16,140" Width="115" Height="115" MouseLeftButtonDown="nextListing" MouseEnter="onButtons" MouseLeave="offButtons" />
+        <Image Name="LeftArrow" Source="left.png"  Width="110" Height="115" MouseLeftButtonDown="prevLisiting" MouseEnter="onButtons" MouseLeave="offButtons" Margin="452,792,1353,146"/>
     </Grid>
 
 </Page>
