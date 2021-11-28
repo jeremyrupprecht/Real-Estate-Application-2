@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;             //Needed for animation
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -27,6 +28,7 @@ namespace Real_Tors_Application
         public ListView()
         {
             InitializeComponent();
+            //InitFilter();
             GlobalState.lastPage = "List";          //Set last page for easy jumping in between
             GlobalState.Generate();
             GenerateListings();
@@ -245,20 +247,58 @@ namespace Real_Tors_Application
             }
         }
 
-       
+        //DispatcherTimer timer;
+
+        //int panelWidth;
+        //bool hidden;
+
+        //private void InitFilter()
+        //{
+        //    Console.WriteLine("Initializing Filter");
+        //    timer = new DispatcherTimer(DispatcherPriority.Background, Application.Current.Dispatcher);
+        //    timer.Interval = new TimeSpan(0, 0, 0, 10);
+        //    timer.Tick += Timer_Tick;
+
+        //    panelWidth = (int)FilterPanel.Width;
+        //}
+
+        //private void Timer_Tick(object sender, EventArgs e)
+        //{
+        //    Console.WriteLine("Timer ticking: "+ FilterPanel.Width);
+        //    if (hidden)
+        //    {
+        //        FilterPanel.Width += 1;
+        //        if (FilterPanel.Width >= panelWidth)
+        //        {
+        //            timer.Stop();
+        //            hidden = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        FilterPanel.Width -= 1;
+        //        if (FilterPanel.Width <= 30)
+        //        {
+        //            timer.Stop();
+        //            hidden = true;
+        //        }
+        //    }
+        //}
+
+
         private void ToggleFilter(object sender, RoutedEventArgs e)
         {
-            if (FilterPanel.Visibility == Visibility.Collapsed)
+            //Console.WriteLine("Toggle Pressed");
+            //timer.Start();
+            if (!hidden)
             {
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
-
             }
             else
             {
                 FilterPanel.Visibility = Visibility.Collapsed;
                 listResultsGrid.Width = 1850;
-
             }
         }
 
@@ -446,7 +486,19 @@ namespace Real_Tors_Application
             heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
         }
 
-        
+        private void enterPriceLow(object sender, KeyEventArgs e)
+        {
+            var box = sender as TextBlock;
+            if(int.TryParse(box.Text, out _))
+            {
+                int high = 25000000;
+                if(GlobalState.paramPrice!=null)
+                {
+                    high = GlobalState.paramPrice.Item2;
+                }
+                GlobalState.paramPrice = new Tuple<int, int>(int.Parse(box.Text), high);
+            }
+        }
     }
 }
 
