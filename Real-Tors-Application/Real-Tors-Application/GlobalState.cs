@@ -47,6 +47,41 @@ namespace Real_Tors_Application
             Generate(9);
         }
 
+        public static List<Listing> FindNineFaves()
+        {
+            List<Listing> faves = new List<Listing>();
+            int count = 0;
+            foreach(Listing fave in totalList)
+            {
+                if (fave.Favorited && count < 9)
+                {
+                    faves.Add(fave);
+                    count++;
+                }
+            }
+
+            if (faves.Count < 9)
+            {
+                foreach (Listing fave in additionalFavorites)
+                {
+                    if (fave.Favorited && count < 9)
+                    {
+                        faves.Add(fave);
+                        count++;
+                    }
+                }
+            }
+
+            Console.WriteLine("Faves Count: " + faves.Count);
+            Console.WriteLine("Total Count: " + totalList.Count);
+            foreach (Listing fave in faves)
+            {
+                Console.WriteLine(faves.ToString());
+            }
+
+            return faves;
+        }
+ 
         public static void Generate(int limit)
         {
             int count = 0;
