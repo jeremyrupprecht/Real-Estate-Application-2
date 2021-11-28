@@ -27,13 +27,14 @@ namespace Real_Tors_Application
         public static Tuple<int, int> paramBed { get; set; }
         public static Tuple<int, int> paramBath { get; set; }
         public static Tuple<int, int> paramYear { get; set; }
-        public static List<string> paramAmenities { get; set; }
+        public static List<String> paramAmenities { get; set; }
 
         public static List<string> neighbourhoodsOfInterest = new List<string>(){"Citadel", "Hamptons", "Edgemont", "Hawkwood", "Simons Valley"};
         static GlobalState()
         {
             totalList = new List<Listing>();
             additionalFavorites = new List<Listing>();
+            paramAmenities = new List<String>();
             similar = -1;
 
             paramNeighbourhood = new List<String>();
