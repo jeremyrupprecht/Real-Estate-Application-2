@@ -290,7 +290,7 @@ namespace Real_Tors_Application
         {
             //Console.WriteLine("Toggle Pressed");
             //timer.Start();
-            if (!hidden)
+            if (FilterPanel.Visibility == Visibility.Collapsed)
             {
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
@@ -319,7 +319,7 @@ namespace Real_Tors_Application
 
         private void AddAmenity()
         {
-            if (!GlobalState.paramAmenities.Contains(AmenitiesInput.Text) && GlobalState.paramAmenities.Count()<5 && AmenitiesInput.Text.Count() > 0)
+            if (AmenitiesInput.Text!= null && !GlobalState.paramAmenities.Contains(AmenitiesInput.Text) && GlobalState.paramAmenities.Count()<5 && AmenitiesInput.Text.Count() > 0)
             {
                 GlobalState.paramAmenities.Add(AmenitiesInput.Text);
                 AmenitiesInput.Text = "";
@@ -330,6 +330,7 @@ namespace Real_Tors_Application
         private void DeleteAmenity(object sender, MouseButtonEventArgs e)
         {
             var lbl = sender as Label;
+            
             GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
             Print_Amenity();
         }
@@ -392,7 +393,7 @@ namespace Real_Tors_Application
 
         private void AddNeighbour()
         {
-            if (!GlobalState.paramNeighbourhood.Contains(NeighbourhoodInput.Text) && GlobalState.paramNeighbourhood.Count() < 6 && NeighbourhoodInput.Text.Count()>0)
+            if (NeighbourhoodInput.Text != null && !GlobalState.paramNeighbourhood.Contains(NeighbourhoodInput.Text) && GlobalState.paramNeighbourhood.Count() < 6 && NeighbourhoodInput.Text.Count()>0)
             {
                 GlobalState.paramNeighbourhood.Add(NeighbourhoodInput.Text);
                 NeighbourhoodInput.Text = "";
