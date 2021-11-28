@@ -24,6 +24,7 @@ namespace Real_Tors_Application
         public Listing list1;
         public List<Listing> ListOfListings = new List<Listing>();
         public List<int> similarNum;
+        public bool onButton, onPopup;
 
 
         public JeremyWindow3()
@@ -317,6 +318,7 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(pNext);
         }
 
+        
         private void expandListingFiltered(object sender, MouseButtonEventArgs e)
         {
             int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(8));
@@ -324,6 +326,55 @@ namespace Real_Tors_Application
             GlobalState.similar = -1;
             JeremyWindow3 pNext = new JeremyWindow3();
             this.NavigationService.Navigate(pNext);
+        }
+
+        private void enterPopUp(object sender, MouseEventArgs e)
+        {
+            onPopup = true;
+        }
+
+        private void exitPopUp(object sender, MouseEventArgs e)
+        {
+            onPopup = false;
+        }
+
+        private void onButtons(object sender, MouseEventArgs e)
+        {
+            onButton = true;
+        }
+
+        private void offButtons(object sender, MouseEventArgs e)
+        {
+            onButton = false;
+        }
+
+        private void exitExpanded(object sender, MouseButtonEventArgs e)
+        {
+            if(!onPopup && !onButton)
+            {
+                switch(GlobalState.lastPage)
+                {
+                    case "Favorites":
+                        break;
+                    case "Hamptons":
+                        break;
+                    case "Citadel":
+                        break;
+                    case "Simons Valley":
+                        break;
+                    case "Edgemont":
+                        break;
+                    case "Hawkwood":
+                        break;
+                    default:
+                        ListView pNext = new ListView();
+                        GlobalState.currentIndex = -1;
+                        GlobalState.similar = -1;
+                        this.NavigationService.Navigate(pNext);
+                        break;
+                }
+                
+            }
         }
 
         private void BackToSelection(object sender, RoutedEventArgs e)

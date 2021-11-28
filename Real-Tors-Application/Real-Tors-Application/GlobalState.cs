@@ -18,6 +18,8 @@ namespace Real_Tors_Application
 
         public static int similar { get; set; }
 
+        public static String lastPage { get; set; }
+
         public static ListingType paramType { get; set; }
         public static List<String> paramNeighbourhood { get; set; }
         public static Tuple<int, int> paramSize { get; set; }
@@ -47,6 +49,7 @@ namespace Real_Tors_Application
             neighbourhoodBounds.Add("Edgemont", new Tuple<int, int, int, int>(-300, 150, -350, 150));
             neighbourhoodBounds.Add("Hawkwood", new Tuple<int, int, int, int>(-200, 400, -300, 200));
             neighbourhoodBounds.Add("Simons Valley", new Tuple<int, int, int, int>(-300, 350, -300, 150));
+
         }
 
         public static List<int> GenerateSimilar(int start)

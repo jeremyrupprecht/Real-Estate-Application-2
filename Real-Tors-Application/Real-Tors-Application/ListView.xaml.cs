@@ -27,6 +27,7 @@ namespace Real_Tors_Application
         public ListView()
         {
             InitializeComponent();
+            GlobalState.lastPage = "List";          //Set last page for easy jumping in between
             GlobalState.Generate();
             GenerateListings();
         }
