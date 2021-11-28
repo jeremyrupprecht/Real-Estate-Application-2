@@ -136,6 +136,33 @@ namespace Real_Tors_Application
 
             }
 
+            ChangeExpansion();
+
+        }
+
+        private void ChangeExpansion()
+        {
+            if(FilterPanel.Visibility == Visibility.Collapsed)
+            {
+                expandedListingGrid.Width = 1900;
+                Column1.Width = new GridLength(700);
+                expandedListingScrollViewer.Width = 1700;
+                SimilarListingsScroll.Width = 1600;
+                FilteredListingsScroll.Width = 1600;
+                LeftArrow.Margin = new Thickness(50, 804, 1773, 146);
+            }
+            
+            else
+            {
+                expandedListingScrollViewer.Width = 1220;
+                Column1.Width = new GridLength(500);
+                expandedListingGrid.Width = 1480;
+                SimilarListingsScroll.Width = 1150;
+                FilteredListingsScroll.Width = 1150;
+                LeftArrow.Margin = new Thickness(452, 804, 1353, 146);
+            }
+
+
         }
 
         private void prevLisiting(object sender, MouseButtonEventArgs e)

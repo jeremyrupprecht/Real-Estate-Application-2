@@ -357,7 +357,7 @@
             </Button>
         </Grid>
 
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="1080" Margin="0, 100, 0, 0" Background="White">
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 100, 0, 0" Background="White">
             <ScrollViewer>
                 <StackPanel Name="FilterPanel" Width="400">
 
@@ -404,29 +404,35 @@
                     <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
                     <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25"/>
 
+                    <Label FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Padding="24 12 48 12" Width="300">Amenities:</Label>
                     <StackPanel Orientation="Horizontal">
-                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Amenities:</Label>
-                        <Button Name="OpenAmenities" Content="Change" FontSize="24" Click="OpenAmenities_Click" HorizontalAlignment="Right"/>
+                        <TextBox Name ="AmenitiesInput" IsReadOnly="False" Background="#eee" Width="250" Margin="24 4" FontSize="25" KeyDown="EnterAmenity"/>
+                        <Button Name="AddAmenities" Content="Add" FontSize="24" Margin="8" Padding="20 0" HorizontalAlignment="Right" Click="Add_Amenity_Click"/>
                     </StackPanel>
-                    <StackPanel Name="AmenTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Granite Countertops"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Walkout Basement"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Rennovated Kitchen"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="High Ceiling"/>
-                    </StackPanel>
-                    <Label Height="10" />
+                    <WrapPanel Orientation="Horizontal">
+                        <Label Name="Amenity1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                    </WrapPanel>
+
+                    <Label Height="20" />
+                    <Label FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
                     <StackPanel Orientation="Horizontal">
-                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
-                        <Button Name="OpenNeighTypes" Content="Change" FontSize="24" Click="toggleNeigh"/>
+                        <TextBox Name ="NeighbourhoodInput" IsReadOnly="False" Background="#eee" Width="250" Margin="24 4" FontSize="25" KeyDown="EnterNeighbour"/>
+                        <Button Name="AddNeighbourhood" Content="Add" FontSize="24" Margin="8" Padding="20 0" HorizontalAlignment="Right" Click="Add_Neighbourhood_Click"/>
                     </StackPanel>
-                    <StackPanel Name="NeighTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Dover Glen" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Inglewood" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Mills Estate" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Ramsay" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Radisson Heights" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Southview" IsChecked="True"/>
-                    </StackPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <Label Name="Neighbour1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour6" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                    </WrapPanel>
+                    <Label Height="50" />
+
                     <Grid Height="400"/>
 
                 </StackPanel>

@@ -95,29 +95,25 @@
                 <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
             </StackPanel>
             <Grid x:Name="expandedListingGrid" VerticalAlignment="Top" Background="LightGray" Width="1480" MouseLeftButtonDown="exitExpanded" >
-                <Grid Name="expandedListingPopOut" Background="White" Margin="100, 50, 100, 50" MouseEnter="enterPopUp" MouseLeave="exitPopUp">
+                <Grid Name="expandedListingPopOut" HorizontalAlignment="Center" Background="White" Margin="50" MouseEnter="enterPopUp" MouseLeave="exitPopUp">
                     <ScrollViewer x:Name="expandedListingScrollViewer" VerticalAlignment="Top"  Height ="880" Width="1220" VerticalScrollBarVisibility="Auto">
 
                         <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 0">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="154"/>
+                                <RowDefinition Height="50"/>
                                 <RowDefinition Height="100"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <Button x:Name="listViewButton" Width="131" Height ="124" HorizontalAlignment="Left"  Background="#FFD3D3D3" Margin="0, 30, 0, 0" Click="btn_listView_Click">
-                                <Image Source="ListIcon.png" Height="131" Width="124" />
-                            </Button>
-
-                            <Button Name="BackIfSimilar" Visibility="Collapsed" Content="Back" Width="200" Margin="150, 0, 0, 0" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="75" Click="BackToSelection"/>
+                            <Button Name="BackIfSimilar" Visibility="Collapsed" Content="Back" Width="100" Margin="0" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Click="BackToSelection"/>
                             <Label Name="Address" Margin="530,30,0,0" FontWeight="Black" Height="80" FontSize="50" Grid.Row="1"  Content="{Binding Path=address[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
 
                             <StackPanel Orientation="Vertical" Grid.Row="2">
 
-                                <Grid>
+                                <Grid HorizontalAlignment="Center">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="500"/>
+                                        <ColumnDefinition Name="Column1" Width="500"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
@@ -177,7 +173,7 @@
                                     </Grid>
                                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center">
                                         <Image Source="left-arrow.png" Width="50"/>
-                                        <Image Name="MainHouseImage" Height ="400 " Width ="Auto"  Source="houseImg1.jpg"/>
+                                        <Image Name="MainHouseImage" Height ="400 " Width ="Auto" MaxWidth="600" Source="houseImg1.jpg"/>
                                         <Image Source="right-arrow.png" Width="50"/>
                                     </StackPanel>
 
@@ -192,7 +188,7 @@
 
                                 <Label x:Name="similarListingsTextBlock" Content="Similar Listings:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold"  Margin="20 0 20 0" />
 
-                                <ScrollViewer HorizontalScrollBarVisibility="Visible" Height ="400" Width ="1200" VerticalScrollBarVisibility="Disabled" Margin="0 50">
+                                <ScrollViewer Name ="SimilarListingsScroll" HorizontalAlignment ="Left" HorizontalScrollBarVisibility="Visible" Height ="400" Width ="1150" VerticalScrollBarVisibility="Disabled" Margin="25 50">
                                     <StackPanel Orientation="Horizontal">
 
                                         <Grid Name ="Listing1" MouseLeftButtonDown="expandListing">
@@ -430,7 +426,7 @@
 
                                 <Label x:Name="filteredListingsTextBlock" Content="Filtered Listings:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold"  Margin="20 0 20 0" />
 
-                                <ScrollViewer Name ="FilteredListingsScroll" HorizontalScrollBarVisibility="Visible" Height ="400" Width ="1200" VerticalScrollBarVisibility="Disabled" Margin="0 50">
+                                <ScrollViewer Name ="FilteredListingsScroll" HorizontalAlignment="Left" HorizontalScrollBarVisibility="Visible" Height ="400" Width ="1150" VerticalScrollBarVisibility="Disabled" Margin="25 50">
                                     <StackPanel Orientation="Horizontal">
 
                                         <Grid Name ="ListingF1" MouseLeftButtonDown="expandListingFiltered">
