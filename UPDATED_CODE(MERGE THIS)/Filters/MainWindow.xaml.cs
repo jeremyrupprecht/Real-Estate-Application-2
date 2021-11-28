@@ -40,7 +40,7 @@ namespace Filters
             if (hidden)
             {
                 sidePanel.Width += 1;
-                if(sidePanel.Width >= panelWidth)
+                if (sidePanel.Width >= panelWidth)
                 {
                     timer.Stop();
                     hidden = false;
@@ -59,7 +59,7 @@ namespace Filters
 
         private void Collapse_Click(object sender, RoutedEventArgs e)
         {
-            
+
             timer.Start();
         }
 
@@ -68,7 +68,7 @@ namespace Filters
 
         }
 
-  
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -80,13 +80,13 @@ namespace Filters
         private void Add_Click(object sender, RoutedEventArgs e)
         {
 
-            List<string> inputList = new List<string>();
-            
+
+
             string addedinput = AmenitiesInput.Text; //saves the user's input as a string
 
             inputList.Add(addedinput); //adds the amenity the user wants into inputList
 
-         
+
 
             Print_Amenity(inputList);
 
@@ -95,17 +95,56 @@ namespace Filters
 
 
         }
-        private void Print_Amenity(List<string> listOfAmenities)
+        private void Print_Amenity(List<string> inputList)
         {
 
+            string s = "Selected: ";
             for (int i = 0; i < inputList.Count; i++)
             {
 
-                amenity.Content = inputList[i] + ", ";
+                if (i > 0)
+                {
 
 
+
+                    s += inputList[i];
+                    s += ",";
+
+                    amenity.Content = " " + s + " ";
+                }
             }
         }
 
+
+        List<String> NeighbourhoodList = new List<String>();
+
+        private void Neighbourhood_Click(object sender, RoutedEventArgs e)
+        {
+            string addedInput1 = NeighbourhoodInput.Text;
+
+            NeighbourhoodList.Add(addedInput1);
+
+            Print_Neighbourhood(NeighbourhoodList);
+        }
+
+        private void Print_Neighbourhood(List<string> NeighbourhoodList)
+        {
+            string n = "Selected: ";
+
+            for (int i = 0; i < NeighbourhoodList.Count; i++)
+            {
+                if (i > 0)
+                {
+
+                    n += NeighbourhoodList[i];
+                    n += ",";
+
+                    neighbourhood.Content = " " + n + " ";
+                }
+
+
+            }
+
+        }
     }
 }
