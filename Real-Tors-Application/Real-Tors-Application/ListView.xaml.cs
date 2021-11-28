@@ -38,7 +38,6 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-            GlobalState.currentList[8] = -1;
             if (GlobalState.currentList[0] != -1)
             {
                 Neighbourhood0.Content = GlobalState.totalList[GlobalState.currentList[0]].Neighbourhood;

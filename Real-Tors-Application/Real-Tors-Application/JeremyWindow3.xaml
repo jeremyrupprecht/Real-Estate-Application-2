@@ -355,10 +355,10 @@
 						<Label x:Name="filteredListingsTextBlock" Content="Filtered Listings:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold"  Margin="20 0 20 0" />
 
 
-						<ScrollViewer HorizontalScrollBarVisibility="Visible" Height ="400" Width ="1400" VerticalScrollBarVisibility="Disabled" Margin="0 50">
+						<ScrollViewer Name ="FilteredListingsScroll" HorizontalScrollBarVisibility="Visible" Height ="400" Width ="1400" VerticalScrollBarVisibility="Disabled" Margin="0 50">
                             <StackPanel Orientation="Horizontal">
 
-								<Grid Name ="Listing7" MouseLeftButtonDown="expandListing">
+								<Grid Name ="ListingF1" MouseLeftButtonDown="expandListingFiltered">
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="350"></ColumnDefinition>
 										<ColumnDefinition Width="50"></ColumnDefinition>
@@ -398,7 +398,7 @@
 
 								</Grid>
 
-								<Grid Name ="Listing8" MouseLeftButtonDown="expandListing">
+								<Grid Name ="ListingF2" MouseLeftButtonDown="expandListingFiltered">
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="350"></ColumnDefinition>
 										<ColumnDefinition Width="50"></ColumnDefinition>
@@ -436,7 +436,7 @@
 
 								</Grid>
 
-								<Grid Name ="Listing9" MouseLeftButtonDown="expandListing">
+								<Grid Name ="ListingF3" MouseLeftButtonDown="expandListingFiltered">
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="350"></ColumnDefinition>
 										<ColumnDefinition Width="50"></ColumnDefinition>
@@ -475,7 +475,7 @@
 								</Grid>
 
 
-								<Grid Name ="Listing10" MouseLeftButtonDown="expandListing">
+								<Grid Name ="ListingF4" MouseLeftButtonDown="expandListingFiltered">
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="350"></ColumnDefinition>
 										<ColumnDefinition Width="50"></ColumnDefinition>
@@ -513,7 +513,7 @@
 
 								</Grid>
 
-								<Grid Name ="Listing11" MouseLeftButtonDown="expandListing">
+								<Grid Name ="ListingF5" MouseLeftButtonDown="expandListingFiltered">
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="350"></ColumnDefinition>
 										<ColumnDefinition Width="50"></ColumnDefinition>
@@ -552,7 +552,7 @@
 								</Grid>
 
 
-								<Grid Name ="Listing12" MouseLeftButtonDown="expandListing">
+								<Grid Name ="ListingF6" MouseLeftButtonDown="expandListingFiltered">
 									<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="350"></ColumnDefinition>
 										<ColumnDefinition Width="50"></ColumnDefinition>

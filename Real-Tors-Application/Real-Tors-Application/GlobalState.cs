@@ -11,26 +11,28 @@ namespace Real_Tors_Application
         public static List<Listing> totalList { get; set; }
         public static List<Listing> additionalFavorites { get; set; }
         public static Dictionary<string, int> perNeighbourhood { get; set; }
-        public static Dictionary<string, Tuple<int,int,int,int>> neighbourhoodBounds { get; set; }
+        public static Dictionary<string, Tuple<int, int, int, int>> neighbourhoodBounds { get; set; }
         //x min, x max, y min, y max
         public static int[] currentList { get; set; }
         public static int currentIndex { get; set; }
 
-        public static Listing similar { get; set; }
+        public static int similar { get; set; }
 
         public static ListingType paramType { get; set; }
         public static List<String> paramNeighbourhood { get; set; }
-        public static Tuple<int,int> paramSize { get; set; }
-        public static Tuple<int,int> paramPrice { get; set; }
+        public static Tuple<int, int> paramSize { get; set; }
+        public static Tuple<int, int> paramPrice { get; set; }
         public static Tuple<int, int> paramBed { get; set; }
         public static Tuple<int, int> paramBath { get; set; }
         public static Tuple<int, int> paramYear { get; set; }
         public static List<string> paramAmenities { get; set; }
-        
+
+        public static List<string> neighbourhoodsOfInterest = new List<string>(){"Citadel", "Hamptons", "Edgemont", "Hawkwood", "Simons Valley"};
         static GlobalState()
         {
             totalList = new List<Listing>();
             additionalFavorites = new List<Listing>();
+            similar = -1;
 
             paramNeighbourhood = new List<String>();
             currentList = new int[9];
@@ -47,6 +49,17 @@ namespace Real_Tors_Application
             neighbourhoodBounds.Add("Simons Valley", new Tuple<int, int, int, int>(-300, 350, -300, 150));
         }
 
+        public static List<int> GenerateSimilar(int start)
+        {
+            List<int> ret = new List<int>();
+            for(int i=start+1; i<1000 && ret.Count()<6; i++)
+            {
+                if (!neighbourhoodsOfInterest.Contains(totalList[i].Neighbourhood)) {
+                    ret.Add(i);
+                }
+            }
+            return ret;
+        }
         public static void Generate()
         {
             Generate(9);
@@ -90,7 +103,13 @@ namespace Real_Tors_Application
 
                 if (paramAmenities!=null)
                 {
-                    totalList[i].Amenities.Concat(paramAmenities);
+                    foreach(String s in paramAmenities)
+                    {
+                        if(!totalList[i].Amenities.Contains(s))
+                        {
+                            totalList[i].Amenities.Add(s);
+                        }
+                    }
                 }
                 currentList[count] = i;
                 count++;
