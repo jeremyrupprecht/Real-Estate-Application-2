@@ -142,7 +142,8 @@ namespace Real_Tors_Application {
         {
             return "Neighbourhood: " + Neighbourhood +
                 ",\t\tAddress: " + Address +
-                ",\t\tPrice: " + Price;
+                ",\t\tPrice: " + Price +
+                ",\t\tFav:" + Favorited;
         }
     }
 }

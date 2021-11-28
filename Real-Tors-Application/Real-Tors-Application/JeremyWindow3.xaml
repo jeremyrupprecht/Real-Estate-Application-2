@@ -105,8 +105,12 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <Button Name="BackIfSimilar" Visibility="Collapsed" Content="Back" Width="100" Margin="0" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Click="BackToSelection"/>
-                            <Label Name="Address" Margin="530,30,0,0" FontWeight="Black" Height="80" FontSize="50" Grid.Row="1"  Content="{Binding Path=address[0], UpdateSourceTrigger=PropertyChanged}"></Label>
+					<Button x:Name="listViewButton" Width="131" Height ="124" HorizontalAlignment="Left"  Background="#FFD3D3D3" Margin="0, 30, 0, 0" Click="btn_listView_Click">
+					    <Image Source="ListIcon.png" Height="131" Width="124" />						
+					</Button>
+
+					<Button Name="BackIfSimilar" Visibility="Collapsed" Content="Back" Width="200" Margin="150, 0, 0, 0" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="75" Click="BackToSelection"/>
+                    <Label Name="Address" Margin="530,30,0,0" FontWeight="Black" Height="80" FontSize="50" Grid.Row="1"  Content="{Binding Path=address[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
 
                             <StackPanel Orientation="Vertical" Grid.Row="2">
