@@ -10,6 +10,14 @@
       Background="White">
 
     <Grid>
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,100,0,0" Click="Btn_Map_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Calgary.png" Margin="-98,-100,-146,-92"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
             <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
@@ -18,28 +26,15 @@
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
 
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,100,0,9" Click="Btn_Map_Click">
-            <Button.Template>
-                <ControlTemplate>
-                    <Image Source="Calgary_cropped.jpg" Stretch="UniformToFill"/>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
         <Button x:Name="btn_ListView" HorizontalAlignment="Right" Margin="0,0,30,30" Padding="10" VerticalAlignment="Bottom" Width="Auto" Click="Btn_ListView_Click" Grid.Row="1">
-            <Image Source="ListIcon.png" Height="131" Width="124" />
+            <Image Source="ListIcon.png" Height="131" Width="124" RenderTransformOrigin="0.5,0.527" />
         </Button>
 
         <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
-        <Label Content="23" HorizontalAlignment="Left" Margin="780,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
-        <Label Content="30" HorizontalAlignment="Left" Margin="1014,302,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF134203"/>
-        <Label Content="18" HorizontalAlignment="Left" Margin="666,354,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
-        <Label Content="3" HorizontalAlignment="Left" Margin="740,518,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
-        <Label Content="20" HorizontalAlignment="Left" Margin="809,552,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
-        <Label Content="34" HorizontalAlignment="Left" Margin="911,550,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF134203"/>
-        <Label Content="13" HorizontalAlignment="Left" Margin="1039,558,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF65D042"/>
-        <Label Content="29" HorizontalAlignment="Left" Margin="779,774,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
-        <Label Content="17" HorizontalAlignment="Left" Margin="939,836,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF2E9C0A"/>
-        <Label Content="21" HorizontalAlignment="Left" Margin="1073,796,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="#FF1B5F04"/>
+        <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Left" Margin="737,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100" Foreground="DarkGreen" MouseDown="clickNorthWest"/>
+        <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Left" Margin="984,377,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="YellowGreen"/>
+        <Label x:Name="SouthWest" Content="200" HorizontalAlignment="Left" Margin="789,528,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="90" Foreground="Lime"/>
+        <Label x:Name="SouthEast" Content="800" HorizontalAlignment="Left" Margin="994,738,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100" Foreground="OliveDrab"/>
 
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="1080" Margin="0, 100, 0, 0">
             <ScrollViewer Background="White">

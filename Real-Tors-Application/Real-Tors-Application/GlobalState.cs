@@ -31,9 +31,14 @@ namespace Real_Tors_Application
         {
             totalList = new List<Listing>();
             additionalFavorites = new List<Listing>();
-            perNeighbourhood = new Dictionary<string, int>();
+
             paramNeighbourhood = new List<String>();
             currentList = new int[9];
+            
+            //per neighbourhood
+            perNeighbourhood = new Dictionary<string, int>();
+
+            //neighbourhood bounds
             neighbourhoodBounds = new Dictionary<string, Tuple<int, int, int, int>>();
             neighbourhoodBounds.Add("Citadel", new Tuple<int, int, int, int>( -300, 500, -300, 30));
             neighbourhoodBounds.Add("Hamptons", new Tuple<int, int, int, int>(-300, 350, -300, 100));
@@ -98,76 +103,96 @@ namespace Real_Tors_Application
             }
         }
 
-        public static int MapListingAmount(List<Listing> listOfListings)
+        public static void setPerNeighbourhood(String neighbourhood)
+        {
+            if (perNeighbourhood.ContainsKey(neighbourhood))
+            {
+                perNeighbourhood[neighbourhood] = MapListingAmount(totalList, neighbourhood);
+            }
+            else
+            {
+                perNeighbourhood.Add(neighbourhood, MapListingAmount(totalList, neighbourhood));
+            }
+
+            //Console.WriteLine("Citadel Count: " + perNeighbourhood["Citadel"]);
+        }
+
+        public static int MapListingAmount(List<Listing> listOfListings, String neighbourhood)
         {
             int count = 0;
 
+            //If no paramters are set
+            if(/*paramNeighbourhood.Count != 0 && */paramSize != null && paramBed != null && paramBath != null && paramYear != null)
+            {
+                //set default count to 9 for now
+                return 9;
+            }
+
+            //Checks the parameters
+
+            //Neighbourhood -----------------------------------------------------------------------------------
+            if (paramNeighbourhood.Count != 0) //only checks if this parameter is set
+            {
+                //If the neighbourhood we are checking for is not in the list;
+                if (!paramNeighbourhood.Contains(neighbourhood))
+                {
+                    //as soon as you know its not a match, return
+                    return count;
+                }
+            }
+
             foreach (Listing listing in listOfListings)
             {
-
-                //Checks the parameters
-
-                //Neighbourhood -----------------------------------------------------------------------------------
-                if (paramNeighbourhood.Count != 0) //only checks if this parameter is set
+                if (listing.Neighbourhood == neighbourhood)
                 {
-                    //If this neighbourhood is not one of the ones in the parameter
-                    if (!paramNeighbourhood.Contains(listing.Neighbourhood))
+
+                    //Size --------------------------------------------------------------------------------------------
+                    if (paramSize != null) //only checks if this parameter is set
                     {
-                        //as soon as you know its not a match, move to the next neighbourhood
-                        continue;
+                        //If the listing's size is less than min or larger than max
+                        if (listing.Size < paramSize.Item1 || listing.Size > paramSize.Item2)
+                        {
+                            //as soon as you know its not a match, move to the next neighbourhood
+                            continue;
+                        }
                     }
-                }
 
-                //Size --------------------------------------------------------------------------------------------
-                if (paramSize != null) //only checks if this parameter is set
-                {
-                    //If the listing's size is less than min or larger than max
-                    if (listing.Size < paramSize.Item1 || listing.Size > paramSize.Item2)
+                    //Bed Amount --------------------------------------------------------------------------------------
+                    if (paramBed != null) //only checks if this parameter is set
                     {
-                        //as soon as you know its not a match, move to the next neighbourhood
-                        continue;
+                        //If the listing's bedNum is less than min or larger than max
+                        if (listing.BedNum < paramBed.Item1 || listing.BedNum > paramBed.Item2)
+                        {
+                            //as soon as you know its not a match, move to the next neighbourhood
+                            continue;
+                        }
                     }
-                }
 
-                //Bed Amount --------------------------------------------------------------------------------------
-                if (paramBed != null) //only checks if this parameter is set
-                {
-                    //If the listing's bedNum is less than min or larger than max
-                    if (listing.BedNum < paramBed.Item1 || listing.BedNum > paramBed.Item2)
+                    //Bath Amount -------------------------------------------------------------------------------------
+                    if (paramBath != null) //only checks if this parameter is set
                     {
-                        //as soon as you know its not a match, move to the next neighbourhood
-                        continue;
+                        //If the listing's bedNum is less than min or larger than max
+                        if (listing.BathNum < paramBath.Item1 || listing.BathNum > paramBath.Item2)
+                        {
+                            //as soon as you know its not a match, move to the next neighbourhood
+                            continue;
+                        }
                     }
-                }
 
-                //Bath Amount -------------------------------------------------------------------------------------
-                if (paramBath != null) //only checks if this parameter is set
-                {
-                    //If the listing's bedNum is less than min or larger than max
-                    if (listing.BathNum < paramBath.Item1 || listing.BathNum > paramBath.Item2)
+                    //Year --------------------------------------------------------------------------------------------
+                    if (paramYear != null) //only checks if this parameter is set
                     {
-                        //as soon as you know its not a match, move to the next neighbourhood
-                        continue;
+                        //If the listing's bedNum is less than min or larger than max
+                        if (listing.YearBuilt < paramYear.Item1 || listing.YearBuilt > paramYear.Item2)
+                        {
+                            //as soon as you know its not a match, move to the next neighbourhood
+                            continue;
+                        }
                     }
+
+                    //If it has not yet hit a continue by this point, you know its a match
+                    count++;
                 }
-
-                //Year --------------------------------------------------------------------------------------------
-                if (paramYear != null) //only checks if this parameter is set
-                {
-                    //If the listing's bedNum is less than min or larger than max
-                    if (listing.YearBuilt < paramYear.Item1 || listing.YearBuilt > paramYear.Item2)
-                    {
-                        //as soon as you know its not a match, move to the next neighbourhood
-                        continue;
-                    }
-                }
-
-                //Amenities ---------------------------------------------------------------------------------------
-                //Not sure what was needed for this one
-
-
-                //If it has not yet hit a continue by this point, you know its a match
-                count++;
                 
             }
 

@@ -123,6 +123,9 @@
     <Compile Include="MapView-FullyZoomed\MapViewNolanHill.xaml.cs">
       <DependentUpon>MapViewNolanHill.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapViewNorthWest.xaml.cs">
+      <DependentUpon>MapViewNorthWest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapViewRegion.xaml.cs">
       <DependentUpon>MapViewRegion.xaml</DependentUpon>
     </Compile>
@@ -260,6 +263,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MapViewNorthWest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MapViewRegion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -332,9 +339,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Calgary_Zoomed.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Calgary.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\houseImg1.jpg" />
@@ -471,7 +475,7 @@
     <Resource Include="sortup_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="arbourLake.png" />
+    <Resource Include="MapView-FullyZoomed-Images\arbourLake.png" />
     <Resource Include="MapView-FullyZoomed-Images\citadel.png" />
     <Resource Include="MapView-FullyZoomed-Images\dalhousie.png" />
     <Resource Include="MapView-FullyZoomed-Images\edgemont.png" />
@@ -515,6 +519,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MapView-FullyZoomed-Images\royalVista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Calgary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NorthWest.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
