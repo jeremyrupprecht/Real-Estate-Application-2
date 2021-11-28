@@ -23,19 +23,23 @@ namespace Real_Tors_Application
         public readonly Random rand = new Random();
         public Listing list1;
         public List<Listing> ListOfListings = new List<Listing>();
+        public List<int> similarNum;
+        public bool onButton, onPopup;
 
 
         public JeremyWindow3()
         {
             InitializeComponent();
-            if (GlobalState.similar != null)
+            if (GlobalState.similar != -1)
             {
-                Console.WriteLine("Similar Listing " + GlobalState.similar.Address);
+                Console.WriteLine("Similar Listing " + GlobalState.totalList[GlobalState.similar].Address);
                 LeftArrow.Visibility = Visibility.Collapsed;
                 RightArrow.Visibility = Visibility.Collapsed;
                 BackIfSimilar.Visibility = Visibility.Visible;
                 //BackIfSimilar.Content = "Back to " + GlobalState.totalList[GlobalState.currentList[GlobalState.currentIndex]].Address;
-                list1 = GlobalState.similar;
+                list1 = GlobalState.totalList[GlobalState.similar];
+                filteredListingsTextBlock.Visibility = Visibility.Collapsed;
+                FilteredListingsScroll.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -132,6 +136,33 @@ namespace Real_Tors_Application
 
             }
 
+            ChangeExpansion();
+
+        }
+
+        private void ChangeExpansion()
+        {
+            if(FilterPanel.Visibility == Visibility.Collapsed)
+            {
+                expandedListingGrid.Width = 1900;
+                Column1.Width = new GridLength(700);
+                expandedListingScrollViewer.Width = 1700;
+                SimilarListingsScroll.Width = 1600;
+                FilteredListingsScroll.Width = 1600;
+                LeftArrow.Margin = new Thickness(50, 804, 1773, 146);
+            }
+            
+            else
+            {
+                expandedListingScrollViewer.Width = 1220;
+                Column1.Width = new GridLength(500);
+                expandedListingGrid.Width = 1480;
+                SimilarListingsScroll.Width = 1150;
+                FilteredListingsScroll.Width = 1150;
+                LeftArrow.Margin = new Thickness(452, 804, 1353, 146);
+            }
+
+
         }
 
         private void prevLisiting(object sender, MouseButtonEventArgs e)
@@ -164,9 +195,11 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-            for (int i = 0; i < 12; i++)
+            similarNum = GlobalState.GenerateSimilar((GlobalState.similar!=-1? GlobalState.similar : 50));
+
+            for (int i = 0; i < 6; i++)
             {
-                ListOfListings.Add(new Listing(rand));
+                ListOfListings.Add(GlobalState.totalList[similarNum[i]]);
             }
 
             Neighbourhood1.Content = ListOfListings[0].Neighbourhood;
@@ -211,47 +244,47 @@ namespace Real_Tors_Application
             SizeNumber6.Content = ListOfListings[5].Size + " sq ft";
             HouseImage6.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[5].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood7.Content = ListOfListings[6].Neighbourhood;
-            PriceNum7.Content = "$" + ListOfListings[6].Price;
-            BedNumber7.Content = ListOfListings[6].BedNum;
-            BathNumber7.Content = ListOfListings[6].BathNum;
-            SizeNumber7.Content = ListOfListings[6].Size + " sq ft";
-            HouseImage7.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[6].NumOfImg + ".jpg", UriKind.Relative));
+            Neighbourhood7.Content = GlobalState.totalList[GlobalState.currentList[1]].Neighbourhood;
+            PriceNum7.Content = "$" + GlobalState.totalList[GlobalState.currentList[1]].Price;
+            BedNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].BedNum;
+            BathNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].BathNum;
+            SizeNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].Size + " sq ft";
+            HouseImage7.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[1]].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood8.Content = ListOfListings[7].Neighbourhood;
-            PriceNum8.Content = "$" + ListOfListings[7].Price;
-            BedNumber8.Content = ListOfListings[7].BedNum;
-            BathNumber8.Content = ListOfListings[7].BathNum;
-            SizeNumber8.Content = ListOfListings[7].Size + " sq ft";
-            HouseImage8.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[7].NumOfImg + ".jpg", UriKind.Relative));
+            Neighbourhood8.Content = GlobalState.totalList[GlobalState.currentList[2]].Neighbourhood;
+            PriceNum8.Content = "$" + GlobalState.totalList[GlobalState.currentList[2]].Price;
+            BedNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].BedNum;
+            BathNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].BathNum;
+            SizeNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].Size + " sq ft";
+            HouseImage8.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[2]].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood9.Content = ListOfListings[8].Neighbourhood;
-            PriceNum9.Content = "$" + ListOfListings[8].Price;
-            BedNumber9.Content = ListOfListings[8].BedNum;
-            BathNumber9.Content = ListOfListings[8].BathNum;
-            SizeNumber9.Content = ListOfListings[8].Size + " sq ft";
-            HouseImage9.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[8].NumOfImg + ".jpg", UriKind.Relative));
+            Neighbourhood9.Content = GlobalState.totalList[GlobalState.currentList[3]].Neighbourhood;
+            PriceNum9.Content = "$" + GlobalState.totalList[GlobalState.currentList[3]].Price;
+            BedNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].BedNum;
+            BathNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].BathNum;
+            SizeNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].Size + " sq ft";
+            HouseImage9.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[3]].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood10.Content = ListOfListings[9].Neighbourhood;
-            PriceNum10.Content = "$" + ListOfListings[9].Price;
-            BedNumber10.Content = ListOfListings[9].BedNum;
-            BathNumber10.Content = ListOfListings[9].BathNum;
-            SizeNumber10.Content = ListOfListings[9].Size + " sq ft";
-            HouseImage10.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[9].NumOfImg + ".jpg", UriKind.Relative));
+            Neighbourhood10.Content = GlobalState.totalList[GlobalState.currentList[4]].Neighbourhood;
+            PriceNum10.Content = "$" + GlobalState.totalList[GlobalState.currentList[4]].Price;
+            BedNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].BedNum;
+            BathNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].BathNum;
+            SizeNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].Size + " sq ft";
+            HouseImage10.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[4]].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood11.Content = ListOfListings[10].Neighbourhood;
-            PriceNum11.Content = "$" + ListOfListings[10].Price;
-            BedNumber11.Content = ListOfListings[10].BedNum;
-            BathNumber11.Content = ListOfListings[10].BathNum;
-            SizeNumber11.Content = ListOfListings[10].Size + " sq ft";
-            HouseImage11.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[10].NumOfImg + ".jpg", UriKind.Relative));
+            Neighbourhood11.Content = GlobalState.totalList[GlobalState.currentList[5]].Neighbourhood;
+            PriceNum11.Content = "$" + GlobalState.totalList[GlobalState.currentList[5]].Price;
+            BedNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].BedNum;
+            BathNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].BathNum;
+            SizeNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].Size + " sq ft";
+            HouseImage11.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[5]].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood12.Content = ListOfListings[11].Neighbourhood;
-            PriceNum12.Content = "$" + ListOfListings[11].Price;
-            BedNumber12.Content = ListOfListings[11].BedNum;
-            BathNumber12.Content = ListOfListings[11].BathNum;
-            SizeNumber12.Content = ListOfListings[11].Size + " sq ft";
-            HouseImage12.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[11].NumOfImg + ".jpg", UriKind.Relative));
+            Neighbourhood12.Content = GlobalState.totalList[GlobalState.currentList[6]].Neighbourhood;
+            PriceNum12.Content = "$" + GlobalState.totalList[GlobalState.currentList[6]].Price;
+            BedNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].BedNum;
+            BathNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].BathNum;
+            SizeNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].Size + " sq ft";
+            HouseImage12.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[6]].NumOfImg + ".jpg", UriKind.Relative));
 
             ShrinkNeighbourhoodText(Neighbourhood1);
             ShrinkNeighbourhoodText(Neighbourhood2);
@@ -280,22 +313,18 @@ namespace Real_Tors_Application
 
         private void ChangeFavoriteActivate()
         {
-            if (GlobalState.similar != null)
+            int numOfListing;
+            if (GlobalState.similar != -1)
             {
-                list1.Favorited = !list1.Favorited;
-                if (list1.Favorited)
-                {
-                    GlobalState.additionalFavorites.Add(list1);
-                }
-                else
-                {
-                    GlobalState.additionalFavorites.Remove(list1);
-                }
-                FavoritedListing.Source = list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                numOfListing = GlobalState.similar;
+                GlobalState.totalList[GlobalState.similar].Favorited = !GlobalState.totalList[GlobalState.similar].Favorited;
+
+                var heartImg = FavoritedListing;
+                heartImg.Source = GlobalState.totalList[GlobalState.similar].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
             }
             else
             {
-                int numOfListing = GlobalState.currentIndex;
+                numOfListing = GlobalState.currentIndex;
                 GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
 
                 var heartImg = FavoritedListing;
@@ -311,14 +340,73 @@ namespace Real_Tors_Application
         private void expandListing(object sender, MouseButtonEventArgs e)
         {
             int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(7))-1;
-            GlobalState.similar = ListOfListings[numOfListing];
+            GlobalState.similar = similarNum[numOfListing];
             JeremyWindow3 pNext = new JeremyWindow3();
             this.NavigationService.Navigate(pNext);
         }
 
+        
+        private void expandListingFiltered(object sender, MouseButtonEventArgs e)
+        {
+            int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(8));
+            GlobalState.currentIndex = numOfListing;
+            GlobalState.similar = -1;
+            JeremyWindow3 pNext = new JeremyWindow3();
+            this.NavigationService.Navigate(pNext);
+        }
+
+        private void enterPopUp(object sender, MouseEventArgs e)
+        {
+            onPopup = true;
+        }
+
+        private void exitPopUp(object sender, MouseEventArgs e)
+        {
+            onPopup = false;
+        }
+
+        private void onButtons(object sender, MouseEventArgs e)
+        {
+            onButton = true;
+        }
+
+        private void offButtons(object sender, MouseEventArgs e)
+        {
+            onButton = false;
+        }
+
+        private void exitExpanded(object sender, MouseButtonEventArgs e)
+        {
+            if(!onPopup && !onButton)
+            {
+                switch(GlobalState.lastPage)
+                {
+                    case "Favorites":
+                        break;
+                    case "Hamptons":
+                        break;
+                    case "Citadel":
+                        break;
+                    case "Simons Valley":
+                        break;
+                    case "Edgemont":
+                        break;
+                    case "Hawkwood":
+                        break;
+                    default:
+                        ListView pNext = new ListView();
+                        GlobalState.currentIndex = -1;
+                        GlobalState.similar = -1;
+                        this.NavigationService.Navigate(pNext);
+                        break;
+                }
+                
+            }
+        }
+
         private void BackToSelection(object sender, RoutedEventArgs e)
         {
-            GlobalState.similar = null;
+            GlobalState.similar = -1;
             JeremyWindow3 pNext = new JeremyWindow3();
             this.NavigationService.Navigate(pNext);
         }

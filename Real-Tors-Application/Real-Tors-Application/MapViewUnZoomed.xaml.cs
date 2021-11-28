@@ -24,6 +24,19 @@ namespace Real_Tors_Application
         public MapViewUnZoomed()
         {
             InitializeComponent();
+            SetMapValues();
+        }
+
+        private void SetMapValues()
+        {
+            GlobalState.setPerNeighbourhood("Citadel");
+            GlobalState.setPerNeighbourhood("Edgemont");
+            GlobalState.setPerNeighbourhood("Hamptons");
+            GlobalState.setPerNeighbourhood("Hawkwood");
+            GlobalState.setPerNeighbourhood("Simons Valley");
+
+            NorthWest.Content = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
+                GlobalState.perNeighbourhood["Simons Valley"] + 500;
         }
 
         private void Btn_Map_Click(object sender, RoutedEventArgs e)
@@ -103,5 +116,9 @@ namespace Real_Tors_Application
 
         }
 
+        private void clickNorthWest(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MapViewNorthWest.xaml", UriKind.Relative));
+        }
     }
 }

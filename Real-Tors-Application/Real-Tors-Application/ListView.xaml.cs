@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;             //Needed for animation
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -27,6 +28,8 @@ namespace Real_Tors_Application
         public ListView()
         {
             InitializeComponent();
+            //InitFilter();
+            GlobalState.lastPage = "List";          //Set last page for easy jumping in between
             GlobalState.Generate();
             GenerateListings();
         }
@@ -38,7 +41,6 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-            GlobalState.currentList[8] = -1;
             if (GlobalState.currentList[0] != -1)
             {
                 Neighbourhood0.Content = GlobalState.totalList[GlobalState.currentList[0]].Neighbourhood;
@@ -198,6 +200,10 @@ namespace Real_Tors_Application
             }
         }
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///Filters and Header Stuff
+       
+
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -241,47 +247,217 @@ namespace Real_Tors_Application
             }
         }
 
-        private void OpenAmenities_Click(object sender, RoutedEventArgs e)
-        {
-            if (AmenTypesSelect.Visibility == Visibility.Collapsed)
-            {
-                AmenTypesSelect.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                AmenTypesSelect.Visibility = Visibility.Collapsed;
-            }
+        //DispatcherTimer timer;
 
-        }
+        //int panelWidth;
+        //bool hidden;
 
-        private void toggleNeigh(object sender, RoutedEventArgs e)
-        {
-            if (NeighTypesSelect.Visibility == Visibility.Collapsed)
-            {
-                NeighTypesSelect.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                NeighTypesSelect.Visibility = Visibility.Collapsed;
-            }
-        }
+        //private void InitFilter()
+        //{
+        //    Console.WriteLine("Initializing Filter");
+        //    timer = new DispatcherTimer(DispatcherPriority.Background, Application.Current.Dispatcher);
+        //    timer.Interval = new TimeSpan(0, 0, 0, 10);
+        //    timer.Tick += Timer_Tick;
+
+        //    panelWidth = (int)FilterPanel.Width;
+        //}
+
+        //private void Timer_Tick(object sender, EventArgs e)
+        //{
+        //    Console.WriteLine("Timer ticking: "+ FilterPanel.Width);
+        //    if (hidden)
+        //    {
+        //        FilterPanel.Width += 1;
+        //        if (FilterPanel.Width >= panelWidth)
+        //        {
+        //            timer.Stop();
+        //            hidden = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        FilterPanel.Width -= 1;
+        //        if (FilterPanel.Width <= 30)
+        //        {
+        //            timer.Stop();
+        //            hidden = true;
+        //        }
+        //    }
+        //}
+
 
         private void ToggleFilter(object sender, RoutedEventArgs e)
         {
-            if (FilterPanel.Visibility == Visibility.Collapsed)
+            //Console.WriteLine("Toggle Pressed");
+            //timer.Start();
+            if (!hidden)
             {
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
-
             }
             else
             {
                 FilterPanel.Visibility = Visibility.Collapsed;
                 listResultsGrid.Width = 1850;
-
             }
-
         }
+
+
+        private void Add_Amenity_Click(object sender, RoutedEventArgs e)
+        {
+            AddAmenity();
+        }
+
+        private void EnterAmenity(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                AddAmenity();
+            }
+        }
+
+        private void AddAmenity()
+        {
+            if (!GlobalState.paramAmenities.Contains(AmenitiesInput.Text) && GlobalState.paramAmenities.Count()<5 && AmenitiesInput.Text.Count() > 0)
+            {
+                GlobalState.paramAmenities.Add(AmenitiesInput.Text);
+                AmenitiesInput.Text = "";
+                Print_Amenity();
+            }
+        }
+
+        private void DeleteAmenity(object sender, MouseButtonEventArgs e)
+        {
+            var lbl = sender as Label;
+            GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
+            Print_Amenity();
+        }
+
+        private void Print_Amenity()
+        {
+            Amenity1.Visibility = Visibility.Collapsed;
+            Amenity2.Visibility = Visibility.Collapsed;
+            Amenity3.Visibility = Visibility.Collapsed;
+            Amenity4.Visibility = Visibility.Collapsed;
+            Amenity5.Visibility = Visibility.Collapsed;
+            int count = GlobalState.paramAmenities.Count;
+            AddAmenities.IsEnabled = true;
+            if(count>=1)
+            {
+                Amenity1.Content = "x " + GlobalState.paramAmenities[0];
+                Amenity1.Visibility = Visibility.Visible;
+
+                if (count>=2)
+                {
+                    Amenity2.Content = "x " + GlobalState.paramAmenities[1];
+                    Amenity2.Visibility = Visibility.Visible;
+
+                    if (count >= 3)
+                    {
+                        Amenity3.Content = "x " + GlobalState.paramAmenities[2];
+                        Amenity3.Visibility = Visibility.Visible;
+
+                        if (count >= 4)
+                        {
+                            Amenity4.Content = "x " + GlobalState.paramAmenities[3];
+                            Amenity4.Visibility = Visibility.Visible;
+
+                            if (count >= 5)
+                            {
+                                Amenity5.Content = "x " + GlobalState.paramAmenities[4];
+                                Amenity5.Visibility = Visibility.Visible;
+                                AddAmenities.IsEnabled = false;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Add_Neighbourhood_Click(object sender, RoutedEventArgs e)
+        {
+            AddNeighbour();
+        }
+
+        private void EnterNeighbour(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                AddNeighbour();
+            }
+        }
+
+        private void AddNeighbour()
+        {
+            if (!GlobalState.paramNeighbourhood.Contains(NeighbourhoodInput.Text) && GlobalState.paramNeighbourhood.Count() < 6 && NeighbourhoodInput.Text.Count()>0)
+            {
+                GlobalState.paramNeighbourhood.Add(NeighbourhoodInput.Text);
+                NeighbourhoodInput.Text = "";
+                Print_Neighbourhood();
+            }
+        }
+
+        private void DeleteNeighbour(object sender, MouseButtonEventArgs e)
+        {
+            var lbl = sender as Label;
+            GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
+            Print_Neighbourhood();
+        }
+
+        private void Print_Neighbourhood()
+        {
+            Neighbour1.Visibility = Visibility.Collapsed;
+            Neighbour2.Visibility = Visibility.Collapsed;
+            Neighbour3.Visibility = Visibility.Collapsed;
+            Neighbour4.Visibility = Visibility.Collapsed;
+            Neighbour5.Visibility = Visibility.Collapsed;
+            int count = GlobalState.paramNeighbourhood.Count;
+            AddNeighbourhood.IsEnabled = true;
+            if (count >= 1)
+            {
+                Neighbour1.Content = "x " + GlobalState.paramNeighbourhood[0];
+                Neighbour1.Visibility = Visibility.Visible;
+
+                if (count >= 2)
+                {
+                    Neighbour2.Content = "x " + GlobalState.paramNeighbourhood[1];
+                    Neighbour2.Visibility = Visibility.Visible;
+
+                    if (count >= 3)
+                    {
+                        Neighbour3.Content = "x " + GlobalState.paramNeighbourhood[2];
+                        Neighbour3.Visibility = Visibility.Visible;
+
+                        if (count >= 4)
+                        {
+                            Neighbour4.Content = "x " + GlobalState.paramNeighbourhood[3];
+                            Neighbour4.Visibility = Visibility.Visible;
+
+                            if (count >= 5)
+                            {
+                                Neighbour5.Content = "x " + GlobalState.paramNeighbourhood[4];
+                                Neighbour5.Visibility = Visibility.Visible;
+
+                                if(count>=6)
+                                {
+                                    Neighbour6.Content = "x " + GlobalState.paramNeighbourhood[5];
+                                    Neighbour6.Visibility = Visibility.Visible;
+                                    AddNeighbourhood.IsEnabled = false;
+                                }
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
         private void expandListing(object sender, MouseButtonEventArgs e)
         {
@@ -310,6 +486,19 @@ namespace Real_Tors_Application
             heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
         }
 
+        private void enterPriceLow(object sender, KeyEventArgs e)
+        {
+            var box = sender as TextBlock;
+            if(int.TryParse(box.Text, out _))
+            {
+                int high = 25000000;
+                if(GlobalState.paramPrice!=null)
+                {
+                    high = GlobalState.paramPrice.Item2;
+                }
+                GlobalState.paramPrice = new Tuple<int, int>(int.Parse(box.Text), high);
+            }
+        }
     }
 }
 
