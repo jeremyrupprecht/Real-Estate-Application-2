@@ -39,7 +39,16 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
-            
+            Listing1.Visibility = Visibility.Visible;
+            Listing2.Visibility = Visibility.Visible;
+            Listing3.Visibility = Visibility.Visible;
+            Listing4.Visibility = Visibility.Visible;
+            Listing5.Visibility = Visibility.Visible;
+            Listing6.Visibility = Visibility.Visible;
+            Listing7.Visibility = Visibility.Visible;
+            Listing8.Visibility = Visibility.Visible;
+            Listing9.Visibility = Visibility.Visible;
+
             if (GlobalState.currentList[0] != -1)
             {
                 Neighbourhood0.Content = GlobalState.totalList[GlobalState.currentList[0]].Neighbourhood;
@@ -301,6 +310,8 @@ namespace Real_Tors_Application
             
             GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
             Print_Amenity();
+            GlobalState.Generate(9);
+            GenerateListings();
         }
 
         private void Print_Amenity()
@@ -378,6 +389,8 @@ namespace Real_Tors_Application
             var lbl = sender as Label;
             GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
             Print_Neighbourhood();
+            GlobalState.Generate(9);
+            GenerateListings();
         }
 
         private void Print_Neighbourhood()
@@ -505,7 +518,7 @@ namespace Real_Tors_Application
                     {
                         high = GlobalState.paramSize.Item2;
                     }
-                    GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowSize.Text), high);
+                    GlobalState.paramSize = new Tuple<int, int>(int.Parse(lowSize.Text), high);
                     lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
@@ -535,7 +548,7 @@ namespace Real_Tors_Application
                     {
                         low = GlobalState.paramSize.Item1;
                     }
-                    GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highSize.Text));
+                    GlobalState.paramSize = new Tuple<int, int>(low, int.Parse(highSize.Text));
                     highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();

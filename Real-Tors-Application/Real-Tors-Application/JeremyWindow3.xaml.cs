@@ -286,60 +286,108 @@ namespace Real_Tors_Application
             SizeNumber6.Content = ListOfListings[5].Size + " sq ft";
             HouseImage6.Source = new BitmapImage(new Uri(@"/houseImg" + ListOfListings[5].NumOfImg + ".jpg", UriKind.Relative));
 
-            Neighbourhood7.Content = GlobalState.totalList[GlobalState.currentList[1]].Neighbourhood;
-            PriceNum7.Content = "$" + GlobalState.totalList[GlobalState.currentList[1]].Price;
-            BedNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].BedNum;
-            BathNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].BathNum;
-            SizeNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].Size + " sq ft";
-            HouseImage7.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[1]].NumOfImg + ".jpg", UriKind.Relative));
+            ListingF1.Visibility = Visibility.Collapsed;
+            ListingF2.Visibility = Visibility.Collapsed;
+            ListingF3.Visibility = Visibility.Collapsed;
+            ListingF4.Visibility = Visibility.Collapsed;
+            ListingF5.Visibility = Visibility.Collapsed;
+            ListingF6.Visibility = Visibility.Collapsed;
 
-            Neighbourhood8.Content = GlobalState.totalList[GlobalState.currentList[2]].Neighbourhood;
-            PriceNum8.Content = "$" + GlobalState.totalList[GlobalState.currentList[2]].Price;
-            BedNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].BedNum;
-            BathNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].BathNum;
-            SizeNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].Size + " sq ft";
-            HouseImage8.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[2]].NumOfImg + ".jpg", UriKind.Relative));
+            if (GlobalState.currentList[1]!=-1)
+            {
+                Neighbourhood7.Content = GlobalState.totalList[GlobalState.currentList[1]].Neighbourhood;
+                PriceNum7.Content = "$" + GlobalState.totalList[GlobalState.currentList[1]].Price;
+                BedNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].BedNum;
+                BathNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].BathNum;
+                SizeNumber7.Content = GlobalState.totalList[GlobalState.currentList[1]].Size + " sq ft";
+                HouseImage7.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[1]].NumOfImg + ".jpg", UriKind.Relative));
+                ListingF1.Visibility = Visibility.Visible;
+                ShrinkNeighbourhoodText(Neighbourhood7);
 
-            Neighbourhood9.Content = GlobalState.totalList[GlobalState.currentList[3]].Neighbourhood;
-            PriceNum9.Content = "$" + GlobalState.totalList[GlobalState.currentList[3]].Price;
-            BedNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].BedNum;
-            BathNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].BathNum;
-            SizeNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].Size + " sq ft";
-            HouseImage9.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[3]].NumOfImg + ".jpg", UriKind.Relative));
+                if (GlobalState.currentList[2] != -1)
+                {
+                    Neighbourhood8.Content = GlobalState.totalList[GlobalState.currentList[2]].Neighbourhood;
+                    PriceNum8.Content = "$" + GlobalState.totalList[GlobalState.currentList[2]].Price;
+                    BedNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].BedNum;
+                    BathNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].BathNum;
+                    SizeNumber8.Content = GlobalState.totalList[GlobalState.currentList[2]].Size + " sq ft";
+                    HouseImage8.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[2]].NumOfImg + ".jpg", UriKind.Relative));
+                    ListingF2.Visibility = Visibility.Visible;
 
-            Neighbourhood10.Content = GlobalState.totalList[GlobalState.currentList[4]].Neighbourhood;
-            PriceNum10.Content = "$" + GlobalState.totalList[GlobalState.currentList[4]].Price;
-            BedNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].BedNum;
-            BathNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].BathNum;
-            SizeNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].Size + " sq ft";
-            HouseImage10.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[4]].NumOfImg + ".jpg", UriKind.Relative));
+                    ShrinkNeighbourhoodText(Neighbourhood8);
 
-            Neighbourhood11.Content = GlobalState.totalList[GlobalState.currentList[5]].Neighbourhood;
-            PriceNum11.Content = "$" + GlobalState.totalList[GlobalState.currentList[5]].Price;
-            BedNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].BedNum;
-            BathNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].BathNum;
-            SizeNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].Size + " sq ft";
-            HouseImage11.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[5]].NumOfImg + ".jpg", UriKind.Relative));
+                    if (GlobalState.currentList[3] != -1) {
+                        Neighbourhood9.Content = GlobalState.totalList[GlobalState.currentList[3]].Neighbourhood;
+                        PriceNum9.Content = "$" + GlobalState.totalList[GlobalState.currentList[3]].Price;
+                        BedNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].BedNum;
+                        BathNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].BathNum;
+                        SizeNumber9.Content = GlobalState.totalList[GlobalState.currentList[3]].Size + " sq ft";
+                        HouseImage9.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[3]].NumOfImg + ".jpg", UriKind.Relative));
+                        ListingF3.Visibility = Visibility.Visible;
 
-            Neighbourhood12.Content = GlobalState.totalList[GlobalState.currentList[6]].Neighbourhood;
-            PriceNum12.Content = "$" + GlobalState.totalList[GlobalState.currentList[6]].Price;
-            BedNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].BedNum;
-            BathNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].BathNum;
-            SizeNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].Size + " sq ft";
-            HouseImage12.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[6]].NumOfImg + ".jpg", UriKind.Relative));
 
+                        ShrinkNeighbourhoodText(Neighbourhood9);
+
+                        if (GlobalState.currentList[4] != -1)
+                        {
+                            Neighbourhood10.Content = GlobalState.totalList[GlobalState.currentList[4]].Neighbourhood;
+                            PriceNum10.Content = "$" + GlobalState.totalList[GlobalState.currentList[4]].Price;
+                            BedNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].BedNum;
+                            BathNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].BathNum;
+                            SizeNumber10.Content = GlobalState.totalList[GlobalState.currentList[4]].Size + " sq ft";
+                            HouseImage10.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[4]].NumOfImg + ".jpg", UriKind.Relative));
+                            ListingF4.Visibility = Visibility.Visible;
+
+
+                            ShrinkNeighbourhoodText(Neighbourhood10);
+
+                            if (GlobalState.currentList[5] != -1)
+                            {
+                                Neighbourhood11.Content = GlobalState.totalList[GlobalState.currentList[5]].Neighbourhood;
+                                PriceNum11.Content = "$" + GlobalState.totalList[GlobalState.currentList[5]].Price;
+                                BedNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].BedNum;
+                                BathNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].BathNum;
+                                SizeNumber11.Content = GlobalState.totalList[GlobalState.currentList[5]].Size + " sq ft";
+                                HouseImage11.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[5]].NumOfImg + ".jpg", UriKind.Relative));
+
+                                ListingF5.Visibility = Visibility.Visible;
+
+
+                                ShrinkNeighbourhoodText(Neighbourhood11);
+
+                                if (GlobalState.currentList[6] != -1)
+                                {
+                                    Neighbourhood12.Content = GlobalState.totalList[GlobalState.currentList[6]].Neighbourhood;
+                                    PriceNum12.Content = "$" + GlobalState.totalList[GlobalState.currentList[6]].Price;
+                                    BedNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].BedNum;
+                                    BathNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].BathNum;
+                                    SizeNumber12.Content = GlobalState.totalList[GlobalState.currentList[6]].Size + " sq ft";
+                                    HouseImage12.Source = new BitmapImage(new Uri(@"/houseImg" + GlobalState.totalList[GlobalState.currentList[6]].NumOfImg + ".jpg", UriKind.Relative));
+
+                                    ListingF6.Visibility = Visibility.Visible;
+
+                                    ShrinkNeighbourhoodText(Neighbourhood12);
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+           
+            
+            
+            
+            
             ShrinkNeighbourhoodText(Neighbourhood1);
             ShrinkNeighbourhoodText(Neighbourhood2);
             ShrinkNeighbourhoodText(Neighbourhood3);
             ShrinkNeighbourhoodText(Neighbourhood4);
             ShrinkNeighbourhoodText(Neighbourhood5);
             ShrinkNeighbourhoodText(Neighbourhood6);
-            ShrinkNeighbourhoodText(Neighbourhood7);
-            ShrinkNeighbourhoodText(Neighbourhood8);
-            ShrinkNeighbourhoodText(Neighbourhood9);
-            ShrinkNeighbourhoodText(Neighbourhood10);
-            ShrinkNeighbourhoodText(Neighbourhood11);
-            ShrinkNeighbourhoodText(Neighbourhood12);
+            
 
         }
 
