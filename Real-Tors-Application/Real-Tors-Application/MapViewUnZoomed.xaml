@@ -30,11 +30,15 @@
             <Image Source="ListIcon.png" Height="131" Width="124" RenderTransformOrigin="0.5,0.527" />
         </Button>
 
-        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.84,11.958" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
-        <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Left" Margin="737,286,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100" Foreground="DarkGreen" MouseDown="clickNorthWest"/>
-        <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Left" Margin="984,377,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70" Foreground="YellowGreen"/>
-        <Label x:Name="SouthWest" Content="200" HorizontalAlignment="Left" Margin="789,528,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="90" Foreground="Lime"/>
-        <Label x:Name="SouthEast" Content="800" HorizontalAlignment="Left" Margin="994,738,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100" Foreground="OliveDrab"/>
+        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
+        <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Left" Margin="650,260,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100" MouseDown="clickNorthWest"/>
+        <Label x:Name="North" Content="531" HorizontalAlignment="Left" Margin="804,128,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100"/>
+        <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Left" Margin="964,276,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="West" Content="710" HorizontalAlignment="Left" Margin="702,449,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70"/>
+        <Label x:Name="Center" Content="832" HorizontalAlignment="Left" Margin="864,477,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70"/>
+        <Label x:Name="East" Content="458" HorizontalAlignment="Left" Margin="1023,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="50"/>
+        <Label x:Name="South" Content="700" HorizontalAlignment="Left" Margin="841,689,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="90"/>
+        <Label x:Name="SouthEast" Content="800" HorizontalAlignment="Left" Margin="1001,628,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
 
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="1080" Margin="0, 100, 0, 0">
             <ScrollViewer Background="White">
