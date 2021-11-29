@@ -9,7 +9,6 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Threading;             //Needed for animation
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -28,7 +27,6 @@ namespace Real_Tors_Application
         public ListView()
         {
             InitializeComponent();
-            //InitFilter();
             GlobalState.lastPage = "List";          //Set last page for easy jumping in between
             GlobalState.Generate();
             GenerateListings();
@@ -240,70 +238,37 @@ namespace Real_Tors_Application
         {
             if (HomeTypesSelect.Visibility == Visibility.Collapsed)
             {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
             }
             else
             {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
         }
 
-        //DispatcherTimer timer;
-
-        //int panelWidth;
-        //bool hidden;
-
-        //private void InitFilter()
-        //{
-        //    Console.WriteLine("Initializing Filter");
-        //    timer = new DispatcherTimer(DispatcherPriority.Background, Application.Current.Dispatcher);
-        //    timer.Interval = new TimeSpan(0, 0, 0, 10);
-        //    timer.Tick += Timer_Tick;
-
-        //    panelWidth = (int)FilterPanel.Width;
-        //}
-
-        //private void Timer_Tick(object sender, EventArgs e)
-        //{
-        //    Console.WriteLine("Timer ticking: "+ FilterPanel.Width);
-        //    if (hidden)
-        //    {
-        //        FilterPanel.Width += 1;
-        //        if (FilterPanel.Width >= panelWidth)
-        //        {
-        //            timer.Stop();
-        //            hidden = false;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        FilterPanel.Width -= 1;
-        //        if (FilterPanel.Width <= 30)
-        //        {
-        //            timer.Stop();
-        //            hidden = true;
-        //        }
-        //    }
-        //}
-
-
+       
         private void ToggleFilter(object sender, RoutedEventArgs e)
         {
             //Console.WriteLine("Toggle Pressed");
             //timer.Start();
             if (FilterPanel.Visibility == Visibility.Collapsed)
             {
+                
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
+
             }
             else
             {
+                
                 FilterPanel.Visibility = Visibility.Collapsed;
                 listResultsGrid.Width = 1850;
+
             }
         }
-
-
+        
         private void Add_Amenity_Click(object sender, RoutedEventArgs e)
         {
             AddAmenity();
@@ -379,6 +344,8 @@ namespace Real_Tors_Application
                 }
             }
         }
+
+
 
         private void Add_Neighbourhood_Click(object sender, RoutedEventArgs e)
         {
