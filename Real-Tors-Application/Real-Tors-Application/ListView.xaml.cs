@@ -39,6 +39,7 @@ namespace Real_Tors_Application
 
         public void GenerateListings()
         {
+            
             if (GlobalState.currentList[0] != -1)
             {
                 Neighbourhood0.Content = GlobalState.totalList[GlobalState.currentList[0]].Neighbourhood;
@@ -289,6 +290,8 @@ namespace Real_Tors_Application
                 GlobalState.paramAmenities.Add(AmenitiesInput.Text);
                 AmenitiesInput.Text = "";
                 Print_Amenity();
+                GlobalState.Generate(9);
+                GenerateListings();
             }
         }
 
@@ -365,6 +368,8 @@ namespace Real_Tors_Application
                 GlobalState.paramNeighbourhood.Add(NeighbourhoodInput.Text);
                 NeighbourhoodInput.Text = "";
                 Print_Neighbourhood();
+                GlobalState.Generate(9);
+                GenerateListings();
             }
         }
 
@@ -422,6 +427,306 @@ namespace Real_Tors_Application
                 }
             }
         }
+
+
+        private void enterPriceLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowPrice.Text, out _))
+                {
+                    int high = 25000000;
+                    if (GlobalState.paramPrice != null)
+                    {
+                        high = GlobalState.paramPrice.Item2;
+                    }
+                    GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowPrice.Text), high);
+                    lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterPriceHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highPrice.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramPrice != null)
+                    {
+                        low = GlobalState.paramPrice.Item1;
+                    }
+                    GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highPrice.Text));
+                    highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterSizeLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowSize.Text, out _))
+                {
+                    int high = 20000;
+                    if (GlobalState.paramSize != null)
+                    {
+                        high = GlobalState.paramSize.Item2;
+                    }
+                    GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowSize.Text), high);
+                    lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterSizeHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highSize.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramSize != null)
+                    {
+                        low = GlobalState.paramSize.Item1;
+                    }
+                    GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highSize.Text));
+                    highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+        private void enterBedLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowBed.Text, out _))
+                {
+                    int high = 6;
+                    if (GlobalState.paramBed != null)
+                    {
+                        high = GlobalState.paramBed.Item2;
+                    }
+                    GlobalState.paramBed = new Tuple<int, int>(int.Parse(lowBed.Text), high);
+                    lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterBedHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highBed.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramBed != null)
+                    {
+                        low = GlobalState.paramBed.Item1;
+                    }
+                    GlobalState.paramBed = new Tuple<int, int>(low, int.Parse(highBed.Text));
+                    highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+        private void enterBathLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowBath.Text, out _))
+                {
+                    int high = 6;
+                    if (GlobalState.paramBath != null)
+                    {
+                        high = GlobalState.paramBath.Item2;
+                    }
+                    GlobalState.paramBath = new Tuple<int, int>(int.Parse(lowBath.Text), high);
+                    lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterBathHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highBath.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramBath != null)
+                    {
+                        low = GlobalState.paramBath.Item1;
+                    }
+                    GlobalState.paramBath = new Tuple<int, int>(low, int.Parse(highBath.Text));
+                    highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+        private void enterYearLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowYear.Text, out _))
+                {
+                    int high = 2021;
+                    if (GlobalState.paramYear != null)
+                    {
+                        high = GlobalState.paramYear.Item2;
+                    }
+                    GlobalState.paramYear = new Tuple<int, int>(int.Parse(lowYear.Text), high);
+                    lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterYearHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highYear.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramYear != null)
+                    {
+                        low = GlobalState.paramYear.Item1;
+                    }
+                    GlobalState.paramYear = new Tuple<int, int>(low, int.Parse(highYear.Text));
+                    highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -190,7 +190,49 @@ namespace Real_Tors_Application
             SizeNumber.Content = list1.Size + " sq ft";
             MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +list1.NumOfImg + ".jpg", UriKind.Relative));
             FavoritedListing.Source = (list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative)));
+            Print_Amenity();
+        }
 
+        private void Print_Amenity()
+        {
+            Amenity1.Visibility = Visibility.Collapsed;
+            Amenity2.Visibility = Visibility.Collapsed;
+            Amenity3.Visibility = Visibility.Collapsed;
+            Amenity4.Visibility = Visibility.Collapsed;
+            Amenity5.Visibility = Visibility.Collapsed;
+            if (list1.Amenities == null)
+                return;
+            int count = list1.Amenities.Count;
+            if (count >= 1)
+            {
+                Amenity1.Content = list1.Amenities[0];
+                Amenity1.Visibility = Visibility.Visible;
+
+                if (count >= 2)
+                {
+                    Amenity2.Content = list1.Amenities[1];
+                    Amenity2.Visibility = Visibility.Visible;
+
+                    if (count >= 3)
+                    {
+                        Amenity3.Content = list1.Amenities[2];
+                        Amenity3.Visibility = Visibility.Visible;
+
+                        if (count >= 4)
+                        {
+                            Amenity4.Content = list1.Amenities[3];
+                            Amenity4.Visibility = Visibility.Visible;
+
+                            if (count >= 5)
+                            {
+                                Amenity5.Content = list1.Amenities[4];
+                                Amenity5.Visibility = Visibility.Visible;
+
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         public void GenerateListings()

@@ -105,11 +105,7 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-					<Button x:Name="listViewButton" Width="131" Height ="124" HorizontalAlignment="Left"  Background="#FFD3D3D3" Margin="0, 30, 0, 0" Click="btn_listView_Click">
-					    <Image Source="ListIcon.png" Height="131" Width="124" />						
-					</Button>
-
-					<Button Name="BackIfSimilar" Visibility="Collapsed" Content="Back" Width="200" Margin="150, 0, 0, 0" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="75" Click="BackToSelection"/>
+					<Button Name="BackIfSimilar" Visibility="Collapsed" Grid.Row="1" Content="Back" Width="200" Margin="80, 0, 0, 0" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="75" Click="BackToSelection"/>
                     <Label Name="Address" Margin="530,30,0,0" FontWeight="Black" Height="80" FontSize="50" Grid.Row="1"  Content="{Binding Path=address[0], UpdateSourceTrigger=PropertyChanged}"></Label>
 
 
@@ -164,11 +160,13 @@
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="30 0">
                                             <Label x:Name="amenitiesTextBlock" Content="Amenities:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                            <ComboBox x:Name="amentiesDropdown" HorizontalAlignment="Left" Margin="20 10" VerticalAlignment="Top" Width="30" Height="30">
-                                                <ComboBoxItem>
-                                                    <Button x:Name="amenitiesDropdown" Content="idk the rugs kinda nice" Height="40" Width="250" FontSize="24" Click="btn_amenities_Click" />
-                                                </ComboBoxItem>
-                                            </ComboBox>
+                                            <WrapPanel Orientation="Horizontal">
+                                                <Label Name="Amenity1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                            </WrapPanel>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="7" Margin="30 0">
                                             <Label x:Name="descriptionTextBlock" Content="Description:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
