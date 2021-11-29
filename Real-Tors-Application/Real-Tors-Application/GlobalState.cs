@@ -121,7 +121,7 @@ namespace Real_Tors_Application
                 }
                 if (paramYear != null)
                 {
-                    if(paramYear.Item1 > totalList[i].YearBuilt || paramPrice.Item2 < totalList[i].YearBuilt)
+                    if(paramYear.Item1 > totalList[i].YearBuilt || paramYear.Item2 < totalList[i].YearBuilt)
                         continue;
                 }
                 if (paramPrice != null)
@@ -142,6 +142,11 @@ namespace Real_Tors_Application
 
                 if (paramAmenities!=null)
                 {
+                    if(totalList[i].Amenities==null)
+                    {
+
+                        totalList[i].Amenities = new List<String>();
+                    }
                     foreach(String s in paramAmenities)
                     {
                         if(!totalList[i].Amenities.Contains(s))
@@ -153,6 +158,8 @@ namespace Real_Tors_Application
                 currentList[count] = i;
                 count++;
             }
+
+            Console.WriteLine("has this many fit " + count);
 
             while(count<9)
             {

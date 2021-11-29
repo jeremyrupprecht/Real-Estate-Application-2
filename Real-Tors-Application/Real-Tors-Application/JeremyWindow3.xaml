@@ -164,11 +164,13 @@
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="30 0">
                                             <Label x:Name="amenitiesTextBlock" Content="Amenities:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                            <ComboBox x:Name="amentiesDropdown" HorizontalAlignment="Left" Margin="20 10" VerticalAlignment="Top" Width="30" Height="30">
-                                                <ComboBoxItem>
-                                                    <Button x:Name="amenitiesDropdown" Content="idk the rugs kinda nice" Height="40" Width="250" FontSize="24" Click="btn_amenities_Click" />
-                                                </ComboBoxItem>
-                                            </ComboBox>
+                                            <WrapPanel Orientation="Horizontal">
+                                                <Label Name="Amenity1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="Amenity5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                            </WrapPanel>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="7" Margin="30 0">
                                             <Label x:Name="descriptionTextBlock" Content="Description:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
