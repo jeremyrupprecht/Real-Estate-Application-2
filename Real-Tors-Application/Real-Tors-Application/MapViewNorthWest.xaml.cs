@@ -166,10 +166,11 @@ namespace Real_Tors_Application
         {
             if((int) label.Content <= 50)
             {
-                label.Foreground = Brushes.SkyBlue;
-            }else if ((int)label.Content <= 60)
-            {
                 label.Foreground = Brushes.DeepSkyBlue;
+            }
+            else if ((int)label.Content <= 60)
+            {
+                label.Foreground = Brushes.DodgerBlue;
             }
             else if ((int)label.Content <= 70)
             {

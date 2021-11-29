@@ -9,26 +9,26 @@
       Title="MapViewNorthWest">
 
     <Grid>
-        <Image Source="/Images/NorthWest.png" Margin="-273,-149,-430,-167"/>
+        <Image Source="/Images/NorthWest.png" Margin="-187,-172,-1011,-412"/>
 
-        <Label x:Name="LBL_Citadel" Content="00" HorizontalAlignment="Left" Margin="780,331,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
-        <Label x:Name="LBL_Edgemont" Content="00" HorizontalAlignment="Left" Margin="908,428,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
-        <Label x:Name="LBL_Hamptons" Content="00" HorizontalAlignment="Left" Margin="893,320,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70"/>
-        <Label x:Name="LBL_Hawkwood" Content="00" HorizontalAlignment="Left" Margin="776,418,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
-        <Label x:Name="LBL_SimonsValley" Content="00" HorizontalAlignment="Left" Margin="910,200,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="90"/>
-        <Label x:Name="LBL_ArbourLake" Content="00" HorizontalAlignment="Left" Margin="674,398,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70"/>
-        <Label x:Name="LBL_Dalhousie" Content="00" HorizontalAlignment="Left" Margin="854,574,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
-        <Label x:Name="LBL_NolanHill" Content="00" HorizontalAlignment="Left" Margin="826,125,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
-        <Label x:Name="LBL_Ranchlands" Content="00" HorizontalAlignment="Left" Margin="752,508,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
-        <Label x:Name="LBL_RockeyRidge" Content="00" HorizontalAlignment="Left" Margin="467,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
-        <Label x:Name="LBL_RoyalOak" Content="00" HorizontalAlignment="Left" Margin="570,323,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
-        <Label x:Name="LBL_RoyalVista" Content="00" HorizontalAlignment="Left" Margin="672,300,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="40"/>
-        <Label x:Name="LBL_SageHill" Content="00" HorizontalAlignment="Left" Margin="926,108,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
-        <Label x:Name="LBL_ScenicAcres" Content="00" HorizontalAlignment="Left" Margin="601,516,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="65"/>
-        <Label x:Name="LBL_SilverSprings" Content="00" HorizontalAlignment="Left" Margin="685,575,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
-        <Label x:Name="LBL_Tuscany" Content="00" HorizontalAlignment="Left" Margin="465,484,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_Citadel" Content="00" HorizontalAlignment="Left" Margin="1069,411,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
+        <Label x:Name="LBL_Edgemont" Content="00" HorizontalAlignment="Left" Margin="1213,552,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_Hamptons" Content="00" HorizontalAlignment="Left" Margin="1213,413,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70"/>
+        <Label x:Name="LBL_Hawkwood" Content="00" HorizontalAlignment="Left" Margin="1069,523,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_SimonsValley" Content="00" HorizontalAlignment="Left" Margin="1226,268,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="90"/>
+        <Label x:Name="LBL_ArbourLake" Content="00" HorizontalAlignment="Left" Margin="935,507,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="70"/>
+        <Label x:Name="LBL_Dalhousie" Content="00" HorizontalAlignment="Left" Margin="1169,713,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
+        <Label x:Name="LBL_NolanHill" Content="00" HorizontalAlignment="Left" Margin="1123,166,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
+        <Label x:Name="LBL_Ranchlands" Content="00" HorizontalAlignment="Left" Margin="1037,623,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="60"/>
+        <Label x:Name="LBL_RockeyRidge" Content="00" HorizontalAlignment="Left" Margin="704,383,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_RoyalOak" Content="00" HorizontalAlignment="Left" Margin="831,406,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_RoyalVista" Content="00" HorizontalAlignment="Left" Margin="942,386,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="40"/>
+        <Label x:Name="LBL_SageHill" Content="00" HorizontalAlignment="Left" Margin="1242,149,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_ScenicAcres" Content="00" HorizontalAlignment="Left" Margin="860,643,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="65"/>
+        <Label x:Name="LBL_SilverSprings" Content="00" HorizontalAlignment="Left" Margin="944,701,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
+        <Label x:Name="LBL_Tuscany" Content="00" HorizontalAlignment="Left" Margin="704,580,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
 
-        <Button x:Name="Citadel" Click="Btn_Citadel" MouseLeave ="MouseOutCitadel" MouseEnter="MouseOverCitadel" Margin="717,333,1036,600" Opacity="0">
+        <Button x:Name="Citadel" Click="Btn_Citadel" MouseLeave ="MouseOutCitadel" MouseEnter="MouseOverCitadel" Margin="980,406,721,508" Opacity="0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/citadel.png"/>
@@ -36,7 +36,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="Edgemont" Click="Btn_Edgemont" MouseLeave ="MouseOutEdgemont" MouseEnter="MouseOverEdgemont" Margin="868,386,838,400" Opacity="0">
+        <Button x:Name="Edgemont" Click="Btn_Edgemont" MouseLeave ="MouseOutEdgemont" MouseEnter="MouseOverEdgemont" Margin="1157,478,480,279" Opacity="0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/edgemont.png"/>
@@ -44,7 +44,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="Hamptons" Click="Btn_Hamptons" MouseLeave ="MouseOutHamptons" MouseEnter="MouseOverHamptons" Margin="820,329,820,609" Opacity="0">
+        <Button x:Name="Hamptons" Click="Btn_Hamptons" MouseLeave ="MouseOutHamptons" MouseEnter="MouseOverHamptons" Margin="1146,399,494,512" Opacity="0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/hamptons.png"/>
@@ -52,7 +52,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="Hawkwood" Click="Btn_Hawkwood" MouseLeave ="MouseOutHawkwood" MouseEnter="MouseOverHawkwood" Margin="726,412,991,495" Opacity="0">
+        <Button x:Name="Hawkwood" Click="Btn_Hawkwood" MouseLeave ="MouseOutHawkwood" MouseEnter="MouseOverHawkwood" Margin="1021,498,688,385" Opacity="0">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -68,7 +68,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="SimonsValley" Click="Btn_SimonsValley" MouseLeave ="MouseOutSimonsValley" MouseEnter="MouseOverSimonsValley" Margin="875,192,831,695" Opacity="0">
+        <Button x:Name="SimonsValley" Click="Btn_SimonsValley" MouseLeave ="MouseOutSimonsValley" MouseEnter="MouseOverSimonsValley" Margin="1160,265,482,638" Opacity="0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/simonsValley.png"/>
@@ -76,7 +76,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="ArbourLake" MouseLeave ="MouseOutArbourLake" MouseEnter="MouseOverArbourLake" Opacity="0" Height="156" VerticalAlignment="Top" Margin="609,390,1097,0">
+        <Button x:Name="ArbourLake" MouseLeave ="MouseOutArbourLake" MouseEnter="MouseOverArbourLake" Opacity="0" Height="205" VerticalAlignment="Top" Margin="860,469,813,0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/arbourLake.png"/>
@@ -84,7 +84,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="Dalhousie" MouseLeave ="MouseOutDalhousie" MouseEnter="MouseOverDalhousie" Opacity="0" Margin="780,549,882,334">
+        <Button x:Name="Dalhousie" MouseLeave ="MouseOutDalhousie" MouseEnter="MouseOverDalhousie" Opacity="0" Margin="1080,655,568,196">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/dalhousie.png"/>
@@ -92,7 +92,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="NolanHill" MouseLeave ="MouseOutNolanHill" MouseEnter="MouseOverNolanHill" Opacity="0" Margin="822,107,980,815">
+        <Button x:Name="NolanHill" MouseLeave ="MouseOutNolanHill" MouseEnter="MouseOverNolanHill" Opacity="0" Margin="1117,145,665,767">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/nolanHill.png"/>
@@ -100,7 +100,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="Ranchlands" MouseLeave ="MouseOutRanchlands" MouseEnter="MouseOverRanchlands" Opacity="0" Margin="711,498,1026,428">
+        <Button x:Name="Ranchlands" MouseLeave ="MouseOutRanchlands" MouseEnter="MouseOverRanchlands" Opacity="0" Margin="984,604,739,308">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/ranchlands.png"/>
@@ -108,7 +108,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="RockeyRidge" MouseLeave ="MouseOutRockeyRidge" MouseEnter="MouseOverRockeyRidge" Opacity="0" Margin="428,318,1312,593">
+        <Button x:Name="RockeyRidge" MouseLeave ="MouseOutRockeyRidge" MouseEnter="MouseOverRockeyRidge" Opacity="0" Margin="651,391,1046,494">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/rockeyRidge.png"/>
@@ -116,7 +116,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="RoyalOak" MouseLeave ="MouseOutRoyalOak" MouseEnter="MouseOverRoyalOak" Opacity="0" Margin="513,313,1155,587">
+        <Button x:Name="RoyalOak" MouseLeave ="MouseOutRoyalOak" MouseEnter="MouseOverRoyalOak" Opacity="0" Margin="806,383,925,493">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/royalOak.png"/>
@@ -124,7 +124,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="RoyalVista" MouseLeave ="MouseOutRoyalVista" MouseEnter="MouseOverRoyalVista" Opacity="0" Margin="594,311,1093,677">
+        <Button x:Name="RoyalVista" MouseLeave ="MouseOutRoyalVista" MouseEnter="MouseOverRoyalVista" Opacity="0" Margin="862,379,802,594">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/royalVista.png"/>
@@ -132,7 +132,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="SageHill" MouseLeave ="MouseOutSageHill" MouseEnter="MouseOverSageHill" Opacity="0" Margin="876,115,845,817">
+        <Button x:Name="SageHill" MouseLeave ="MouseOutSageHill" MouseEnter="MouseOverSageHill" Opacity="0" Margin="1186,145,533,778">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/sageHill.png"/>
@@ -140,7 +140,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="ScenicAcres" MouseLeave ="MouseOutScenicAcres" MouseEnter="MouseOverScenicAcres" Opacity="0" Margin="565,494,1180,384">
+        <Button x:Name="ScenicAcres" MouseLeave ="MouseOutScenicAcres" MouseEnter="MouseOverScenicAcres" Opacity="0" Margin="811,586,914,247">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/scenicAcres.png"/>
@@ -148,7 +148,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="SilverSprings" MouseLeave ="MouseOutSilverSprings" MouseEnter="MouseOverSilverSprings" Opacity="0" Margin="655,555,1096,315">
+        <Button x:Name="SilverSprings" MouseLeave ="MouseOutSilverSprings" MouseEnter="MouseOverSilverSprings" Opacity="0" Margin="914,666,798,169">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/silverSprings.png"/>
@@ -156,7 +156,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="Tuscany" MouseLeave ="MouseOutTuscany" MouseEnter="MouseOverTuscany" Opacity="0" Margin="456,406,1294,404">
+        <Button x:Name="Tuscany" MouseLeave ="MouseOutTuscany" MouseEnter="MouseOverTuscany" Opacity="0" Margin="670,486,1036,263">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/MapView-FullyZoomed-Images/tuscany.png"/>
