@@ -78,27 +78,27 @@ namespace Real_Tors_Application
         // Clear current listing
         // find faves, and put the indexes into current listing
         // Use current list to generate listings in profile view
-        public static List<Listing> FindNineFaves()
+        public static void FindNineFaves()
         {
-            List<Listing> faves = new List<Listing>();
+            
             int count = 0;
-            foreach(Listing fave in totalList)
+
+            for (int i = 0; i < 9; i++)
             {
-                if (fave.Favorited && count < 9)
+                currentList[i] = -1;
+            }
+
+            for (int i = 0; i < 1000; i++)
+            {
+                if (totalList[i].Favorited)
                 {
-                    faves.Add(fave);
+                    currentList[count] = i;
                     count++;
                 }
-            }
 
-            Console.WriteLine("Faves Count: " + faves.Count);
-            Console.WriteLine("Total Count: " + totalList.Count);
-            foreach (Listing fave in faves)
-            {
-                Console.WriteLine(faves.ToString());
+                if (count > 8) break;
             }
-
-            return faves;
+            
         }
  
         public static void Generate(int limit)

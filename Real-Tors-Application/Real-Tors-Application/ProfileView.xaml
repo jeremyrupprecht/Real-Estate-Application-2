@@ -50,8 +50,8 @@
         <Label x:Name="favListingLabel" Content="Favorite Listings" HorizontalAlignment="Left" Margin="0,204,0,0" VerticalAlignment="Top" Width="1920" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" Background="#FFE2E2E2" Height="40"/>
         <ScrollViewer x:Name="favListingScrollView" HorizontalAlignment="Left" Margin="0,251,0,0" VerticalAlignment="Top" Width="1920" HorizontalScrollBarVisibility="Disabled">
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="center">
-                <Label Name="ListTitle" FontSize="60" Margin="20" FontWeight="Bold" Width="1920">Results:</Label>
-                <Grid Name="Listing1" Margin="50" Visibility="Collapsed">
+                <Label Name="ListTitle" FontSize="60" Margin="20" FontWeight="Bold" Width="1920">Favourites:</Label>
+                <Grid Name="Listing1" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -88,7 +88,7 @@
                     </Grid>
                     <Image Name="Heart0" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite" Grid.ColumnSpan="4"/>
                 </Grid>
-                <Grid Name="Listing2" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing2" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -124,7 +124,7 @@
                     </Grid>
                     <Image Name="Heart1" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing3" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing3" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -160,7 +160,7 @@
                     </Grid>
                     <Image Name="Heart2" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing4" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing4" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -196,7 +196,7 @@
                     </Grid>
                     <Image Name="Heart3" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing5" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing5" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -232,7 +232,7 @@
                     </Grid>
                     <Image Name="Heart4" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing6" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing6" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -268,7 +268,7 @@
                     </Grid>
                     <Image Name="Heart5" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing7" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing7" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -304,7 +304,7 @@
                     </Grid>
                     <Image Name="Heart6" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing8" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing8" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
@@ -340,7 +340,7 @@
                     </Grid>
                     <Image Name="Heart7" Source="HeartIconFilled.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                 </Grid>
-                <Grid Name="Listing9" Margin="50" Visibility="Collapsed">
+                <Grid Name="Listing9" Margin="50" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="350"/>
                     </Grid.ColumnDefinitions>
