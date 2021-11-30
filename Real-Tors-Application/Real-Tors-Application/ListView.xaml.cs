@@ -30,6 +30,7 @@ namespace Real_Tors_Application
             GlobalState.lastPage = "List";          //Set last page for easy jumping in between
             GlobalState.Generate();
             GenerateListings();
+            FillList();
         }
 
         private void btn_MapView_Click(object sender, RoutedEventArgs e)
@@ -48,6 +49,7 @@ namespace Real_Tors_Application
             Listing7.Visibility = Visibility.Visible;
             Listing8.Visibility = Visibility.Visible;
             Listing9.Visibility = Visibility.Visible;
+            ZerosLabel.Visibility = Visibility.Collapsed;
 
             if (GlobalState.currentList[0] != -1)
             {
@@ -61,6 +63,7 @@ namespace Real_Tors_Application
             }
             else
             {
+                ZerosLabel.Visibility = Visibility.Visible;
                 Listing1.Visibility = Visibility.Collapsed;
             }
 
@@ -214,12 +217,12 @@ namespace Real_Tors_Application
 
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri("AboutView.xaml", UriKind.Relative));
         }
 
         private void teamButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri("OurTeamView.xaml", UriKind.Relative));
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -274,9 +277,85 @@ namespace Real_Tors_Application
                 
                 FilterPanel.Visibility = Visibility.Collapsed;
                 listResultsGrid.Width = 1850;
-
             }
         }
+
+        private void FillList()
+        {
+            if (GlobalState.paramPrice != null)
+            {
+                if (GlobalState.paramPrice.Item1 != 0)
+                {
+                    lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowPrice.Text = GlobalState.paramPrice.Item1.ToString();
+                }
+                if (GlobalState.paramPrice.Item2 != 25000000)
+                {
+                    highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highPrice.Text = GlobalState.paramPrice.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramSize != null)
+            {
+                if (GlobalState.paramSize.Item1 != 0)
+                {
+                    lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowSize.Text = GlobalState.paramSize.Item1.ToString();
+                }
+                if (GlobalState.paramPrice.Item2 != 20000)
+                {
+                    highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highSize.Text = GlobalState.paramSize.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramBed != null)
+            {
+                if (GlobalState.paramBed.Item1 != 0)
+                {
+                    lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowBed.Text = GlobalState.paramBed.Item1.ToString();
+                }
+                if (GlobalState.paramBed.Item2 != 6)
+                {
+                    highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highBed.Text = GlobalState.paramBed.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramBath != null)
+            {
+                if (GlobalState.paramBath.Item1 != 0)
+                {
+                    lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowBath.Text = GlobalState.paramBath.Item1.ToString();
+                }
+                if (GlobalState.paramBath.Item2 != 6)
+                {
+                    highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highBath.Text = GlobalState.paramBath.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramYear != null)
+            {
+                if (GlobalState.paramYear.Item1 != 0)
+                {
+                    lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowYear.Text = GlobalState.paramYear.Item1.ToString();
+                }
+                if (GlobalState.paramPrice.Item2 != 2021)
+                {
+                    highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highYear.Text = GlobalState.paramYear.Item2.ToString();
+                }
+            }
+
+            Print_Amenity();
+            Print_Neighbourhood();
+        }
+
         
         private void Add_Amenity_Click(object sender, RoutedEventArgs e)
         {

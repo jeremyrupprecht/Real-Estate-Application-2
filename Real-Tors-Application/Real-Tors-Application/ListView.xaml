@@ -25,6 +25,8 @@
             <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                 <WrapPanel Orientation="Horizontal" HorizontalAlignment="center">
                     <Label Name="ListTitle" FontSize="60" Margin="20" FontWeight="Bold" Width="1920">Results:</Label>
+                    <Label Name="ZerosLabel" FontSize="40" Margin="20" Visibility="Collapsed" Content="There are 0 listings matching those criteria"></Label>
+                    
                     <Grid Name="Listing1" Margin="50">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="350"/>
@@ -351,6 +353,7 @@
                         <Image Name="Heart8" Source="HeartIconEmpty.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                     </Grid>
                 </WrapPanel>
+                
             </ScrollViewer>
             <Button x:Name="btn_MapView" HorizontalAlignment="Right" Margin="0,0,30,30" VerticalAlignment="Bottom" Click="btn_MapView_Click">
                 <Image Name="MapIcon" Source="MapIcon.png" Height="157" Width="139"></Image>

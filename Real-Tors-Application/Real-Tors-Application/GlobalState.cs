@@ -151,7 +151,6 @@ namespace Real_Tors_Application
                 count++;
             }
 
-            Console.WriteLine("has this many fit " + count);
 
             while(count<9)
             {

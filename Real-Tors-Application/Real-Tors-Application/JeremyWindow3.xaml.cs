@@ -47,7 +47,7 @@ namespace Real_Tors_Application
                 {
                     LeftArrow.Visibility = Visibility.Collapsed;
                 }
-                else if (GlobalState.currentIndex == 8 || GlobalState.currentList[GlobalState.currentIndex+1]==-1)
+                if (GlobalState.currentIndex == 8 || GlobalState.currentList[GlobalState.currentIndex+1]==-1)
                 {
                     RightArrow.Visibility = Visibility.Collapsed;
                 }
@@ -55,12 +55,7 @@ namespace Real_Tors_Application
             }
             ShowMainListing();
             GenerateListings();
-        }
-
-        // button listener to go back to home page
-        private void homeButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            FillList();
         }
 
         private void btn_saveForLater_Click(object sender, RoutedEventArgs e)
@@ -73,14 +68,38 @@ namespace Real_Tors_Application
 
         }
 
-        private void btn_amenities_Click(object sender, RoutedEventArgs e)
-        {
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///Filters and Header Stuff
 
+
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("AboutView.xaml", UriKind.Relative));
         }
 
-        private void btn_listView_Click(object sender, RoutedEventArgs e)
+        private void teamButton_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("OurTeamView.xaml", UriKind.Relative));
+        }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+        }
+
+        private void navLogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("SignupView.xaml", UriKind.Relative));
+        }
+
+        private void contactButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ContactUsView.xaml", UriKind.Relative));
         }
 
 
@@ -88,57 +107,579 @@ namespace Real_Tors_Application
         {
             if (HomeTypesSelect.Visibility == Visibility.Collapsed)
             {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
             }
             else
             {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
         }
 
-        private void OpenAmenities_Click(object sender, RoutedEventArgs e)
-        {
-            if (AmenTypesSelect.Visibility == Visibility.Collapsed)
-            {
-                AmenTypesSelect.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                AmenTypesSelect.Visibility = Visibility.Collapsed;
-            }
-
-        }
-
-        private void toggleNeigh(object sender, RoutedEventArgs e)
-        {
-            if (NeighTypesSelect.Visibility == Visibility.Collapsed)
-            {
-                NeighTypesSelect.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                NeighTypesSelect.Visibility = Visibility.Collapsed;
-            }
-        }
 
         private void ToggleFilter(object sender, RoutedEventArgs e)
         {
+            //Console.WriteLine("Toggle Pressed");
+            //timer.Start();
             if (FilterPanel.Visibility == Visibility.Collapsed)
             {
+
                 FilterPanel.Visibility = Visibility.Visible;
-                expandedListingScrollViewer.Width = 1420;
 
             }
             else
             {
-                FilterPanel.Visibility = Visibility.Collapsed;
-                expandedListingScrollViewer.Width = 1700;
 
+                FilterPanel.Visibility = Visibility.Collapsed;
             }
 
             ChangeExpansion();
-
         }
+
+        private void FillList()
+        {
+            if (GlobalState.paramPrice != null)
+            {
+                if (GlobalState.paramPrice.Item1 != 0)
+                {
+                    lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowPrice.Text = GlobalState.paramPrice.Item1.ToString();
+                }
+                if (GlobalState.paramPrice.Item2 != 25000000)
+                {
+                    highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highPrice.Text = GlobalState.paramPrice.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramSize != null)
+            {
+                if (GlobalState.paramSize.Item1 != 0)
+                {
+                    lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowSize.Text = GlobalState.paramSize.Item1.ToString();
+                }
+                if (GlobalState.paramPrice.Item2 != 20000)
+                {
+                    highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highSize.Text = GlobalState.paramSize.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramBed != null)
+            {
+                if (GlobalState.paramBed.Item1 != 0)
+                {
+                    lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowBed.Text = GlobalState.paramBed.Item1.ToString();
+                }
+                if (GlobalState.paramBed.Item2 != 6)
+                {
+                    highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highBed.Text = GlobalState.paramBed.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramBath != null)
+            {
+                if (GlobalState.paramBath.Item1 != 0)
+                {
+                    lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowBath.Text = GlobalState.paramBath.Item1.ToString();
+                }
+                if (GlobalState.paramBath.Item2 != 6)
+                {
+                    highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highBath.Text = GlobalState.paramBath.Item2.ToString();
+                }
+            }
+
+            if (GlobalState.paramYear != null)
+            {
+                if (GlobalState.paramYear.Item1 != 0)
+                {
+                    lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    lowYear.Text = GlobalState.paramYear.Item1.ToString();
+                }
+                if (GlobalState.paramPrice.Item2 != 2021)
+                {
+                    highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    highYear.Text = GlobalState.paramYear.Item2.ToString();
+                }
+            }
+
+            Print_Amenity();
+            Print_Neighbourhood();
+        }
+
+
+        private void Add_Amenity_Click(object sender, RoutedEventArgs e)
+        {
+            AddAmenity();
+        }
+
+        private void EnterAmenity(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                AddAmenity();
+            }
+        }
+
+        private void AddAmenity()
+        {
+            if (AmenitiesInput.Text != null && !GlobalState.paramAmenities.Contains(AmenitiesInput.Text) && GlobalState.paramAmenities.Count() < 5 && AmenitiesInput.Text.Count() > 0)
+            {
+                GlobalState.paramAmenities.Add(AmenitiesInput.Text);
+                AmenitiesInput.Text = "";
+                Print_Amenity();
+                GlobalState.Generate(9);
+                GenerateListings();
+            }
+        }
+
+        private void DeleteAmenity(object sender, MouseButtonEventArgs e)
+        {
+            var lbl = sender as Label;
+
+            GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
+            Print_Amenity();
+            GlobalState.Generate(9);
+            GenerateListings();
+        }
+
+        private void Print_Amenity()
+        {
+            Amenity1.Visibility = Visibility.Collapsed;
+            Amenity2.Visibility = Visibility.Collapsed;
+            Amenity3.Visibility = Visibility.Collapsed;
+            Amenity4.Visibility = Visibility.Collapsed;
+            Amenity5.Visibility = Visibility.Collapsed;
+            int count = GlobalState.paramAmenities.Count;
+            AddAmenities.IsEnabled = true;
+            if (count >= 1)
+            {
+                Amenity1.Content = "x " + GlobalState.paramAmenities[0];
+                Amenity1.Visibility = Visibility.Visible;
+
+                if (count >= 2)
+                {
+                    Amenity2.Content = "x " + GlobalState.paramAmenities[1];
+                    Amenity2.Visibility = Visibility.Visible;
+
+                    if (count >= 3)
+                    {
+                        Amenity3.Content = "x " + GlobalState.paramAmenities[2];
+                        Amenity3.Visibility = Visibility.Visible;
+
+                        if (count >= 4)
+                        {
+                            Amenity4.Content = "x " + GlobalState.paramAmenities[3];
+                            Amenity4.Visibility = Visibility.Visible;
+
+                            if (count >= 5)
+                            {
+                                Amenity5.Content = "x " + GlobalState.paramAmenities[4];
+                                Amenity5.Visibility = Visibility.Visible;
+                                AddAmenities.IsEnabled = false;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        private void Add_Neighbourhood_Click(object sender, RoutedEventArgs e)
+        {
+            AddNeighbour();
+        }
+
+        private void EnterNeighbour(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                AddNeighbour();
+            }
+        }
+
+        private void AddNeighbour()
+        {
+            if (NeighbourhoodInput.Text != null && !GlobalState.paramNeighbourhood.Contains(NeighbourhoodInput.Text) && GlobalState.paramNeighbourhood.Count() < 6 && NeighbourhoodInput.Text.Count() > 0)
+            {
+                GlobalState.paramNeighbourhood.Add(NeighbourhoodInput.Text);
+                NeighbourhoodInput.Text = "";
+                Print_Neighbourhood();
+                GlobalState.Generate(9);
+                GenerateListings();
+            }
+        }
+
+        private void DeleteNeighbour(object sender, MouseButtonEventArgs e)
+        {
+            var lbl = sender as Label;
+            GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
+            Print_Neighbourhood();
+            GlobalState.Generate(9);
+            GenerateListings();
+        }
+
+        private void Print_Neighbourhood()
+        {
+            Neighbour1.Visibility = Visibility.Collapsed;
+            Neighbour2.Visibility = Visibility.Collapsed;
+            Neighbour3.Visibility = Visibility.Collapsed;
+            Neighbour4.Visibility = Visibility.Collapsed;
+            Neighbour5.Visibility = Visibility.Collapsed;
+            int count = GlobalState.paramNeighbourhood.Count;
+            AddNeighbourhood.IsEnabled = true;
+            if (count >= 1)
+            {
+                Neighbour1.Content = "x " + GlobalState.paramNeighbourhood[0];
+                Neighbour1.Visibility = Visibility.Visible;
+
+                if (count >= 2)
+                {
+                    Neighbour2.Content = "x " + GlobalState.paramNeighbourhood[1];
+                    Neighbour2.Visibility = Visibility.Visible;
+
+                    if (count >= 3)
+                    {
+                        Neighbour3.Content = "x " + GlobalState.paramNeighbourhood[2];
+                        Neighbour3.Visibility = Visibility.Visible;
+
+                        if (count >= 4)
+                        {
+                            Neighbour4.Content = "x " + GlobalState.paramNeighbourhood[3];
+                            Neighbour4.Visibility = Visibility.Visible;
+
+                            if (count >= 5)
+                            {
+                                Neighbour5.Content = "x " + GlobalState.paramNeighbourhood[4];
+                                Neighbour5.Visibility = Visibility.Visible;
+
+                                if (count >= 6)
+                                {
+                                    Neighbour6.Content = "x " + GlobalState.paramNeighbourhood[5];
+                                    Neighbour6.Visibility = Visibility.Visible;
+                                    AddNeighbourhood.IsEnabled = false;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        private void enterPriceLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowPrice.Text, out _))
+                {
+                    int high = 25000000;
+                    if (GlobalState.paramPrice != null)
+                    {
+                        high = GlobalState.paramPrice.Item2;
+                    }
+                    GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowPrice.Text), high);
+                    lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterPriceHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highPrice.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramPrice != null)
+                    {
+                        low = GlobalState.paramPrice.Item1;
+                    }
+                    GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highPrice.Text));
+                    highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterSizeLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowSize.Text, out _))
+                {
+                    int high = 20000;
+                    if (GlobalState.paramSize != null)
+                    {
+                        high = GlobalState.paramSize.Item2;
+                    }
+                    GlobalState.paramSize = new Tuple<int, int>(int.Parse(lowSize.Text), high);
+                    lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterSizeHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highSize.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramSize != null)
+                    {
+                        low = GlobalState.paramSize.Item1;
+                    }
+                    GlobalState.paramSize = new Tuple<int, int>(low, int.Parse(highSize.Text));
+                    highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+        private void enterBedLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowBed.Text, out _))
+                {
+                    int high = 6;
+                    if (GlobalState.paramBed != null)
+                    {
+                        high = GlobalState.paramBed.Item2;
+                    }
+                    GlobalState.paramBed = new Tuple<int, int>(int.Parse(lowBed.Text), high);
+                    lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterBedHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highBed.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramBed != null)
+                    {
+                        low = GlobalState.paramBed.Item1;
+                    }
+                    GlobalState.paramBed = new Tuple<int, int>(low, int.Parse(highBed.Text));
+                    highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+        private void enterBathLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowBath.Text, out _))
+                {
+                    int high = 6;
+                    if (GlobalState.paramBath != null)
+                    {
+                        high = GlobalState.paramBath.Item2;
+                    }
+                    GlobalState.paramBath = new Tuple<int, int>(int.Parse(lowBath.Text), high);
+                    lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterBathHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highBath.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramBath != null)
+                    {
+                        low = GlobalState.paramBath.Item1;
+                    }
+                    GlobalState.paramBath = new Tuple<int, int>(low, int.Parse(highBath.Text));
+                    highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+        private void enterYearLow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(lowYear.Text, out _))
+                {
+                    int high = 2021;
+                    if (GlobalState.paramYear != null)
+                    {
+                        high = GlobalState.paramYear.Item2;
+                    }
+                    GlobalState.paramYear = new Tuple<int, int>(int.Parse(lowYear.Text), high);
+                    lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+        private void enterYearHigh(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+                return;
+            }
+
+            if (e.Key == Key.Return)
+            {
+
+                if (int.TryParse(highYear.Text, out _))
+                {
+                    int low = 0;
+                    if (GlobalState.paramYear != null)
+                    {
+                        low = GlobalState.paramYear.Item1;
+                    }
+                    GlobalState.paramYear = new Tuple<int, int>(low, int.Parse(highYear.Text));
+                    highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
+                    GlobalState.Generate(9);
+                    GenerateListings();
+                }
+            }
+            else
+            {
+                highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
+            }
+        }
+
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
         private void ChangeExpansion()
         {
@@ -190,43 +731,43 @@ namespace Real_Tors_Application
             SizeNumber.Content = list1.Size + " sq ft";
             MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +list1.NumOfImg + ".jpg", UriKind.Relative));
             FavoritedListing.Source = (list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative)));
-            Print_Amenity();
+            Print_AmenityF();
         }
 
-        private void Print_Amenity()
+        private void Print_AmenityF()
         {
-            Amenity1.Visibility = Visibility.Collapsed;
-            Amenity2.Visibility = Visibility.Collapsed;
-            Amenity3.Visibility = Visibility.Collapsed;
-            Amenity4.Visibility = Visibility.Collapsed;
-            Amenity5.Visibility = Visibility.Collapsed;
+            AmenityF1.Visibility = Visibility.Collapsed;
+            AmenityF2.Visibility = Visibility.Collapsed;
+            AmenityF3.Visibility = Visibility.Collapsed;
+            AmenityF4.Visibility = Visibility.Collapsed;
+            AmenityF5.Visibility = Visibility.Collapsed;
             if (list1.Amenities == null)
                 return;
             int count = list1.Amenities.Count;
             if (count >= 1)
             {
-                Amenity1.Content = list1.Amenities[0];
-                Amenity1.Visibility = Visibility.Visible;
+                AmenityF1.Content = list1.Amenities[0];
+                AmenityF1.Visibility = Visibility.Visible;
 
                 if (count >= 2)
                 {
-                    Amenity2.Content = list1.Amenities[1];
-                    Amenity2.Visibility = Visibility.Visible;
+                    AmenityF2.Content = list1.Amenities[1];
+                    AmenityF2.Visibility = Visibility.Visible;
 
                     if (count >= 3)
                     {
-                        Amenity3.Content = list1.Amenities[2];
-                        Amenity3.Visibility = Visibility.Visible;
+                        AmenityF3.Content = list1.Amenities[2];
+                        AmenityF3.Visibility = Visibility.Visible;
 
                         if (count >= 4)
                         {
-                            Amenity4.Content = list1.Amenities[3];
-                            Amenity4.Visibility = Visibility.Visible;
+                            AmenityF4.Content = list1.Amenities[3];
+                            AmenityF4.Visibility = Visibility.Visible;
 
                             if (count >= 5)
                             {
-                                Amenity5.Content = list1.Amenities[4];
-                                Amenity5.Visibility = Visibility.Visible;
+                                AmenityF5.Content = list1.Amenities[4];
+                                AmenityF5.Visibility = Visibility.Visible;
 
                             }
                         }

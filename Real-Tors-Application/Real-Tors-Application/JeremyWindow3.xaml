@@ -18,7 +18,7 @@
             <Button x:Name="profileButton" Content="" Width="384" FontSize="40" Background="#FF7B82A0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0, 100, 0 ,0">
-            <StackPanel Orientation="Horizontal" Height="980">
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 0, 0, 0" Background="White">
                 <ScrollViewer>
                     <StackPanel Name="FilterPanel" Width="400">
 
@@ -26,7 +26,9 @@
                         <Label Height="10" />
                         <StackPanel Orientation="Horizontal">
                             <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Home Type:</Label>
-                            <Button Name="OpenHomeTypes" Content="Change" FontSize="24" Click="toggleTypes"/>
+                            <Button Name="OpenHomeTypes" Click="toggleTypes">
+                                <Image x:Name="dropdown_btn_image" Source="sortdown_icon.png"/>
+                            </Button>
                         </StackPanel>
 
                         <StackPanel Name="HomeTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Visible">
@@ -39,55 +41,61 @@
                         </StackPanel>
 
                         <Label Content="Price" FontWeight="Bold" Padding="24 12 0 12" FontSize="26"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                        <TextBox Name="lowPrice" IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25" KeyDown="enterPriceLow"/>
                         <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+                        <TextBox Name="highPrice" IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25" KeyDown="enterPriceHigh"/>
 
 
                         <Label Content="Size (sq ft)" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                        <TextBox Name ="lowSize" IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25" KeyDown="enterSizeLow"/>
                         <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+                        <TextBox Name ="highSize" IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25" KeyDown="enterSizeHigh"/>
 
 
                         <Label Content="# of Beds" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                        <TextBox Name="lowBed" IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25" KeyDown="enterBedLow"/>
                         <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+                        <TextBox Name="highBed" IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25" KeyDown="enterBedHigh"/>
 
                         <Label Content="# of Baths" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                        <TextBox Name="lowBath" IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25" KeyDown="enterBathLow"/>
                         <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+                        <TextBox Name="highBath" IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25" KeyDown="enterBathHigh"/>
 
                         <Label Content="Year Built" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 200 20" FontSize="25"/>
+                        <TextBox Name="lowYear" IsReadOnly="False" Background="#eee" Margin="20 0 200 20" FontSize="25" KeyDown="enterYearLow"/>
                         <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                        <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25"/>
+                        <TextBox Name="highYear" IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25" KeyDown="enterYearHigh"/>
 
+                        <Label FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Padding="24 12 48 12" Width="300">Amenities:</Label>
                         <StackPanel Orientation="Horizontal">
-                            <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Amenities:</Label>
-                            <Button Name="OpenAmenities" Content="Change" FontSize="24" Click="OpenAmenities_Click" HorizontalAlignment="Right"/>
+                            <TextBox Name ="AmenitiesInput" IsReadOnly="False" Background="#eee" Width="250" Margin="24 4" FontSize="25" KeyDown="EnterAmenity"/>
+                            <Button Name="AddAmenities" Content="Add" FontSize="24" Margin="8" Padding="20 0" HorizontalAlignment="Right" Click="Add_Amenity_Click"/>
                         </StackPanel>
-                        <StackPanel Name="AmenTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Granite Countertops"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Walkout Basement"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Rennovated Kitchen"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="High Ceiling"/>
-                        </StackPanel>
-                        <Label Height="10" />
+                        <WrapPanel Orientation="Horizontal">
+                            <Label Name="Amenity1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                            <Label Name="Amenity2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                            <Label Name="Amenity3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                            <Label Name="Amenity4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                            <Label Name="Amenity5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        </WrapPanel>
+
+                        <Label Height="20" />
+                        <Label FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
                         <StackPanel Orientation="Horizontal">
-                            <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
-                            <Button Name="OpenNeighTypes" Content="Change" FontSize="24" Click="toggleNeigh"/>
+                            <TextBox Name ="NeighbourhoodInput" IsReadOnly="False" Background="#eee" Width="250" Margin="24 4" FontSize="25" KeyDown="EnterNeighbour"/>
+                            <Button Name="AddNeighbourhood" Content="Add" FontSize="24" Margin="8" Padding="20 0" HorizontalAlignment="Right" Click="Add_Neighbourhood_Click"/>
                         </StackPanel>
-                        <StackPanel Name="NeighTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Dover Glen" IsChecked="True"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Inglewood" IsChecked="True"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Mills Estate" IsChecked="True"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Ramsay" IsChecked="True"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Radisson Heights" IsChecked="True"/>
-                            <CheckBox FontSize = "26" Padding="0 6" Content="Southview" IsChecked="True"/>
-                        </StackPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <Label Name="Neighbour1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                            <Label Name="Neighbour2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                            <Label Name="Neighbour3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                            <Label Name="Neighbour4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                            <Label Name="Neighbour5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                            <Label Name="Neighbour6" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        </WrapPanel>
+                        <Label Height="50" />
+
                         <Grid Height="400"/>
 
                     </StackPanel>
@@ -161,11 +169,11 @@
                                         <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="30 0">
                                             <Label x:Name="amenitiesTextBlock" Content="Amenities:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
                                             <WrapPanel Orientation="Horizontal">
-                                                <Label Name="Amenity1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
-                                                <Label Name="Amenity2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
-                                                <Label Name="Amenity3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
-                                                <Label Name="Amenity4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
-                                                <Label Name="Amenity5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="AmenityF1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="AmenityF2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="AmenityF3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="AmenityF4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
+                                                <Label Name="AmenityF5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
                                             </WrapPanel>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="7" Margin="30 0">
