@@ -19,6 +19,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0, 100, 0 ,0">
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 0, 0, 0" Background="White">
+                
                 <ScrollViewer>
                     <StackPanel Name="FilterPanel" Width="400">
 

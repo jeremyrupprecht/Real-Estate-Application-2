@@ -19,6 +19,7 @@ namespace Real_Tors_Application
         public static int similar { get; set; }
 
         public static String lastPage { get; set; }
+        public static bool isLoggedIn { get; set; }
 
         public static ListingType paramType { get; set; }
         public static List<String> paramNeighbourhood { get; set; }
@@ -36,6 +37,7 @@ namespace Real_Tors_Application
             additionalFavorites = new List<Listing>();
             paramAmenities = new List<String>();
             similar = -1;
+            isLoggedIn = false;
 
             paramNeighbourhood = new List<String>();
             currentList = new int[9];
