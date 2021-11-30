@@ -24,6 +24,7 @@ namespace Real_Tors_Application
         public MapViewNorthWest()
         {
             InitializeComponent();
+            SetAllNWParam();
             SetMapValues();
         }
 
@@ -102,6 +103,28 @@ namespace Real_Tors_Application
 
             }
 
+        }
+
+        private void SetAllNWParam()
+        {
+            GlobalState.paramNeighbourhood.Clear();
+            GlobalState.paramNeighbourhood.Add("Citadel");
+            GlobalState.paramNeighbourhood.Add("Edgemont");
+            GlobalState.paramNeighbourhood.Add("Hamptons");
+            GlobalState.paramNeighbourhood.Add("Hawkwood");
+            GlobalState.paramNeighbourhood.Add("Simons Valley");
+
+            GlobalState.paramNeighbourhood.Add("Arbour Lake");
+            GlobalState.paramNeighbourhood.Add("Dalhousie");
+            GlobalState.paramNeighbourhood.Add("Nolan Hill");
+            GlobalState.paramNeighbourhood.Add("Ranchlands");
+            GlobalState.paramNeighbourhood.Add("Rockey Ridge");
+            GlobalState.paramNeighbourhood.Add("Royal Oak");
+            GlobalState.paramNeighbourhood.Add("Royal Vista");
+            GlobalState.paramNeighbourhood.Add("Sage Hill");
+            GlobalState.paramNeighbourhood.Add("Scenic Acres");
+            GlobalState.paramNeighbourhood.Add("Silver Springs");
+            GlobalState.paramNeighbourhood.Add("Tuscany");
         }
 
         private void SetMapValues()

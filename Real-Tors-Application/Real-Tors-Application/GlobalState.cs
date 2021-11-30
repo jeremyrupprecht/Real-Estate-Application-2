@@ -21,6 +21,8 @@ namespace Real_Tors_Application
         public static String lastPage { get; set; }
         public static bool isLoggedIn { get; set; }
 
+        public static bool isOpen { get; set; }
+
         public static ListingType paramType { get; set; }
         public static List<String> paramNeighbourhood { get; set; }
         public static Tuple<int, int> paramSize { get; set; }
@@ -38,6 +40,7 @@ namespace Real_Tors_Application
             paramAmenities = new List<String>();
             similar = -1;
             isLoggedIn = false;
+            isOpen = true;
 
             paramNeighbourhood = new List<String>();
             currentList = new int[9];

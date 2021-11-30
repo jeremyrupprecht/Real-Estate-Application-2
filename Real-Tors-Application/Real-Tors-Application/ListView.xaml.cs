@@ -277,6 +277,7 @@ namespace Real_Tors_Application
                 
                 FilterPanel.Visibility = Visibility.Visible;
                 listResultsGrid.Width = 1420;
+                GlobalState.isOpen = true;
 
             }
             else
@@ -284,15 +285,28 @@ namespace Real_Tors_Application
                 
                 FilterPanel.Visibility = Visibility.Collapsed;
                 listResultsGrid.Width = 1850;
+                GlobalState.isOpen = false;
             }
         }
 
         private void FillList()
         {
+            if(GlobalState.isOpen)
+            {
+                FilterPanel.Visibility = Visibility.Visible;
+                listResultsGrid.Width = 1420;
+            }
+            else
+            {
+                FilterPanel.Visibility = Visibility.Collapsed;
+                listResultsGrid.Width = 1850;
+            }
+
             if(GlobalState.isLoggedIn)
             {
                 profileButton.Visibility = Visibility.Visible;
             }
+
 
             if (GlobalState.paramPrice != null)
             {
