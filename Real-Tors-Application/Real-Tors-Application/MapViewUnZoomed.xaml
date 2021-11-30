@@ -10,7 +10,7 @@
       Background="White">
 
     <Grid>
-        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,100,0,0" Click="Btn_Map_Click">
+        <Button x:Name="btn_Map" RenderTransformOrigin="5.875,2.445" Margin="2,100,0,0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="/Images/Calgary.png" Margin="-98,-100,-146,-92"/>
