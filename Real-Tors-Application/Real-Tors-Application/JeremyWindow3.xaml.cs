@@ -235,8 +235,8 @@ namespace Real_Tors_Application
                 GlobalState.paramAmenities.Add(AmenitiesInput.Text);
                 AmenitiesInput.Text = "";
                 Print_Amenity();
-                GlobalState.Generate(9);
-                GenerateListings();
+                //GlobalState.Generate(9);
+                //GenerateListings();
             }
         }
 
@@ -246,8 +246,8 @@ namespace Real_Tors_Application
 
             GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
             Print_Amenity();
-            GlobalState.Generate(9);
-            GenerateListings();
+            //GlobalState.Generate(9);
+            //GenerateListings();
         }
 
         private void Print_Amenity()
@@ -315,8 +315,8 @@ namespace Real_Tors_Application
                 GlobalState.paramNeighbourhood.Add(NeighbourhoodInput.Text);
                 NeighbourhoodInput.Text = "";
                 Print_Neighbourhood();
-                GlobalState.Generate(9);
-                GenerateListings();
+                //GlobalState.Generate(9);
+                //GenerateListings();
             }
         }
 
@@ -325,8 +325,8 @@ namespace Real_Tors_Application
             var lbl = sender as Label;
             GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
             Print_Neighbourhood();
-            GlobalState.Generate(9);
-            GenerateListings();
+            //GlobalState.Generate(9);
+            //GenerateListings();
         }
 
         private void Print_Neighbourhood()
@@ -397,8 +397,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowPrice.Text), high);
                     lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -427,8 +427,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highPrice.Text));
                     highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -456,8 +456,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramSize = new Tuple<int, int>(int.Parse(lowSize.Text), high);
                     lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -486,8 +486,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramSize = new Tuple<int, int>(low, int.Parse(highSize.Text));
                     highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -516,8 +516,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramBed = new Tuple<int, int>(int.Parse(lowBed.Text), high);
                     lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -546,8 +546,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramBed = new Tuple<int, int>(low, int.Parse(highBed.Text));
                     highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -576,8 +576,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramBath = new Tuple<int, int>(int.Parse(lowBath.Text), high);
                     lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -606,8 +606,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramBath = new Tuple<int, int>(low, int.Parse(highBath.Text));
                     highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -636,8 +636,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramYear = new Tuple<int, int>(int.Parse(lowYear.Text), high);
                     lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
@@ -666,8 +666,8 @@ namespace Real_Tors_Application
                     }
                     GlobalState.paramYear = new Tuple<int, int>(low, int.Parse(highYear.Text));
                     highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
-                    GlobalState.Generate(9);
-                    GenerateListings();
+                    //GlobalState.Generate(9);
+                    //GenerateListings();
                 }
             }
             else
