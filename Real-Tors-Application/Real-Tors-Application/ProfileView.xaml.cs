@@ -37,6 +37,7 @@ namespace Real_Tors_Application
 
         private void navLogOutButton_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.isLoggedIn = false;
             this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
 

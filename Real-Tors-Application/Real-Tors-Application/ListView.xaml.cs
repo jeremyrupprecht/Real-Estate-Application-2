@@ -31,6 +31,8 @@ namespace Real_Tors_Application
             GlobalState.Generate();
             GenerateListings();
             FillList();
+
+            profileButtonVisibility();
         }
 
         private void btn_MapView_Click(object sender, RoutedEventArgs e)
@@ -213,7 +215,18 @@ namespace Real_Tors_Application
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///Filters and Header Stuff
-       
+
+        private void profileButtonVisibility()
+        {
+            if (GlobalState.isLoggedIn)
+            {
+                profileButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                profileButton.Visibility = Visibility.Collapsed;
+            }
+        }
 
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
