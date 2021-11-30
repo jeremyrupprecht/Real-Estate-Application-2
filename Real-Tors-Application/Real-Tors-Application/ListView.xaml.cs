@@ -245,6 +245,13 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(new Uri("ContactUsView.xaml", UriKind.Relative));
         }
 
+        private void profileButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ProfileView.xaml", UriKind.Relative));
+        }
+
+
+
 
         private void toggleTypes(object sender, RoutedEventArgs e)
         {
@@ -282,6 +289,11 @@ namespace Real_Tors_Application
 
         private void FillList()
         {
+            if(GlobalState.isLoggedIn)
+            {
+                profileButton.Visibility = Visibility.Visible;
+            }
+
             if (GlobalState.paramPrice != null)
             {
                 if (GlobalState.paramPrice.Item1 != 0)

@@ -10,12 +10,12 @@
       Background="White">
 
     <Grid>
-        <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
+        <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920" Background="#FF7B82A0">
             <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
             <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0" Click="aboutButton_Click"/>
             <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0" Click="teamButton_Click"/>
             <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0" Click="contactButton_Click"/>
-            <Button x:Name="profileButton" Content="My Profile" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="profileButton" Content="My Profile" Width="384" FontSize="40" Background="#FF7B82A0" Visibility="Collapsed" Click="profileButton_Click"/>
         </StackPanel>
 
 
@@ -141,7 +141,7 @@
                             <ColumnDefinition Width="350"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="100"/>
                         </Grid.RowDefinitions>
                         <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" MouseLeftButtonDown="expandListing"/>
@@ -381,6 +381,8 @@
                         <RadioButton FontSize = "26" Padding="0 6" Content="Apartment"/>
                         <RadioButton FontSize = "26" Padding="0 6" Content="Loft"/>
                     </StackPanel>
+
+                    <Label Content="Please Press 'Enter' to Update" Margin="25" FontSize="25" Foreground="#FF55EA8C"/>
 
                     <Label Content="Price" FontWeight="Bold" Padding="24 12 0 12" FontSize="26"/>
                     <TextBox Name="lowPrice" IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25" KeyDown="enterPriceLow"/>
