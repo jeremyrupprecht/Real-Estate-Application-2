@@ -23,6 +23,18 @@ namespace Real_Tors_Application
         public LoginPage()
         {
             InitializeComponent();
+            profileButtonVisibility();
+        }
+
+        private void profileButtonVisibility()
+        {
+            if (GlobalState.isLoggedIn)
+            {
+                profileButton.Visibility = Visibility.Visible;
+            } else
+            {
+                profileButton.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -85,7 +97,8 @@ namespace Real_Tors_Application
             margin.Left = 790;
             homeTypeGrid.Margin = margin;
 
-            profileButton.Content = "My Profile";
+            GlobalState.isLoggedIn = true;
+            profileButtonVisibility();
         }
 
         private void loginButtonSUCC_Click(object sender, RoutedEventArgs e)
