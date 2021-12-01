@@ -22,6 +22,8 @@ namespace Real_Tors_Application
     {
         public readonly Random rand = new Random();
         public Listing list1;
+        public List<int> list2 = new List<int> { 1,2,3,4,5 };
+        public int mainImageNumber = 0;
         public List<Listing> ListOfListings = new List<Listing>();
         public List<int> similarNum;
         public bool onButton, onPopup;
@@ -57,6 +59,93 @@ namespace Real_Tors_Application
             GenerateListings();
             FillList();
         }
+
+        private void changeMainImageRight(object sender, RoutedEventArgs e)
+        {
+            if (mainImageNumber == 0)
+            {
+
+                mainImageNumber = 1;
+                //            replace each of these lines with: @"/houseinterior" + mainImageNumber + ".jpg"
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 1)
+            {
+
+                mainImageNumber = 2;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 2)
+            {
+
+                mainImageNumber = 3;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 3)
+            {
+
+                mainImageNumber = 5;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 4)
+            {
+
+                mainImageNumber = 5;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 5)
+            {
+
+                mainImageNumber = 0;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } 
+
+        }
+
+        private void changeMainImageLeft(object sender, RoutedEventArgs e)
+        {
+
+            if (mainImageNumber == 0)
+            {
+
+                mainImageNumber = 5;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 1)
+            {
+
+                mainImageNumber = 0;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 2)
+            {
+
+                mainImageNumber = 1;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 3)
+            {
+
+                mainImageNumber = 2;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 4)
+            {
+                
+                mainImageNumber = 3;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } else if (mainImageNumber == 5)
+            {
+
+                mainImageNumber = 4;
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+
+            } 
+
+        }
+
 
         private void btn_saveForLater_Click(object sender, RoutedEventArgs e)
         {
