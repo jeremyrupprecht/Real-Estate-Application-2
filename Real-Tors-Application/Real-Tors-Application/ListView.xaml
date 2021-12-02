@@ -356,7 +356,7 @@
                 
             </ScrollViewer>
             <Button x:Name="btn_MapView" HorizontalAlignment="Right" Margin="0,0,30,30" VerticalAlignment="Bottom" Click="btn_MapView_Click">
-                <Image Name="MapIcon" Source="MapIcon.png" Height="157" Width="139"></Image>
+                <Image Name="MapIcon" Source="Calgary_Button.png" Height="157" Width="140"></Image>
             </Button>
         </Grid>
 
