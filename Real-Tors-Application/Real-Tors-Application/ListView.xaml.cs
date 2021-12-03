@@ -23,7 +23,7 @@ namespace Real_Tors_Application
         public readonly Random rand = new Random();
         public List<Listing> ListOfListings = new List<Listing>();
         public List<Listing> FavoritedListings = new List<Listing>();
-        public bool isOnAccount;
+        
 
         public ListView()
         {
@@ -217,6 +217,7 @@ namespace Real_Tors_Application
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///Filters and Header Stuff
 
+        public bool isOnAccount;
         private void profileButtonVisibility()
         {
             if (GlobalState.isLoggedIn)
