@@ -26,7 +26,7 @@ namespace Real_Tors_Application
         public int mainImageNumber = 0;
         public List<Listing> ListOfListings = new List<Listing>();
         public List<int> similarNum;
-        public bool onButton, onPopup;
+        public bool onButton, onPopup, isOnAccount;
 
 
         public JeremyWindow3()
@@ -59,6 +59,8 @@ namespace Real_Tors_Application
             GenerateListings();
             FillList();
         }
+
+        
 
         private void changeMainImageRight(object sender, RoutedEventArgs e)
         {
@@ -160,6 +162,17 @@ namespace Real_Tors_Application
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///Filters and Header Stuff
 
+        private void profileButtonVisibility()
+        {
+            if (GlobalState.isLoggedIn)
+            {
+                profileButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                profileButton.Visibility = Visibility.Collapsed;
+            }
+        }
 
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
@@ -785,10 +798,136 @@ namespace Real_Tors_Application
             }
         }
 
+        private void SingleFamily_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.SingleFamily;
+        }
+
+        private void Duplex_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Duplex;
+        }
+
+        private void Triplex_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Triplex;
+        }
+
+        private void Townhome_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Townhome;
+        }
+
+        private void Apartment_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Apartment;
+        }
+
+        private void Loft_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Loft;
+        }
+
+        private void MouseOnLogin(object sender, MouseEventArgs e)
+        {
+            isOnAccount = true;
+        }
+        private void MouseOutLogin(object sender, MouseEventArgs e)
+        {
+            isOnAccount = false;
+        }
+
+        private void createAccountButtonAC_Click(object sender, RoutedEventArgs e)
+        {
+            if (inputValidation())
+            {
+                signupGrid.Visibility = Visibility.Hidden;
+                successSignupGrid.Visibility = Visibility.Visible;
+            }
+        }
+
+        private bool inputValidation()
+        {
+            var bc = new BrushConverter();
+            bool valid = true;
+            // Error Background = "#FFFFB7B7"
+            String username = userNameTextBoxAC.Text;
+            String password = passwordTextBoxAC.Password;
+            String email = emailTextBoxAC.Text;
+            // Check username 
+            if (username.Equals(""))
+            {
+                userNameTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                userNameTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check password
+            if (password.Equals(""))
+            {
+                passwordTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                passwordTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check email
+            if (email.Equals(""))
+            {
+                emailTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                emailTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+
+            return valid;
+        }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.isLoggedIn = true;
+            AccountPopUp.Visibility = Visibility.Hidden;
+            profileButtonVisibility();
+        }
+
+        private void loginButtonSUCC_Click(object sender, RoutedEventArgs e)
+        {
+            successSignupGrid.Visibility = Visibility.Hidden;
+            logInGrid.Visibility = Visibility.Visible;
+        }
+
+        private void createAcccountTextButton_Click(object sender, RoutedEventArgs e)
+        {
+            logInGrid.Visibility = Visibility.Hidden;
+            signupGrid.Visibility = Visibility.Visible;
+        }
+
+        private void RemoveAccountPopUp(object sender, MouseButtonEventArgs e)
+        {
+            if (!isOnAccount)
+            {
+                AccountPopUp.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
+        //Make it so, if a favorite is attempted to be changed, and the user is not logged in, then fun this
+        private void AccountPopsUp()
+        {
+            AccountPopUp.Visibility = Visibility.Visible;
+            logInGrid.Visibility = Visibility.Visible;
+            signupGrid.Visibility = Visibility.Collapsed;
+        }
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        
 
         private void ChangeExpansion()
         {
@@ -1053,23 +1192,31 @@ namespace Real_Tors_Application
 
         private void ChangeFavoriteActivate()
         {
-            int numOfListing;
-            if (GlobalState.similar != -1)
+            if(GlobalState.isLoggedIn)
             {
-                numOfListing = GlobalState.similar;
-                GlobalState.totalList[GlobalState.similar].Favorited = !GlobalState.totalList[GlobalState.similar].Favorited;
+                int numOfListing;
+                if (GlobalState.similar != -1)
+                {
+                    numOfListing = GlobalState.similar;
+                    GlobalState.totalList[GlobalState.similar].Favorited = !GlobalState.totalList[GlobalState.similar].Favorited;
 
-                var heartImg = FavoritedListing;
-                heartImg.Source = GlobalState.totalList[GlobalState.similar].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                    var heartImg = FavoritedListing;
+                    heartImg.Source = GlobalState.totalList[GlobalState.similar].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                }
+                else
+                {
+                    numOfListing = GlobalState.currentIndex;
+                    GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
+
+                    var heartImg = FavoritedListing;
+                    heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                }
             }
             else
             {
-                numOfListing = GlobalState.currentIndex;
-                GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
-
-                var heartImg = FavoritedListing;
-                heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                AccountPopsUp();
             }
+            
         }
 
         private void ChangeFavorite(object sender, MouseButtonEventArgs e)
