@@ -320,6 +320,28 @@ namespace Real_Tors_Application
                 profileButton.Visibility = Visibility.Visible;
             }
 
+            switch(GlobalState.paramType)
+            {
+                case ListingType.SingleFamily:
+                    SingleButt.IsChecked = true;
+                    break;
+                case ListingType.Duplex:
+                    DuplexButt.IsChecked = true;
+                    break;
+                case ListingType.Triplex:
+                    TriplexButt.IsChecked = true;
+                    break;
+                case ListingType.Apartment:
+                    ApartButt.IsChecked = true;
+                    break;
+                case ListingType.Townhome:
+                    TownhomeButt.IsChecked = true;
+                    break;
+                case ListingType.Loft:
+                    LoftButt.IsChecked = true;
+                    break;
+            }
+            
 
             if (GlobalState.paramPrice != null)
             {
@@ -858,6 +880,35 @@ namespace Real_Tors_Application
             }
         }
 
+        private void SingleFamily_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.SingleFamily;
+        }
+
+        private void Duplex_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Duplex;
+        }
+
+        private void Triplex_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Triplex;
+        }
+
+        private void Townhome_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Townhome;
+        }
+
+        private void Apartment_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Apartment;
+        }
+
+        private void Loft_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.paramType = ListingType.Loft;
+        }
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////

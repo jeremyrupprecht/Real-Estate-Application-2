@@ -44,31 +44,37 @@ namespace Real_Tors_Application
 
         private void comboItem1Button_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramType = ListingType.SingleFamily;
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
         private void comboItem2Button_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramType = ListingType.Duplex;
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
         private void comboItem3Button_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramType = ListingType.Triplex;
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
         private void comboItem4Button_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramType = ListingType.Townhome;
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
         private void comboItem5Button_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramType = ListingType.Apartment;
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 
         private void comboItem6Button_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramType = ListingType.Loft;
             this.NavigationService.Navigate(new Uri("ListView.xaml", UriKind.Relative));
         }
 

@@ -374,12 +374,12 @@
                     </StackPanel>
 
                     <StackPanel Name="HomeTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Visible">
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Single Family"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Duplex"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Triplex"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Townhome"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Apartment"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Loft"/>
+                        <RadioButton Name="SingleButt" FontSize = "26" Padding="0 6" Content="Single Family" Click="SingleFamily_Click"/>
+                        <RadioButton Name="DuplexButt" FontSize = "26" Padding="0 6" Content="Duplex" Click="Duplex_Click"/>
+                        <RadioButton Name="TriplexButt" FontSize = "26" Padding="0 6" Content="Triplex" Click="Triplex_Click"/>
+                        <RadioButton Name="TownhomeButt" FontSize = "26" Padding="0 6" Content="Townhome" Click="Townhome_Click"/>
+                        <RadioButton Name="ApartButt" FontSize = "26" Padding="0 6" Content="Apartment" Click="Apartment_Click"/>
+                        <RadioButton Name="LoftButt" FontSize = "26" Padding="0 6" Content="Loft" Click="Loft_Click"/>
                     </StackPanel>
 
                     <Label Content="Please Press 'Enter' to Update" Margin="25" FontSize="25" Foreground="#FF55EA8C"/>
