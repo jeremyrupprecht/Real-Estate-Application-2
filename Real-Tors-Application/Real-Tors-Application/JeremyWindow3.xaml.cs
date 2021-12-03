@@ -154,9 +154,13 @@ namespace Real_Tors_Application
             ChangeFavoriteActivate();
         }
 
-        private void btn_contractRealtor_Click(object sender, RoutedEventArgs e)
+        private void btn_contactRealtor_Click(object sender, RoutedEventArgs e)
         {
-
+            EmailPopUp.Visibility = Visibility.Visible;
+            EmailRealtorBlock.Text = "Hi. I would like to reach out regarding this property: " + list1.Address;
+            contactRealtor.Content = "Sent to Realtor";
+            contactRealtor.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#296dcf"));
+            contactRealtor.IsEnabled = false;
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -912,6 +916,7 @@ namespace Real_Tors_Application
             if (!isOnAccount)
             {
                 AccountPopUp.Visibility = Visibility.Collapsed;
+                EmailPopUp.Visibility = Visibility.Collapsed;
             }
 
         }
@@ -1296,6 +1301,11 @@ namespace Real_Tors_Application
             GlobalState.similar = -1;
             JeremyWindow3 pNext = new JeremyWindow3();
             this.NavigationService.Navigate(pNext);
+        }
+
+        private void CloseEmail(object sender, RoutedEventArgs e)
+        {
+            EmailPopUp.Visibility = Visibility.Collapsed;
         }
     }
 }
