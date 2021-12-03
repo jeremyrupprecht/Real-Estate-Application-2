@@ -52,7 +52,7 @@
             <Button x:Name="createAccountButtonAC" Content="Create Account" HorizontalAlignment="Left" Margin="400,810,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="24" Background="#FFCBCBCB" Click="createAccountButtonAC_Click"/>
         </Grid>
 
-        <Grid Visibility="Hidden" x:Name="successSignupGrid">
+        <Grid Visibility="Collapsed" x:Name="successSignupGrid">
 
             <Label x:Name="createAccountLabel2" Content="Create an Account" HorizontalAlignment="Left" Margin="200,500,0,0" VerticalAlignment="Top" FontSize="40" Width="620" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="65"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="220" Margin="200,565,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="620"/>

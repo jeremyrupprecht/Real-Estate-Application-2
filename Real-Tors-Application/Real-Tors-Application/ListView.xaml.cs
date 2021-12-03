@@ -23,6 +23,7 @@ namespace Real_Tors_Application
         public readonly Random rand = new Random();
         public List<Listing> ListOfListings = new List<Listing>();
         public List<Listing> FavoritedListings = new List<Listing>();
+        public bool isOnAccount;
 
         public ListView()
         {
@@ -910,6 +911,101 @@ namespace Real_Tors_Application
             GlobalState.paramType = ListingType.Loft;
         }
 
+        private void MouseOnLogin(object sender, MouseEventArgs e)
+        {
+            isOnAccount = true;
+        }
+        private void MouseOutLogin(object sender, MouseEventArgs e)
+        {
+            isOnAccount = false;
+        }
+
+        private void createAccountButtonAC_Click(object sender, RoutedEventArgs e)
+        {
+            if (inputValidation()) 
+            {
+                signupGrid.Visibility = Visibility.Hidden;
+                successSignupGrid.Visibility = Visibility.Visible;
+            }
+        }
+
+        private bool inputValidation()
+        {
+            var bc = new BrushConverter();
+            bool valid = true;
+            // Error Background = "#FFFFB7B7"
+            String username = userNameTextBoxAC.Text;
+            String password = passwordTextBoxAC.Password;
+            String email = emailTextBoxAC.Text;
+            // Check username 
+            if (username.Equals(""))
+            {
+                userNameTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                userNameTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check password
+            if (password.Equals(""))
+            {
+                passwordTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                passwordTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+            // Check email
+            if (email.Equals(""))
+            {
+                emailTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFB7B7");
+                valid = false;
+            }
+            else
+            {
+                emailTextBoxAC.Background = (Brush)bc.ConvertFrom("#FFFFFFFF");
+            }
+
+            return valid;
+        }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalState.isLoggedIn = true;
+            AccountPopUp.Visibility = Visibility.Hidden;
+            profileButtonVisibility();
+        }
+
+        private void loginButtonSUCC_Click(object sender, RoutedEventArgs e)
+        {
+            successSignupGrid.Visibility = Visibility.Hidden;
+            logInGrid.Visibility = Visibility.Visible;
+        }
+
+        private void createAcccountTextButton_Click(object sender, RoutedEventArgs e)
+        {
+            logInGrid.Visibility = Visibility.Hidden;
+            signupGrid.Visibility = Visibility.Visible;
+        }
+
+        private void RemoveAccountPopUp(object sender, MouseButtonEventArgs e)
+        {
+            if(!isOnAccount)
+            {
+                AccountPopUp.Visibility = Visibility.Collapsed;
+            }
+            
+        }
+
+        //Make it so, if a favorite is attempted to be changed, and the user is not logged in, then fun this
+        private void AccountPopsUp()
+        {
+            AccountPopUp.Visibility = Visibility.Visible;
+            logInGrid.Visibility = Visibility.Visible;
+            signupGrid.Visibility = Visibility.Collapsed;
+        }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -934,11 +1030,19 @@ namespace Real_Tors_Application
 
         private void ChangeFavorite(object sender, MouseButtonEventArgs e)
         {
-            int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(5));
-            GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
-            
-            var heartImg = (sender as Image);
-            heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+            if(GlobalState.isLoggedIn)
+            {
+                int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(5));
+                GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
+
+                var heartImg = (sender as Image);
+                heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+
+            }
+            else
+            {
+                AccountPopsUp();
+            }
         }
 
         

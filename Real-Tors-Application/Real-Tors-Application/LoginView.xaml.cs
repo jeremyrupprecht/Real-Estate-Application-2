@@ -23,6 +23,10 @@ namespace Real_Tors_Application
         public LoginPage()
         {
             InitializeComponent();
+            if(GlobalState.isLoggedIn)
+            {
+                isLoggedInAlready();
+            }
             profileButtonVisibility();
         }
 
@@ -93,8 +97,7 @@ namespace Real_Tors_Application
             this.NavigationService.Navigate(new Uri("AboutView.xaml", UriKind.Relative));
         }
 
-
-        private void logInButton_Click(object sender, RoutedEventArgs e)
+        private void isLoggedInAlready()
         {
             logInGrid.Visibility = Visibility.Hidden;
 
@@ -105,6 +108,11 @@ namespace Real_Tors_Application
 
             GlobalState.isLoggedIn = true;
             profileButtonVisibility();
+        }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            isLoggedInAlready();
         }
 
         private void loginButtonSUCC_Click(object sender, RoutedEventArgs e)
