@@ -20,6 +20,7 @@ namespace Real_Tors_Application
 
         public static String lastPage { get; set; }
         public static bool isLoggedIn { get; set; }
+        public static bool isTypeExpanded { get; set; }
 
         public static bool isOpen { get; set; }
 
@@ -41,6 +42,7 @@ namespace Real_Tors_Application
             similar = -1;
             isLoggedIn = false;
             isOpen = true;
+            isTypeExpanded = true;
 
             paramNeighbourhood = new List<String>();
             currentList = new int[9];

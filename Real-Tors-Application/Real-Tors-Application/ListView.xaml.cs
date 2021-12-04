@@ -270,16 +270,18 @@ namespace Real_Tors_Application
 
         private void toggleTypes(object sender, RoutedEventArgs e)
         {
-            if (HomeTypesSelect.Visibility == Visibility.Collapsed)
+            if (!GlobalState.isTypeExpanded)
             {
                 dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
+                
             }
             else
             {
                 dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
+            GlobalState.isTypeExpanded = !GlobalState.isTypeExpanded;
         }
 
        
@@ -320,6 +322,17 @@ namespace Real_Tors_Application
             if(GlobalState.isLoggedIn)
             {
                 profileButton.Visibility = Visibility.Visible;
+            }
+
+            if(!GlobalState.isTypeExpanded)
+            {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
+                HomeTypesSelect.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
+                HomeTypesSelect.Visibility = Visibility.Visible;
             }
 
             switch(GlobalState.paramType)

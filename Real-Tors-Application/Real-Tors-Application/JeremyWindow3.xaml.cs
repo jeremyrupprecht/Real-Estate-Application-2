@@ -215,16 +215,18 @@ namespace Real_Tors_Application
 
         private void toggleTypes(object sender, RoutedEventArgs e)
         {
-            if (HomeTypesSelect.Visibility == Visibility.Collapsed)
+            if (!GlobalState.isTypeExpanded)
             {
                 dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
+
             }
             else
             {
                 dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
+            GlobalState.isTypeExpanded = !GlobalState.isTypeExpanded;
         }
 
 
@@ -234,14 +236,14 @@ namespace Real_Tors_Application
             //timer.Start();
             if (FilterPanel.Visibility == Visibility.Collapsed)
             {
-
                 FilterPanel.Visibility = Visibility.Visible;
+                GlobalState.isOpen = true;
 
             }
             else
             {
-
                 FilterPanel.Visibility = Visibility.Collapsed;
+                GlobalState.isOpen = false;
             }
 
             ChangeExpansion();
@@ -259,11 +261,43 @@ namespace Real_Tors_Application
                 FilterPanel.Visibility = Visibility.Collapsed;
                 ChangeExpansion();
             }
-
+            if (!GlobalState.isTypeExpanded)
+            {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
+                HomeTypesSelect.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
+                HomeTypesSelect.Visibility = Visibility.Visible;
+            }
             if (GlobalState.isLoggedIn)
             {
                 profileButton.Visibility = Visibility.Visible;
             }
+
+            switch (GlobalState.paramType)
+            {
+                case ListingType.SingleFamily:
+                    SingleButt.IsChecked = true;
+                    break;
+                case ListingType.Duplex:
+                    DuplexButt.IsChecked = true;
+                    break;
+                case ListingType.Triplex:
+                    TriplexButt.IsChecked = true;
+                    break;
+                case ListingType.Apartment:
+                    ApartButt.IsChecked = true;
+                    break;
+                case ListingType.Townhome:
+                    TownhomeButt.IsChecked = true;
+                    break;
+                case ListingType.Loft:
+                    LoftButt.IsChecked = true;
+                    break;
+            }
+
 
             if (GlobalState.paramPrice != null)
             {
