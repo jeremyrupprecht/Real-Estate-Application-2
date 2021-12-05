@@ -96,7 +96,44 @@ namespace Real_Tors_Application
 
         private void btn_MapView_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+            if(GlobalState.paramNeighbourhood.Count==1)
+            {
+                if(GlobalState.paramNeighbourhood.Contains("Hamptons"))
+                {
+                    this.NavigationService.Navigate(new Uri("MapView-FullyZoomed/MapViewHamptons.xaml", UriKind.Relative));
+                }
+                else if (GlobalState.paramNeighbourhood.Contains("Edgemont"))
+                {
+                    this.NavigationService.Navigate(new Uri("MapView-FullyZoomed/MapViewEdgemont.xaml", UriKind.Relative));
+                }
+                else if (GlobalState.paramNeighbourhood.Contains("Hawkwood"))
+                {
+                    this.NavigationService.Navigate(new Uri("MapView-FullyZoomed/MapViewHawkwood.xaml", UriKind.Relative));
+                }
+                else if (GlobalState.paramNeighbourhood.Contains("Citadel"))
+                {
+                    this.NavigationService.Navigate(new Uri("MapView-FullyZoomed/MapViewCitadel.xaml", UriKind.Relative));
+                }
+                else if (GlobalState.paramNeighbourhood.Contains("Simons Valley"))
+                {
+                    this.NavigationService.Navigate(new Uri("MapView-FullyZoomed/MapViewSimonsValley.xaml", UriKind.Relative));
+                }
+            }
+            return;
+
+            if (GlobalState.paramNeighbourhood.Contains("Hamptons") &&
+                    GlobalState.paramNeighbourhood.Contains("Edgemont") &&
+                    GlobalState.paramNeighbourhood.Contains("Citadel") &&
+                    GlobalState.paramNeighbourhood.Contains("Hawkwood") &&
+                    GlobalState.paramNeighbourhood.Contains("Simons Valley"))
+            {
+                this.NavigationService.Navigate(new Uri("MapViewNorthWest.xaml", UriKind.Relative));
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+            }
+            
         }
 
         public void GenerateListings()

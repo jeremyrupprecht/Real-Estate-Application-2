@@ -620,12 +620,12 @@ namespace Real_Tors_Application.MapView_FullyZoomed
 
             if (!GlobalState.isTypeExpanded)
             {
-                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
+                dropdown_btn_image.Source = new BitmapImage(new Uri("../sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
             else
             {
-                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
+                dropdown_btn_image.Source = new BitmapImage(new Uri("../sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
             }
 
