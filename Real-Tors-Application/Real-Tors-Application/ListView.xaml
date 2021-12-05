@@ -26,7 +26,7 @@
                 <WrapPanel Orientation="Horizontal" HorizontalAlignment="center">
                     <Label Name="ListTitle" FontSize="60" Margin="20" FontWeight="Bold" Width="1920">Results:</Label>
                     <Label Name="ZerosLabel" FontSize="40" Margin="20" Visibility="Collapsed" Content="There are 0 listings matching those criteria"></Label>
-                    
+
                     <Grid Name="Listing1" Margin="50">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="350"/>
@@ -353,11 +353,20 @@
                         <Image Name="Heart8" Source="HeartIconEmpty.png" Margin="-50,-50,300,200" MouseLeftButtonDown="ChangeFavorite"/>
                     </Grid>
                 </WrapPanel>
-                
+
             </ScrollViewer>
             <Button x:Name="btn_MapView" HorizontalAlignment="Right" Margin="0,0,30,30" VerticalAlignment="Bottom" Click="btn_MapView_Click">
                 <Image Name="MapIcon" Source="Calgary_Button.png" Height="157" Width="140"></Image>
             </Button>
+
+            <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Left" Margin="1253,804,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="North" Content="531" HorizontalAlignment="Left" Margin="1288,787,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Left" Margin="1325,805,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="West" Content="710" HorizontalAlignment="Left" Margin="1253,841,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="Center" Content="832" HorizontalAlignment="Left" Margin="1293,844,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="East" Content="458" HorizontalAlignment="Left" Margin="1333,848,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="South" Content="700" HorizontalAlignment="Left" Margin="1286,893,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="SouthEast" Content="800" HorizontalAlignment="Left" Margin="1328,878,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
         </Grid>
 
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 100, 0, 0" Background="White">
@@ -486,6 +495,6 @@
             </Grid>
         </Grid>
     </Grid>
-    
+
 
 </Page>

@@ -33,7 +33,50 @@ namespace Real_Tors_Application
             GenerateListings();
             FillList();
 
+            SetMapValues();
+
             profileButtonVisibility();
+        }
+
+        private void SetMapValues()
+        {
+            GlobalState.setPerNeighbourhood("Citadel");
+            GlobalState.setPerNeighbourhood("Edgemont");
+            GlobalState.setPerNeighbourhood("Hamptons");
+            GlobalState.setPerNeighbourhood("Hawkwood");
+            GlobalState.setPerNeighbourhood("Simons Valley");
+
+            NorthWest.Content = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
+                GlobalState.perNeighbourhood["Simons Valley"] + 500;
+
+            SetLabelColor(NorthWest);
+            SetLabelColor(North);
+            SetLabelColor(NorthEast);
+            SetLabelColor(West);
+            SetLabelColor(Center);
+            SetLabelColor(East);
+            SetLabelColor(South);
+            SetLabelColor(SouthEast);
+        }
+
+        private void SetLabelColor(Label label)
+        {
+            if (Convert.ToInt32(label.Content) <= 600)
+            {
+                label.Foreground = Brushes.DeepSkyBlue;
+            }
+            else if (Convert.ToInt32(label.Content) <= 700)
+            {
+                label.Foreground = Brushes.DodgerBlue;
+            }
+            else if (Convert.ToInt32(label.Content) <= 800)
+            {
+                label.Foreground = Brushes.Blue;
+            }
+            else
+            {
+                label.Foreground = Brushes.Navy;
+            }
         }
 
         private void btn_MapView_Click(object sender, RoutedEventArgs e)
