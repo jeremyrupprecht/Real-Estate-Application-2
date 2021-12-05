@@ -69,37 +69,37 @@ namespace Real_Tors_Application
 
                 mainImageNumber = 1;
                 //            replace each of these lines with: @"/houseinterior" + mainImageNumber + ".jpg"
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" + list1.NumOfImg + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 1)
             {
 
                 mainImageNumber = 2;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 2)
             {
 
                 mainImageNumber = 3;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 3)
             {
 
                 mainImageNumber = 5;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 4)
             {
 
                 mainImageNumber = 5;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 5)
             {
 
                 mainImageNumber = 0;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } 
 
@@ -112,37 +112,37 @@ namespace Real_Tors_Application
             {
 
                 mainImageNumber = 5;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" + list1.NumOfImg + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 1)
             {
 
                 mainImageNumber = 0;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 2)
             {
 
                 mainImageNumber = 1;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 3)
             {
 
                 mainImageNumber = 2;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 4)
             {
                 
                 mainImageNumber = 3;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } else if (mainImageNumber == 5)
             {
 
                 mainImageNumber = 4;
-                MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +mainImageNumber + ".jpg", UriKind.Relative));
+                MainHouseImage.Source = new BitmapImage(new Uri(@"/Images/houseinterior" + mainImageNumber + ".jpg", UriKind.Relative));
 
             } 
 
