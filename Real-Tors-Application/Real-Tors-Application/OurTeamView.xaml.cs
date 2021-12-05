@@ -23,6 +23,7 @@ namespace Real_Tors_Application
         public OurTeamView()
         {
             InitializeComponent();
+            profileButtonVisibility();
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -47,7 +48,19 @@ namespace Real_Tors_Application
 
         private void teamButton_Click(object sender, RoutedEventArgs e)
         {
+            this.NavigationService.Navigate(new Uri("ProfileView.xaml", UriKind.Relative));
+        }
 
+        private void profileButtonVisibility()
+        {
+            if (GlobalState.isLoggedIn)
+            {
+                profileButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                profileButton.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

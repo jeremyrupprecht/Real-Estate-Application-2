@@ -12,9 +12,9 @@
     <Grid>
         <StackPanel x:Name="navBarStackPanel" Orientation="Horizontal" Height="100" VerticalAlignment="Top" Width="1920">
             <Button x:Name="homeButton" Content="Home" Width="384" FontSize="40" Background="#FF7B82A0" Click="homeButton_Click"/>
-            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0"/>
-            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0"/>
+            <Button x:Name="aboutButton" Content="About" Width="384" FontSize="40" Background="#FF7B82A0" Click="aboutButton_Click"/>
+            <Button x:Name="teamButton" Content="Our team" Width="384" FontSize="40" Background="#FF7B82A0" Click="teamButton_Click"/>
+            <Button x:Name="contactButton" Content="Contact Us" Width="384" FontSize="40" Background="#FF7B82A0" Click="contactButton_Click"/>
             <Button x:Name="navLogOutButton" Content="Log Out" Width="384" FontSize="40" Background="#FF7B82A0" Click="navLogOutButton_Click"/>
         </StackPanel>
 
