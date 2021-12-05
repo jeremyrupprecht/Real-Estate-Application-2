@@ -359,14 +359,14 @@
                 <Image Name="MapIcon" Source="Calgary_Button.png" Height="157" Width="140"></Image>
             </Button>
 
-            <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Left" Margin="1253,804,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="North" Content="531" HorizontalAlignment="Left" Margin="1288,787,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Left" Margin="1325,805,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="West" Content="710" HorizontalAlignment="Left" Margin="1253,841,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="Center" Content="832" HorizontalAlignment="Left" Margin="1293,844,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="East" Content="458" HorizontalAlignment="Left" Margin="1333,848,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="South" Content="700" HorizontalAlignment="Left" Margin="1286,893,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-            <Label x:Name="SouthEast" Content="800" HorizontalAlignment="Left" Margin="1328,878,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Right" Margin="0,804,106,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="North" Content="531" HorizontalAlignment="Right" Margin="0,787,70,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Right" Margin="0,805,40,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="West" Content="710" HorizontalAlignment="Right" Margin="0,841,110,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="Center" Content="832" HorizontalAlignment="Right" Margin="0,845,71,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="East" Content="458" HorizontalAlignment="Right" Margin="0,838,34,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="South" Content="700" HorizontalAlignment="Right" Margin="0,893,72,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="SouthEast" Content="800" HorizontalAlignment="Right" Margin="0,878,34,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
         </Grid>
 
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 100, 0, 0" Background="White">
