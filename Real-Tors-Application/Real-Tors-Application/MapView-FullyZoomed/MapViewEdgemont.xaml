@@ -518,7 +518,7 @@
                     <StackPanel Orientation="Horizontal">
                         <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Home Type:</Label>
                         <Button Name="OpenHomeTypes" Click="toggleTypes">
-                            <Image x:Name="dropdown_btn_image" Source="sortdown_icon.png"/>
+                            <Image x:Name="dropdown_btn_image" Source="../sortdown_icon.png"/>
                         </Button>
                     </StackPanel>
 

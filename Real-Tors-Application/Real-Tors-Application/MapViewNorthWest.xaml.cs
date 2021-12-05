@@ -634,7 +634,8 @@ namespace Real_Tors_Application
                 AmenitiesInput.Text = "";
                 Print_Amenity();
                 GlobalState.Generate(9);
-                
+                SetMapValues();
+
             }
         }
 
@@ -645,11 +646,13 @@ namespace Real_Tors_Application
             GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
             Print_Amenity();
             GlobalState.Generate(9);
-            
+            SetMapValues();
+
         }
 
         private void Print_Amenity()
         {
+            SetMapValues();
             Amenity1.Visibility = Visibility.Collapsed;
             Amenity2.Visibility = Visibility.Collapsed;
             Amenity3.Visibility = Visibility.Collapsed;
@@ -713,8 +716,9 @@ namespace Real_Tors_Application
                 GlobalState.paramNeighbourhood.Add(NeighbourhoodInput.Text);
                 NeighbourhoodInput.Text = "";
                 Print_Neighbourhood();
-                GlobalState.Generate(9);
-                
+                GlobalState.Generate(9); 
+                SetMapValues();
+
             }
         }
 
@@ -724,11 +728,13 @@ namespace Real_Tors_Application
             GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
             Print_Neighbourhood();
             GlobalState.Generate(9);
-            
+            SetMapValues();
+
         }
 
         private void Print_Neighbourhood()
         {
+            SetMapValues();
             Neighbour1.Visibility = Visibility.Collapsed;
             Neighbour2.Visibility = Visibility.Collapsed;
             Neighbour3.Visibility = Visibility.Collapsed;
@@ -796,13 +802,14 @@ namespace Real_Tors_Application
                     GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowPrice.Text), high);
                     lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
                 }
             }
             else
             {
                 lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#eee"));
             }
+
         }
 
         private void enterPriceHigh(object sender, KeyEventArgs e)
@@ -826,7 +833,8 @@ namespace Real_Tors_Application
                     GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highPrice.Text));
                     highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
+
                 }
             }
             else
@@ -855,7 +863,8 @@ namespace Real_Tors_Application
                     GlobalState.paramSize = new Tuple<int, int>(int.Parse(lowSize.Text), high);
                     lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
+
                 }
             }
             else
@@ -885,7 +894,8 @@ namespace Real_Tors_Application
                     GlobalState.paramSize = new Tuple<int, int>(low, int.Parse(highSize.Text));
                     highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
+
                 }
             }
             else
@@ -915,7 +925,8 @@ namespace Real_Tors_Application
                     GlobalState.paramBed = new Tuple<int, int>(int.Parse(lowBed.Text), high);
                     lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
+
                 }
             }
             else
@@ -945,7 +956,8 @@ namespace Real_Tors_Application
                     GlobalState.paramBed = new Tuple<int, int>(low, int.Parse(highBed.Text));
                     highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
+
                 }
             }
             else
@@ -975,7 +987,8 @@ namespace Real_Tors_Application
                     GlobalState.paramBath = new Tuple<int, int>(int.Parse(lowBath.Text), high);
                     lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+
+                    SetMapValues();
                 }
             }
             else
@@ -1005,7 +1018,7 @@ namespace Real_Tors_Application
                     GlobalState.paramBath = new Tuple<int, int>(low, int.Parse(highBath.Text));
                     highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
                 }
             }
             else
@@ -1035,7 +1048,7 @@ namespace Real_Tors_Application
                     GlobalState.paramYear = new Tuple<int, int>(int.Parse(lowYear.Text), high);
                     lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                   
+                    SetMapValues();
                 }
             }
             else
@@ -1065,7 +1078,7 @@ namespace Real_Tors_Application
                     GlobalState.paramYear = new Tuple<int, int>(low, int.Parse(highYear.Text));
                     highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
-                    
+                    SetMapValues();
                 }
             }
             else

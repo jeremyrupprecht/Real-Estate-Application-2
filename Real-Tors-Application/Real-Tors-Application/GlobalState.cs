@@ -253,6 +253,13 @@ namespace Real_Tors_Application
                         }
                     }
 
+                    //Price
+                    if (paramPrice != null)
+                    {
+                        if (listing.Price < paramPrice.Item1 || listing.Price > paramPrice.Item2)
+                            continue;
+                    }
+
                     //If it has not yet hit a continue by this point, you know its a match
                     count++;
                 }

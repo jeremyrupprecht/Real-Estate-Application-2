@@ -38,8 +38,23 @@ namespace Real_Tors_Application
             GlobalState.setPerNeighbourhood("Hawkwood");
             GlobalState.setPerNeighbourhood("Simons Valley");
 
+            GlobalState.setPerNeighbourhood("Arbour Lake");
+            GlobalState.setPerNeighbourhood("Dalhousie");
+            GlobalState.setPerNeighbourhood("Nolan Hill");
+            GlobalState.setPerNeighbourhood("Ranchlands");
+            GlobalState.setPerNeighbourhood("Rockey Ridge");
+            GlobalState.setPerNeighbourhood("Royal Oak");
+            GlobalState.setPerNeighbourhood("Royal Vista");
+            GlobalState.setPerNeighbourhood("Sage Hill");
+            GlobalState.setPerNeighbourhood("Scenic Acres");
+            GlobalState.setPerNeighbourhood("Silver Springs");
+            GlobalState.setPerNeighbourhood("Tuscany");
+
             NorthWest.Content = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
-                GlobalState.perNeighbourhood["Simons Valley"] + 500;
+                GlobalState.perNeighbourhood["Simons Valley"] + GlobalState.perNeighbourhood["Arbour Lake"] + GlobalState.perNeighbourhood["Dalhousie"] + GlobalState.perNeighbourhood["Nolan Hill"];// +
+                //GlobalState.perNeighbourhood["Ranchlands"] + GlobalState.perNeighbourhood["Rocky Ridge"] + GlobalState.perNeighbourhood["Royal Oak"] + GlobalState.perNeighbourhood["Royal Vista"] + 
+                //GlobalState.perNeighbourhood["Sage Hill"] + GlobalState.perNeighbourhood["Scenic Acres"] + GlobalState.perNeighbourhood["Silver Springs"] + GlobalState.perNeighbourhood["Tuscany"];
+            
         
             SetLabelColor(NorthWest);
             SetLabelColor(North);
@@ -394,7 +409,7 @@ namespace Real_Tors_Application
                 AmenitiesInput.Text = "";
                 Print_Amenity();
                 GlobalState.Generate(9);
-
+                SetMapValues();
             }
         }
 
@@ -405,6 +420,7 @@ namespace Real_Tors_Application
             GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
             Print_Amenity();
             GlobalState.Generate(9);
+            SetMapValues();
 
         }
 
@@ -474,6 +490,7 @@ namespace Real_Tors_Application
                 NeighbourhoodInput.Text = "";
                 Print_Neighbourhood();
                 GlobalState.Generate(9);
+                SetMapValues();
 
             }
         }
@@ -484,6 +501,7 @@ namespace Real_Tors_Application
             GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
             Print_Neighbourhood();
             GlobalState.Generate(9);
+            SetMapValues();
 
         }
 
@@ -556,6 +574,7 @@ namespace Real_Tors_Application
                     GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowPrice.Text), high);
                     lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -586,6 +605,7 @@ namespace Real_Tors_Application
                     GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highPrice.Text));
                     highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -615,6 +635,7 @@ namespace Real_Tors_Application
                     GlobalState.paramSize = new Tuple<int, int>(int.Parse(lowSize.Text), high);
                     lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -645,6 +666,7 @@ namespace Real_Tors_Application
                     GlobalState.paramSize = new Tuple<int, int>(low, int.Parse(highSize.Text));
                     highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -675,6 +697,7 @@ namespace Real_Tors_Application
                     GlobalState.paramBed = new Tuple<int, int>(int.Parse(lowBed.Text), high);
                     lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -705,6 +728,7 @@ namespace Real_Tors_Application
                     GlobalState.paramBed = new Tuple<int, int>(low, int.Parse(highBed.Text));
                     highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -735,6 +759,7 @@ namespace Real_Tors_Application
                     GlobalState.paramBath = new Tuple<int, int>(int.Parse(lowBath.Text), high);
                     lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -765,6 +790,7 @@ namespace Real_Tors_Application
                     GlobalState.paramBath = new Tuple<int, int>(low, int.Parse(highBath.Text));
                     highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -795,6 +821,7 @@ namespace Real_Tors_Application
                     GlobalState.paramYear = new Tuple<int, int>(int.Parse(lowYear.Text), high);
                     lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }
@@ -825,6 +852,7 @@ namespace Real_Tors_Application
                     GlobalState.paramYear = new Tuple<int, int>(low, int.Parse(highYear.Text));
                     highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    SetMapValues();
 
                 }
             }

@@ -39,11 +39,8 @@ namespace Real_Tors_Application.MapView_FullyZoomed
 
         }
 
-        private void GetListings()
+        private void ShowListings()
         {
-            GlobalState.paramNeighbourhood.Clear();
-            GlobalState.paramNeighbourhood.Add(nameOfCurrentNeighbourhood);
-            GlobalState.Generate();
             Tuple<int, int> offset;
             Listing curr;
 
@@ -235,6 +232,15 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                 tg.Children.Add(translateT);
                 Listing9Grid.RenderTransform = tg;
             }
+        }
+
+        private void GetListings()
+        {
+            GlobalState.paramNeighbourhood.Clear();
+            GlobalState.paramNeighbourhood.Add(nameOfCurrentNeighbourhood);
+            GlobalState.Generate();
+            ShowListings();
+            
 
         }
 
@@ -471,11 +477,11 @@ namespace Real_Tors_Application.MapView_FullyZoomed
         {
             if (GlobalState.isLoggedIn)
             {
-                int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(5));
+                int numOfListing = Int16.Parse(sender.GetType().GetProperty("Name").GetValue(sender).ToString().Substring(5))-1;
                 GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
 
                 var heartImg = (sender as Image);
-                heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"../HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"../HeartIconEmpty.png", UriKind.Relative));
 
             }
             else
@@ -602,13 +608,13 @@ namespace Real_Tors_Application.MapView_FullyZoomed
         {
             if (!GlobalState.isTypeExpanded)
             {
-                dropdown_btn_image.Source = new BitmapImage(new Uri("sortup_icon.png", UriKind.RelativeOrAbsolute));
+                dropdown_btn_image.Source = new BitmapImage(new Uri("../sortup_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Visible;
 
             }
             else
             {
-                dropdown_btn_image.Source = new BitmapImage(new Uri("sortdown_icon.png", UriKind.RelativeOrAbsolute));
+                dropdown_btn_image.Source = new BitmapImage(new Uri("../sortdown_icon.png", UriKind.RelativeOrAbsolute));
                 HomeTypesSelect.Visibility = Visibility.Collapsed;
             }
             GlobalState.isTypeExpanded = !GlobalState.isTypeExpanded;
@@ -785,6 +791,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                 AmenitiesInput.Text = "";
                 Print_Amenity();
                 GlobalState.Generate(9);
+                ShowListings();
 
             }
         }
@@ -795,7 +802,8 @@ namespace Real_Tors_Application.MapView_FullyZoomed
 
             GlobalState.paramAmenities.Remove(lbl.Content.ToString().Substring(2));
             Print_Amenity();
-            GlobalState.Generate(9);
+            GlobalState.Generate(9); 
+            ShowListings();
 
         }
 
@@ -865,6 +873,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                 NeighbourhoodInput.Text = "";
                 Print_Neighbourhood();
                 GlobalState.Generate(9);
+                ShowListings();
 
             }
         }
@@ -875,6 +884,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
             GlobalState.paramNeighbourhood.Remove(lbl.Content.ToString().Substring(2));
             Print_Neighbourhood();
             GlobalState.Generate(9);
+            ShowListings();
 
         }
 
@@ -947,6 +957,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramPrice = new Tuple<int, int>(int.Parse(lowPrice.Text), high);
                     lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -977,6 +988,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramPrice = new Tuple<int, int>(low, int.Parse(highPrice.Text));
                     highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1006,6 +1018,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramSize = new Tuple<int, int>(int.Parse(lowSize.Text), high);
                     lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1036,6 +1049,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramSize = new Tuple<int, int>(low, int.Parse(highSize.Text));
                     highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1066,6 +1080,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramBed = new Tuple<int, int>(int.Parse(lowBed.Text), high);
                     lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1096,6 +1111,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramBed = new Tuple<int, int>(low, int.Parse(highBed.Text));
                     highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1126,6 +1142,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramBath = new Tuple<int, int>(int.Parse(lowBath.Text), high);
                     lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1156,6 +1173,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramBath = new Tuple<int, int>(low, int.Parse(highBath.Text));
                     highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1186,6 +1204,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramYear = new Tuple<int, int>(int.Parse(lowYear.Text), high);
                     lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
@@ -1216,6 +1235,7 @@ namespace Real_Tors_Application.MapView_FullyZoomed
                     GlobalState.paramYear = new Tuple<int, int>(low, int.Parse(highYear.Text));
                     highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
+                    ShowListings();
 
                 }
             }
