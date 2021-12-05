@@ -46,8 +46,23 @@ namespace Real_Tors_Application
             GlobalState.setPerNeighbourhood("Hawkwood");
             GlobalState.setPerNeighbourhood("Simons Valley");
 
+            GlobalState.setPerNeighbourhood("Arbour Lake");
+            GlobalState.setPerNeighbourhood("Dalhousie");
+            GlobalState.setPerNeighbourhood("Nolan Hill");
+            GlobalState.setPerNeighbourhood("Ranchlands");
+            GlobalState.setPerNeighbourhood("Rockey Ridge");
+            GlobalState.setPerNeighbourhood("Royal Oak");
+            GlobalState.setPerNeighbourhood("Royal Vista");
+            GlobalState.setPerNeighbourhood("Sage Hill");
+            GlobalState.setPerNeighbourhood("Scenic Acres");
+            GlobalState.setPerNeighbourhood("Silver Springs");
+            GlobalState.setPerNeighbourhood("Tuscany");
+
             NorthWest.Content = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
-                GlobalState.perNeighbourhood["Simons Valley"] + 500;
+                GlobalState.perNeighbourhood["Simons Valley"] + GlobalState.perNeighbourhood["Arbour Lake"] + GlobalState.perNeighbourhood["Dalhousie"] + GlobalState.perNeighbourhood["Nolan Hill"] +
+                GlobalState.perNeighbourhood["Ranchlands"] + GlobalState.perNeighbourhood["Rockey Ridge"] + GlobalState.perNeighbourhood["Royal Oak"] + GlobalState.perNeighbourhood["Royal Vista"] +
+                GlobalState.perNeighbourhood["Sage Hill"] + GlobalState.perNeighbourhood["Scenic Acres"] + GlobalState.perNeighbourhood["Silver Springs"] + GlobalState.perNeighbourhood["Tuscany"];
+
 
             SetLabelColor(NorthWest);
             SetLabelColor(North);
@@ -499,6 +514,7 @@ namespace Real_Tors_Application
                 Print_Amenity();
                 GlobalState.Generate(9);
                 GenerateListings();
+                SetMapValues();
             }
         }
 
@@ -510,6 +526,7 @@ namespace Real_Tors_Application
             Print_Amenity();
             GlobalState.Generate(9);
             GenerateListings();
+            SetMapValues();
         }
 
         private void Print_Amenity()
@@ -579,6 +596,7 @@ namespace Real_Tors_Application
                 Print_Neighbourhood();
                 GlobalState.Generate(9);
                 GenerateListings();
+                SetMapValues();
             }
         }
 
@@ -589,6 +607,7 @@ namespace Real_Tors_Application
             Print_Neighbourhood();
             GlobalState.Generate(9);
             GenerateListings();
+            SetMapValues();
         }
 
         private void Print_Neighbourhood()
@@ -661,6 +680,7 @@ namespace Real_Tors_Application
                     lowPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -691,6 +711,7 @@ namespace Real_Tors_Application
                     highPrice.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -720,6 +741,7 @@ namespace Real_Tors_Application
                     lowSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -750,6 +772,7 @@ namespace Real_Tors_Application
                     highSize.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -780,6 +803,7 @@ namespace Real_Tors_Application
                     lowBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -810,6 +834,7 @@ namespace Real_Tors_Application
                     highBed.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -840,6 +865,7 @@ namespace Real_Tors_Application
                     lowBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -870,6 +896,7 @@ namespace Real_Tors_Application
                     highBath.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -900,6 +927,7 @@ namespace Real_Tors_Application
                     lowYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
@@ -930,6 +958,7 @@ namespace Real_Tors_Application
                     highYear.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9DEA8C"));
                     GlobalState.Generate(9);
                     GenerateListings();
+                    SetMapValues();
                 }
             }
             else
