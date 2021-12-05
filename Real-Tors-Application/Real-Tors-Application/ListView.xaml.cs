@@ -242,7 +242,7 @@ namespace Real_Tors_Application
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
 
         private void navLogInButton_Click(object sender, RoutedEventArgs e)

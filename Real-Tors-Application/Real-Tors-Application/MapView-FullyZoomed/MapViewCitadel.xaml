@@ -509,83 +509,130 @@
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="912,445,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
         <Rectangle HorizontalAlignment="Left" Height="20" Margin="638,609,0,0" VerticalAlignment="Top" Width="20" Fill="#FFA750D2"/>
 
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 100, 0, 0">
-            <ScrollViewer Background="White">
-                <StackPanel Name="FilterPanel" Width="400" Visibility="Collapsed">
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="980" Margin="0, 100, 0, 0" Background="White">
+            <ScrollViewer>
+                <StackPanel Name="FilterPanel" Width="400">
 
                     <Label FontSize="36" FontWeight="Bold" Padding="24" Background="#FFAAAAAA" HorizontalContentAlignment="Center">Filters</Label>
                     <Label Height="10" />
                     <StackPanel Orientation="Horizontal">
                         <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Home Type:</Label>
-                        <Button Name="OpenHomeTypes" Content="Change" FontSize="24" Click="toggleTypes"/>
+                        <Button Name="OpenHomeTypes" Click="toggleTypes">
+                            <Image x:Name="dropdown_btn_image" Source="sortdown_icon.png"/>
+                        </Button>
                     </StackPanel>
 
                     <StackPanel Name="HomeTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Visible">
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Single Family"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Duplex"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Triplex"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Townhome"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Apartment"/>
-                        <RadioButton FontSize = "26" Padding="0 6" Content="Loft"/>
+                        <RadioButton Name="SingleButt" FontSize = "26" Padding="0 6" Content="Single Family" Click="SingleFamily_Click"/>
+                        <RadioButton Name="DuplexButt" FontSize = "26" Padding="0 6" Content="Duplex" Click="Duplex_Click"/>
+                        <RadioButton Name="TriplexButt" FontSize = "26" Padding="0 6" Content="Triplex" Click="Triplex_Click"/>
+                        <RadioButton Name="TownhomeButt" FontSize = "26" Padding="0 6" Content="Townhome" Click="Townhome_Click"/>
+                        <RadioButton Name="ApartButt" FontSize = "26" Padding="0 6" Content="Apartment" Click="Apartment_Click"/>
+                        <RadioButton Name="LoftButt" FontSize = "26" Padding="0 6" Content="Loft" Click="Loft_Click"/>
                     </StackPanel>
 
+                    <Label Content="Please Press 'Enter' to Update" Margin="25" FontSize="25" Foreground="#FF55EA8C"/>
+
                     <Label Content="Price" FontWeight="Bold" Padding="24 12 0 12" FontSize="26"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                    <TextBox Name="lowPrice" IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25" KeyDown="enterPriceLow"/>
                     <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+                    <TextBox Name="highPrice" IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25" KeyDown="enterPriceHigh"/>
 
 
                     <Label Content="Size (sq ft)" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25"/>
+                    <TextBox Name ="lowSize" IsReadOnly="False" Background="#eee" Margin="20 0 50 20" FontSize="25" KeyDown="enterSizeLow"/>
                     <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25"/>
+                    <TextBox Name ="highSize" IsReadOnly="False" Background="#eee" Margin="20 10 50 20" FontSize="25" KeyDown="enterSizeHigh"/>
 
 
                     <Label Content="# of Beds" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                    <TextBox Name="lowBed" IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25" KeyDown="enterBedLow"/>
                     <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+                    <TextBox Name="highBed" IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25" KeyDown="enterBedHigh"/>
 
                     <Label Content="# of Baths" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25"/>
+                    <TextBox Name="lowBath" IsReadOnly="False" Background="#eee" Margin="20 0 250 20" FontSize="25" KeyDown="enterBathLow"/>
                     <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25"/>
+                    <TextBox Name="highBath" IsReadOnly="False" Background="#eee" Margin="20 10 250 20" FontSize="25" KeyDown="enterBathHigh"/>
 
                     <Label Content="Year Built" FontWeight="Bold" Padding="24 24 0 12" FontSize="26"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 0 200 20" FontSize="25"/>
+                    <TextBox Name="lowYear" IsReadOnly="False" Background="#eee" Margin="20 0 200 20" FontSize="25" KeyDown="enterYearLow"/>
                     <Label Content="to" FontSize="22" Padding="24 0 0 10"/>
-                    <TextBox IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25"/>
+                    <TextBox Name="highYear" IsReadOnly="False" Background="#eee" Margin="20 10 200 20" FontSize="25" KeyDown="enterYearHigh"/>
 
+                    <Label FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Padding="24 12 48 12" Width="300">Amenities:</Label>
                     <StackPanel Orientation="Horizontal">
-                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Amenities:</Label>
-                        <Button Name="OpenAmenities" Content="Change" FontSize="24" Click="OpenAmenities_Click" HorizontalAlignment="Right"/>
+                        <TextBox Name ="AmenitiesInput" IsReadOnly="False" Background="#eee" Width="250" Margin="24 4" FontSize="25" KeyDown="EnterAmenity"/>
+                        <Button Name="AddAmenities" Content="Add" FontSize="24" Margin="8" Padding="20 0" HorizontalAlignment="Right" Click="Add_Amenity_Click"/>
                     </StackPanel>
-                    <StackPanel Name="AmenTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Granite Countertops"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Walkout Basement"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Rennovated Kitchen"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="High Ceiling"/>
-                    </StackPanel>
-                    <Label Height="10" />
+                    <WrapPanel Orientation="Horizontal">
+                        <Label Name="Amenity1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                        <Label Name="Amenity5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteAmenity"/>
+                    </WrapPanel>
+
+                    <Label Height="20" />
+                    <Label FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
                     <StackPanel Orientation="Horizontal">
-                        <Label FontSize="26" FontWeight="Bold" Padding="24 12 48 12" Width="300">Neighbourhoods:</Label>
-                        <Button Name="OpenNeighTypes" Content="Change" FontSize="24" Click="toggleNeigh"/>
+                        <TextBox Name ="NeighbourhoodInput" IsReadOnly="False" Background="#eee" Width="250" Margin="24 4" FontSize="25" KeyDown="EnterNeighbour"/>
+                        <Button Name="AddNeighbourhood" Content="Add" FontSize="24" Margin="8" Padding="20 0" HorizontalAlignment="Right" Click="Add_Neighbourhood_Click"/>
                     </StackPanel>
-                    <StackPanel Name="NeighTypesSelect" Margin="14" HorizontalAlignment="Center" Visibility="Collapsed">
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Dover Glen" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Inglewood" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Mills Estate" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Ramsay" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Radisson Heights" IsChecked="True"/>
-                        <CheckBox FontSize = "26" Padding="0 6" Content="Southview" IsChecked="True"/>
-                    </StackPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <Label Name="Neighbour1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour4" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour5" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                        <Label Name="Neighbour6" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed" MouseLeftButtonDown="DeleteNeighbour"/>
+                    </WrapPanel>
+                    <Label Height="50" />
+
                     <Grid Height="400"/>
 
                 </StackPanel>
             </ScrollViewer>
-
             <Button Content="||" FontSize="30" VerticalAlignment="Center" Click="ToggleFilter"  Width="20"/>
-
         </StackPanel>
+        <Grid Name="AccountPopUp" Height="1080" Width="1920" Background="#55000000" MouseLeftButtonDown="RemoveAccountPopUp" Visibility="Collapsed">
+            <Grid Visibility="Visible" x:Name="logInGrid" HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="MouseOnLogin" MouseLeave="MouseOutLogin">
+                <Rectangle HorizontalAlignment="Left" Height="380" Margin="0,50,0,0" VerticalAlignment="Top" Width="450" Stroke="Black" Fill="#FFF4F4F5" StrokeThickness="3"/>
+                <Label Content="Log in to save your favourite listings" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Background="#FFD1D1D1" BorderBrush="Black" BorderThickness="3" Width="450"/>
+                <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="40" Margin="160,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+                <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="160,150,0,0" Height="40" Width="260" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
+                <TextBlock x:Name="userNameTextBlock" HorizontalAlignment="Left" Margin="30,80,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
+                <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="30, 150,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
+                <CheckBox x:Name="rememberMeCheckBox" Content="Remember me" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" FontSize="24"/>
+                <Button x:Name="createAcccountButton" Content="Create an account" HorizontalAlignment="Center" Margin="0, 270, 0, 0" VerticalAlignment="Top" Width="Auto" FontSize="24" Height="40" Click="createAcccountTextButton_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock Text="Create an Account" Foreground="#FF4556FF" />
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="148" FontSize="24" Height="40" Click="logInButton_Click" />
+            </Grid>
+            <Grid Visibility="Hidden" x:Name="signupGrid" HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="MouseOnLogin" MouseLeave="MouseOutLogin">
+                <Label x:Name="createAccountLabel" Content="Create an Account" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="40" Width="585" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="70" BorderThickness="3" BorderBrush="Black"/>
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="300" Margin="0, 70, 0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="585"/>
+                <TextBox x:Name="userNameTextBoxAC" HorizontalAlignment="Left" Height="40" Margin="140,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" FontSize="24" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" />
+                <PasswordBox x:Name="passwordTextBoxAC" HorizontalAlignment="Left" Margin="140,170,0,0" Height="40" Width="400" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" FontSize="24"/>
+                <TextBlock x:Name="userNameTextBlockAC" HorizontalAlignment="Left" Margin="20,100,0,0" Height="40" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="24" />
+                <TextBlock x:Name="passwordTextBlockAC" HorizontalAlignment="Left" Margin="20,170,0,0" Height="40" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="24"/>
+                <TextBox x:Name="emailTextBoxAC" HorizontalAlignment="Left" Height="40" Margin="140,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Width="400" FontSize="24"/>
+                <TextBlock x:Name="emailTextBlockAC" HorizontalAlignment="Left" Margin="20,240,0,0" Height="40" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" FontSize="24"/>
+                <Button x:Name="createAccountButtonAC" Content="Create Account" HorizontalAlignment="Left" Margin="200,310,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="24" Background="#FFCBCBCB" Click="createAccountButtonAC_Click"/>
+            </Grid>
+
+            <Grid Visibility="Collapsed" x:Name="successSignupGrid" HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="MouseOnLogin" MouseLeave="MouseOutLogin">
+
+                <Label x:Name="createAccountLabel2" Content="Create an Account" VerticalAlignment="Top" FontSize="40" Width="620" HorizontalContentAlignment="Center" Background="#FF7B82A0" Height="65"/>
+                <Rectangle Fill="#FFF4F4F5" Height="220" Margin="0, 70, 0, 0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="620"/>
+                <Label x:Name="accountCreatedLabel" Content="Your account has been successfully created!" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FF209B05" FontWeight="SemiBold" Width="620" HorizontalContentAlignment="Center"/>
+                <Label x:Name="accountCreatedLabel2" Content="You can now save your favourite listings to your profile!" HorizontalAlignment="Center" Margin="0, 150, 0, 0" VerticalAlignment="Top" FontSize="24" Width="620" HorizontalContentAlignment="Center"/>
+                <Button x:Name="loginButton" Content="Click here to login" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="250" Height="40" FontSize="24" Background="#FF9DEA8C" Click="loginButtonSUCC_Click"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
