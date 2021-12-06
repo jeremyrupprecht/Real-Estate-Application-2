@@ -58,11 +58,18 @@ namespace Real_Tors_Application
             GlobalState.setPerNeighbourhood("Silver Springs");
             GlobalState.setPerNeighbourhood("Tuscany");
 
-            NorthWest.Content = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
+            int nw = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
                 GlobalState.perNeighbourhood["Simons Valley"] + GlobalState.perNeighbourhood["Arbour Lake"] + GlobalState.perNeighbourhood["Dalhousie"] + GlobalState.perNeighbourhood["Nolan Hill"] +
                 GlobalState.perNeighbourhood["Ranchlands"] + GlobalState.perNeighbourhood["Rockey Ridge"] + GlobalState.perNeighbourhood["Royal Oak"] + GlobalState.perNeighbourhood["Royal Vista"] +
                 GlobalState.perNeighbourhood["Sage Hill"] + GlobalState.perNeighbourhood["Scenic Acres"] + GlobalState.perNeighbourhood["Silver Springs"] + GlobalState.perNeighbourhood["Tuscany"];
-
+            NorthWest.Content = nw;
+            North.Content = Math.Max(0, nw + rand.Next(-100,100));
+            NorthEast.Content = Math.Max(0, nw + rand.Next(-100, 100));
+            East.Content = Math.Max(0, nw + rand.Next(-100, 100));
+            West.Content = Math.Max(0, nw + rand.Next(-100, 100));
+            SouthEast.Content = Math.Max(0, nw + rand.Next(-100, 100));
+            Center.Content = Math.Max(0, nw + rand.Next(-100, 100));
+            South.Content = Math.Max(0, nw + rand.Next(-100, 100));
 
             SetLabelColor(NorthWest);
             SetLabelColor(North);
@@ -118,8 +125,13 @@ namespace Real_Tors_Application
                 {
                     this.NavigationService.Navigate(new Uri("MapView-FullyZoomed/MapViewSimonsValley.xaml", UriKind.Relative));
                 }
+                else
+                {
+                    this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
+                }
+                return;
             }
-            return;
+            
 
             if (GlobalState.paramNeighbourhood.Contains("Hamptons") &&
                     GlobalState.paramNeighbourhood.Contains("Edgemont") &&
