@@ -36,9 +36,8 @@ namespace Real_Tors_Application
             }
 
 
-            _NavigationFrame.Navigate(new HomePage()); // First page thats displayed on program start
+            _NavigationFrame.Navigate(new Uri("LoginView.xaml", UriKind.Relative)); // First page thats displayed on program start
         }
-
 
     }
 }

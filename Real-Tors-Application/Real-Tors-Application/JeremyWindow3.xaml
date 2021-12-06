@@ -192,8 +192,10 @@
 										<Button Name="changeMainImageLeft1" Width="30" Height="45" Margin="5 0" Click="changeMainImageLeft">
 											<Image Source="left.png"/>
 										</Button>
-
-										<Image Name="MainHouseImage" Height ="400 " Width ="Auto" MaxWidth="600" Source="houseImg1.jpg"/>
+                                        <Grid Width="600">
+                                            <Image Name="MainHouseImage" Height ="400 " Source="houseImg1.jpg"/>
+                                        </Grid>
+										
 
 										<Button Name="changeMainImageRight1" Width="30" Height="45" Margin="5 0" Click="changeMainImageRight">
 											<Image Source="right.png"/>

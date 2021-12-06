@@ -190,7 +190,7 @@ namespace Real_Tors_Application
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("LoginView.xaml", UriKind.Relative));
         }
 
         private void navLogInButton_Click(object sender, RoutedEventArgs e)
@@ -1244,11 +1244,17 @@ namespace Real_Tors_Application
                 }
                 else
                 {
+                    
                     numOfListing = GlobalState.currentIndex;
                     GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited = !GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited;
 
                     var heartImg = FavoritedListing;
                     heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                    
+                    if(GlobalState.lastPage=="ProfilePage")
+                    {
+                        this.NavigationService.Navigate(new Uri("ProfileView.xaml", UriKind.Relative));
+                    }
                 }
             }
             else
@@ -1307,7 +1313,11 @@ namespace Real_Tors_Application
             {
                 switch(GlobalState.lastPage)
                 {
-                    case "Favorites":
+                    case "ProfilePage":
+                        ProfileView pNextProfile = new ProfileView();
+                        GlobalState.currentIndex = -1;
+                        GlobalState.similar = -1;
+                        this.NavigationService.Navigate(pNextProfile);
                         break;
                     case "Hamptons":
                         break;

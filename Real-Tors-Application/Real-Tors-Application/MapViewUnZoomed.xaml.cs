@@ -63,6 +63,18 @@ namespace Real_Tors_Application
             Center.Content = Math.Max(0, nw + rand.Next(-100, 100));
             South.Content = Math.Max(0, nw + rand.Next(-100, 100));
 
+            if (GlobalState.paramNeighbourhood.Count != 0)
+            {
+                North.Content = 0;
+                NorthEast.Content = 0;
+                East.Content = 0;
+                West.Content = 0;
+                SouthEast.Content = 0;
+                Center.Content = 0;
+                South.Content = 0;
+            }
+
+
             SetLabelColor(NorthWest);
             SetLabelColor(North);
             SetLabelColor(NorthEast);
@@ -75,21 +87,33 @@ namespace Real_Tors_Application
 
         private void SetLabelColor(Label label)
         {
-            if (Convert.ToInt32(label.Content) <= 600)
+            if (Convert.ToInt32(label.Content) == 0)
             {
-                label.Foreground = Brushes.DeepSkyBlue;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9999"));
             }
-            else if (Convert.ToInt32(label.Content) <= 700)
+            else if (Convert.ToInt32(label.Content) <= 20)
             {
-                label.Foreground = Brushes.DodgerBlue;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#99ceFF"));
+            }
+            else if (Convert.ToInt32(label.Content) <= 50)
+            {
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#80bfff"));
+            }
+            else if (Convert.ToInt32(label.Content) <= 200)
+            {
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#4da6ff"));
+            }
+            else if (Convert.ToInt32(label.Content) <= 500)
+            {
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#0073e6"));
             }
             else if (Convert.ToInt32(label.Content) <= 800)
             {
-                label.Foreground = Brushes.Blue;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#004d99"));
             }
             else
             {
-                label.Foreground = Brushes.Navy;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00264d"));
             }
         }
 

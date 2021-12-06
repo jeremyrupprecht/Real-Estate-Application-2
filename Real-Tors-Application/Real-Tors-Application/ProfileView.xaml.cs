@@ -28,6 +28,7 @@ namespace Real_Tors_Application
             InitializeComponent();
             //GenerateListings();
             GenerateFaveListings();
+            GlobalState.lastPage = "ProfilePage";
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)

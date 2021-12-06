@@ -33,6 +33,7 @@ namespace Real_Tors_Application
 
         private void Btn_Zoomout_Click(object sender, RoutedEventArgs e)
         {
+            GlobalState.paramNeighbourhood.Clear();
             this.NavigationService.Navigate(new Uri("MapViewUnZoomed.xaml", UriKind.Relative));
         }
 
@@ -190,24 +191,35 @@ namespace Real_Tors_Application
 
         private void SetLabelColor(Label label)
         {
-            if((int) label.Content <= 50)
+            if (Convert.ToInt32(label.Content) == 0)
             {
-                label.Foreground = Brushes.DeepSkyBlue;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9999"));
             }
-            else if ((int)label.Content <= 60)
+            else if (Convert.ToInt32(label.Content) <= 20)
             {
-                label.Foreground = Brushes.DodgerBlue;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#99ceFF"));
             }
-            else if ((int)label.Content <= 70)
+            else if (Convert.ToInt32(label.Content) <= 50)
             {
-                label.Foreground = Brushes.Blue;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#80bfff"));
+            }
+            else if (Convert.ToInt32(label.Content) <= 200)
+            {
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#4da6ff"));
+            }
+            else if (Convert.ToInt32(label.Content) <= 500)
+            {
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#0073e6"));
+            }
+            else if (Convert.ToInt32(label.Content) <= 800)
+            {
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#004d99"));
             }
             else
             {
-                label.Foreground = Brushes.Navy;
+                label.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00264d"));
             }
         }
-
         private void Btn_Citadel(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/MapView-FullyZoomed/MapViewCitadel.xaml", UriKind.Relative));

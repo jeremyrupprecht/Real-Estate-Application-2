@@ -30,7 +30,7 @@
             <Image Source="ListIcon.png" Height="131" Width="124" RenderTransformOrigin="0.5,0.527" />
         </Button>
 
-        <Label x:Name="lbl_Instructions" Content="Please hover over an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
+        <Label x:Name="lbl_Instructions" Content="Please click on an area on the map to view specific regions" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Foreground="#FFE81515" FontWeight="Bold" FontSize="30"/>
         <Label x:Name="NorthWest" Content="999" HorizontalAlignment="Left" Margin="650,260,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100" MouseDown="clickNorthWest"/>
         <Label x:Name="North" Content="531" HorizontalAlignment="Left" Margin="804,128,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="100"/>
         <Label x:Name="NorthEast" Content="620" HorizontalAlignment="Left" Margin="964,276,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="80"/>
