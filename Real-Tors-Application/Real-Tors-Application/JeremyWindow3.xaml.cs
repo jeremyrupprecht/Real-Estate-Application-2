@@ -1018,6 +1018,10 @@ namespace Real_Tors_Application
             SizeNumber.Content = list1.Size + " sq ft";
             MainHouseImage.Source = new BitmapImage(new Uri(@"/houseImg" +list1.NumOfImg + ".jpg", UriKind.Relative));
             FavoritedListing.Source = (list1.Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative)));
+            if(list1.Favorited)
+            {
+                saveForLater.Content = "Unsave Listing";
+            }
             Print_AmenityF();
         }
 
@@ -1241,6 +1245,7 @@ namespace Real_Tors_Application
 
                     var heartImg = FavoritedListing;
                     heartImg.Source = GlobalState.totalList[GlobalState.similar].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
+                    saveForLater.Content = GlobalState.totalList[GlobalState.similar].Favorited ? "Unsave Listing" : "Save For Later";
                 }
                 else
                 {
@@ -1250,8 +1255,10 @@ namespace Real_Tors_Application
 
                     var heartImg = FavoritedListing;
                     heartImg.Source = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? new BitmapImage(new Uri(@"HeartIconFilled.png", UriKind.Relative)) : new BitmapImage(new Uri(@"HeartIconEmpty.png", UriKind.Relative));
-                    
-                    if(GlobalState.lastPage=="ProfilePage")
+
+                    saveForLater.Content = GlobalState.totalList[GlobalState.currentList[numOfListing]].Favorited ? "Unsave Listing" : "Save For Later";
+
+                    if (GlobalState.lastPage=="ProfilePage")
                     {
                         this.NavigationService.Navigate(new Uri("ProfileView.xaml", UriKind.Relative));
                     }
