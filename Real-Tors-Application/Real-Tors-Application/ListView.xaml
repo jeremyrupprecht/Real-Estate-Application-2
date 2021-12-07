@@ -141,7 +141,7 @@
                             <ColumnDefinition Width="350"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="250"/>
                             <RowDefinition Height="100"/>
                         </Grid.RowDefinitions>
                         <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" MouseLeftButtonDown="expandListing"/>

@@ -50,7 +50,7 @@ namespace Real_Tors_Application
             GlobalState.setPerNeighbourhood("Dalhousie");
             GlobalState.setPerNeighbourhood("Nolan Hill");
             GlobalState.setPerNeighbourhood("Ranchlands");
-            GlobalState.setPerNeighbourhood("Rockey Ridge");
+            GlobalState.setPerNeighbourhood("Rocky Ridge");
             GlobalState.setPerNeighbourhood("Royal Oak");
             GlobalState.setPerNeighbourhood("Royal Vista");
             GlobalState.setPerNeighbourhood("Sage Hill");
@@ -60,7 +60,7 @@ namespace Real_Tors_Application
 
             int nw = GlobalState.perNeighbourhood["Citadel"] + GlobalState.perNeighbourhood["Edgemont"] + GlobalState.perNeighbourhood["Hamptons"] + GlobalState.perNeighbourhood["Hawkwood"] +
                 GlobalState.perNeighbourhood["Simons Valley"] + GlobalState.perNeighbourhood["Arbour Lake"] + GlobalState.perNeighbourhood["Dalhousie"] + GlobalState.perNeighbourhood["Nolan Hill"] +
-                GlobalState.perNeighbourhood["Ranchlands"] + GlobalState.perNeighbourhood["Rockey Ridge"] + GlobalState.perNeighbourhood["Royal Oak"] + GlobalState.perNeighbourhood["Royal Vista"] +
+                GlobalState.perNeighbourhood["Ranchlands"] + GlobalState.perNeighbourhood["Rocky Ridge"] + GlobalState.perNeighbourhood["Royal Oak"] + GlobalState.perNeighbourhood["Royal Vista"] +
                 GlobalState.perNeighbourhood["Sage Hill"] + GlobalState.perNeighbourhood["Scenic Acres"] + GlobalState.perNeighbourhood["Silver Springs"] + GlobalState.perNeighbourhood["Tuscany"];
             NorthWest.Content = nw;
             North.Content = Math.Max(0, nw + rand.Next(-100,100));

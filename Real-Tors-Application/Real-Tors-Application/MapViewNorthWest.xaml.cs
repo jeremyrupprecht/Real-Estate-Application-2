@@ -122,7 +122,7 @@ namespace Real_Tors_Application
             GlobalState.paramNeighbourhood.Add("Dalhousie");
             GlobalState.paramNeighbourhood.Add("Nolan Hill");
             GlobalState.paramNeighbourhood.Add("Ranchlands");
-            GlobalState.paramNeighbourhood.Add("Rockey Ridge");
+            GlobalState.paramNeighbourhood.Add("Rocky Ridge");
             GlobalState.paramNeighbourhood.Add("Royal Oak");
             GlobalState.paramNeighbourhood.Add("Royal Vista");
             GlobalState.paramNeighbourhood.Add("Sage Hill");
@@ -144,7 +144,7 @@ namespace Real_Tors_Application
             GlobalState.setPerNeighbourhood("Dalhousie");
             GlobalState.setPerNeighbourhood("Nolan Hill");
             GlobalState.setPerNeighbourhood("Ranchlands");
-            GlobalState.setPerNeighbourhood("Rockey Ridge");
+            GlobalState.setPerNeighbourhood("Rocky Ridge");
             GlobalState.setPerNeighbourhood("Royal Oak");
             GlobalState.setPerNeighbourhood("Royal Vista");
             GlobalState.setPerNeighbourhood("Sage Hill");
@@ -162,7 +162,7 @@ namespace Real_Tors_Application
             LBL_Dalhousie.Content = GlobalState.perNeighbourhood["Dalhousie"];
             LBL_NolanHill.Content = GlobalState.perNeighbourhood["Nolan Hill"];
             LBL_Ranchlands.Content = GlobalState.perNeighbourhood["Ranchlands"];
-            LBL_RockeyRidge.Content = GlobalState.perNeighbourhood["Rockey Ridge"];
+            LBL_RockeyRidge.Content = GlobalState.perNeighbourhood["Rocky Ridge"];
             LBL_RoyalOak.Content = GlobalState.perNeighbourhood["Royal Oak"];
             LBL_RoyalVista.Content = GlobalState.perNeighbourhood["Royal Vista"];
             LBL_SageHill.Content = GlobalState.perNeighbourhood["Sage Hill"];
