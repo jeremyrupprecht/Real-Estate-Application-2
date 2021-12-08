@@ -158,9 +158,8 @@ namespace Real_Tors_Application
         {
             EmailPopUp.Visibility = Visibility.Visible;
             EmailRealtorBlock.Text = "Hi. I would like to reach out regarding this property: " + list1.Address;
-            contactRealtor.Content = "Sent to Realtor";
-            contactRealtor.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#296dcf"));
-            contactRealtor.IsEnabled = false;
+            
+            
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1357,6 +1356,9 @@ namespace Real_Tors_Application
         private void CloseEmail(object sender, RoutedEventArgs e)
         {
             EmailPopUp.Visibility = Visibility.Collapsed;
+            contactRealtor.IsEnabled = false;
+            contactRealtor.Content = "Sent to Realtor";
+            contactRealtor.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#296dcf"));
         }
     }
 }
