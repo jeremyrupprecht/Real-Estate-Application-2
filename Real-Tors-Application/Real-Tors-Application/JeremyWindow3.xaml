@@ -137,7 +137,7 @@
                                             <RowDefinition Height="70"/>
                                             <RowDefinition Height="70"/>
                                             <RowDefinition Height="70"/>
-                                            <RowDefinition Height="70"/>
+                                            <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="70"/>
                                         </Grid.RowDefinitions>
 
@@ -171,9 +171,9 @@
                                                 <CheckBox IsChecked="True" IsHitTestVisible="False" Focusable="False" />
                                             </Viewbox>
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="30 0">
+                                        <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="30 10">
                                             <Label x:Name="amenitiesTextBlock" Content="Amenities:" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" />
-                                            <WrapPanel Orientation="Horizontal">
+                                            <WrapPanel Orientation="Horizontal" Width="300" Height="Auto">
                                                 <Label Name="AmenityF1" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
                                                 <Label Name="AmenityF2" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
                                                 <Label Name="AmenityF3" FontSize="20" Padding="8 2 12 2" Margin="12" Background="LightGray" Visibility="Collapsed"/>
