@@ -39,7 +39,7 @@
                         <Rectangle Grid.Row="0" Grid.Column="0" Fill="#eee" Height="250" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Grid.ColumnSpan="4" MouseLeftButtonDown="expandListing"/>
                         <Rectangle Grid.Row="1" Grid.Column="0" Fill="#fff" Height="100" Width="350" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Grid.ColumnSpan="4" MouseLeftButtonDown="expandListing"/>
 
-                        <Image Name="HouseImage0" Grid.Row="0" Margin="0,25,25,25" Grid.Column="2" Grid.ColumnSpan="2"  MouseLeftButtonDown="expandListingImg"/>
+                        <Image Name="HouseImage0" Grid.Row="0" Margin="25,25,25,25" Grid.Column="2" Grid.ColumnSpan="2"  MouseLeftButtonDown="expandListingImg"/>
 
                         <Label Name="Neighbourhood0" Grid.Row="1" FontSize="25" FontWeight="Bold" Margin="8" HorizontalAlignment="Left"></Label>
                         <Label Name="PriceNum0" Grid.Row="1" FontSize="25" FontWeight="Black" Margin="8" HorizontalAlignment="Right"></Label>
