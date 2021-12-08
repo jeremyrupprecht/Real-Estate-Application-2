@@ -185,11 +185,11 @@ namespace Real_Tors_Application
             int count = 0;
 
             //If no paramters are set
-            if(/*paramNeighbourhood.Count != 0 && */paramSize != null && paramBed != null && paramBath != null && paramYear != null)
-            {
-                //set default count to 9 for now
-                return 9;
-            }
+            //if(/*paramNeighbourhood.Count != 0 && */paramSize != null && paramBed != null && paramBath != null && paramYear != null)
+            //{
+            //    //set default count to 9 for now
+            //    return 9;
+            //}
 
             //Checks the parameters
 
